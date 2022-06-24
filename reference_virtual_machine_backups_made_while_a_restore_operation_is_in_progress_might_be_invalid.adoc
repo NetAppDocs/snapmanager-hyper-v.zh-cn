@@ -1,0 +1,25 @@
+---
+permalink: reference_virtual_machine_backups_made_while_a_restore_operation_is_in_progress_might_be_invalid.html 
+sidebar: sidebar 
+keywords: virtual, machine, backup, restore, operation, progress, invalid 
+summary: 在执行还原操作期间执行的虚拟机备份可能无效。 
+---
+= 在执行还原操作期间执行的虚拟机备份可能无效
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+在执行还原操作期间创建的应用程序一致的备份可能无效。从此不完整的备份还原虚拟机会导致数据丢失、并且虚拟机会被删除。
+
+* * 发生原因 *
++
+备份副本中缺少SnapManager for Hyper-V配置信息。备份操作成功、但备份副本无效、因为不包含虚拟机配置信息。在执行还原操作之前、适用于Hyper-V的SnapManager 还原操作会从Hyper-V主机中删除虚拟机配置信息。此行为是在Microsoft Hyper-V写入程序中设计的。
+
+* * 更正操作 *
++
+确保备份计划与还原操作不一致、或者您要执行的按需备份不会与对相同数据执行的还原操作重叠。
+
+

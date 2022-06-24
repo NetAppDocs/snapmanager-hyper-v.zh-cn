@@ -1,0 +1,22 @@
+---
+permalink: concept_restoring_a_virtual_machine.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, restore, virtual, machine, vm, cluster, restoring, backup, copy 
+summary: '您可以使用SnapManager for Hyper-V从备份副本还原虚拟机(VM)。您还可以还原属于集群一部分的虚拟机。SnapManager for Hyper-V可确定集群中要将虚拟机还原到的相应节点。' 
+---
+= 从备份副本还原虚拟机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapManager for Hyper-V从备份副本还原虚拟机(VM)。您还可以还原属于集群一部分的虚拟机。SnapManager for Hyper-V可确定集群中要将虚拟机还原到的相应节点。
+
+要还原VM、SnapManager for Hyper-V会使用SnapDrive for Windows中的文件级还原功能。您可以将虚拟机的关联文件(包括配置文件、Snapshot副本和任何VHD)分布在多个ONTAP LUN中。一个LUN可以包含属于多个VM的文件。
+
+如果某个LUN仅包含与要还原的虚拟机关联的文件、则SnapManager for Hyper-V将使用LCSR (LUN克隆拆分还原)还原此LUN。如果某个LUN包含与要还原的虚拟机无关的其他文件、则SnapManager for Hyper-V将使用文件副本还原操作来还原虚拟机。
+
+* 相关信息 *
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp 文档： SnapDrive for Windows （当前版本）"]

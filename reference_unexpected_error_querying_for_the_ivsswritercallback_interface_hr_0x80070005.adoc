@@ -1,0 +1,25 @@
+---
+permalink: reference_unexpected_error_querying_for_the_ivsswritercallback_interface_hr_0x80070005.html 
+sidebar: sidebar 
+keywords: unexpect, error, query, ivsswritercallback, interface, hr, 0x80070005, access, denied, deny 
+summary: 查询IVssWriteCallback接口时出现意外错误。HR = 0x80070005、访问被拒绝。 
+---
+= 查询IVssWriteCallback接口时出现意外错误。HR = 0x80070005、访问被拒绝。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 消息 *
++
+查询IVssWriteCallback接口时出现意外错误。HR = 0x80070005、访问被拒绝。
+
+* * 问题描述 *
++
+如果CSV归集群组所有者所有、而VM归配对节点所有、则虚拟机备份成功完成、应用程序事件日志中会显示VSS错误。这通常是由于写入程序或请求程序进程中的安全设置不正确所致。
+
+* * 更正操作 *
++
+None：可以忽略此错误消息。
+
+

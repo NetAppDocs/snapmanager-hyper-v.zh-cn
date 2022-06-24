@@ -1,0 +1,23 @@
+---
+permalink: task_remotely_installing_or_uninstalling_snapmanager_for_hyper_v_on_nodes.html 
+sidebar: sidebar 
+keywords: remote, host, install, wizard, enable, uninstall, snapmanager, hyper-v, standalone, cluset, node, individual 
+summary: 通过远程主机安装向导、您可以在独立主机或节点以及集群主机或节点上远程安装或卸载SnapManager for Hyper-V。 
+---
+= 在节点或主机上远程安装或卸载SnapManager for Hyper-V
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过远程主机安装向导、您可以在独立主机或节点以及集群主机或节点上远程安装或卸载SnapManager for Hyper-V。如果您希望一次在集群的所有节点上安装SnapManager for Hyper-V、而不是在每个节点上安装该软件、则可以远程安装该软件。
+
+要使用远程主机安装向导、您必须已在主机节点上安装SnapManager for Hyper-V。
+
+. 在导航窗格中、单击*保护*。
+. 从操作窗格中、单击*远程主机安装*。
+. 运行远程主机安装向导。
+
+
+运行远程主机安装向导时、主机节点会将SnapManager for Hyper-V安装或卸载推送到集群中的其他节点或主机。

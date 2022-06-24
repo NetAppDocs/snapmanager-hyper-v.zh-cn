@@ -1,0 +1,28 @@
+---
+permalink: reference_snapmanager_for_hyper_v_is_not_licensed_on_the_host_or_in_the_storage_system.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, license, host, storage, system 
+summary: SnapManager for Hyper-V在主机或存储系统上未获得许可。 
+---
+= SnapManager for Hyper-V在主机或存储系统上未获得许可
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 消息 *
++
+SnapManager for Hyper-V未在主机或存储系统上获得许可、备份将中止
+
+* * 问题描述 *
++
+如果您的系统未获得许可、或者枚举、虚拟机缓存或主启动记录(MBR)磁盘使用出现问题、则会显示此消息。
+
+* * 更正操作 *
++
+.. 确保您的系统已获得许可。
+.. 将SnapManager for Hyper-V不支持的任何MBR磁盘迁移到GUID分区表(GPT)磁盘。
+.. 重新启动适用于Hyper-V的SnapManager如果此操作无法解决问题描述 、则您很可能遇到枚举问题、应联系技术支持。
+
+
+

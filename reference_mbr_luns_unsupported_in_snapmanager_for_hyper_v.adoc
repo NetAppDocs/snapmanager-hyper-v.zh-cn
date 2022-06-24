@@ -1,0 +1,25 @@
+---
+permalink: reference_mbr_luns_unsupported_in_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: mbr, lun, unsupported, snapmanager, hyper-v 
+summary: SnapManager for Hyper-V不支持MBR LUN 
+---
+= SnapManager for Hyper-V不支持MBR LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+对于共享卷或集群共享卷上运行的虚拟机、SnapManager for Hyper-V不支持MBR LUN。
+
+* * 发生原因 *
++
+当集群共享卷磁盘所有权发生变化时、Microsoft API问题描述 将返回不同的卷GUID。卷GUID与集群磁盘资源属性中的GUID不同。此问题描述 还通过Microsoft故障转移集群提供了高可用性的适用场景 虚拟机。
+
+* * 更正操作 *
++
+请参见Microsoft知识库。
+
+

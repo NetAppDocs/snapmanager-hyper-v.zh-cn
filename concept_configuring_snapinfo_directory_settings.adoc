@@ -1,0 +1,22 @@
+---
+permalink: concept_configuring_snapinfo_directory_settings.html 
+sidebar: sidebar 
+keywords: configure, configuring, snapinfo, setting, host, virtual, machine, resource, dataset, action, directory 
+summary: 您必须先为主机配置SnapInfo设置、然后才能将该主机中的虚拟机资源添加到数据集。 
+---
+= 配置SnapInfo目录设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必须先为主机配置SnapInfo设置、然后才能将该主机中的虚拟机资源添加到数据集。如果在将Hyper-V主机添加到SnapManager for Hyper-V时未配置SnapInfo设置、则可以稍后使用配置向导或* SnapInfo设置*操作来配置这些设置。
+
+此外、您还可以在将主机添加到SnapManager for Hyper-V后更改SnapInfo设置但是、如果更改SnapInfo设置、则必须手动将所有文件移动到新位置；SnapManager for Hyper-V不会自动更新这些文件。如果不移动文件、则无法从备份副本还原或管理备份副本、SnapManager for Hyper-V也不会列出备份副本。
+
+从SnapManager for Hyper-V开始、SnapInfo路径可以位于集群共享卷(CSV)上、也可以位于Windows Server 2012的SMB共享上。
+
+* 相关信息 *
+
+http://technet.microsoft.com/library/jj612868.aspx["Microsoft TechNet：在故障转移集群中使用集群共享卷"]

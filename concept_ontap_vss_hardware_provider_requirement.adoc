@@ -1,0 +1,18 @@
+---
+permalink: concept_ontap_vss_hardware_provider_requirement.html 
+sidebar: sidebar 
+keywords: ontap, vss, hardware, provider, install, snapmanager, function, snapdrive, san, storage, requirement 
+summary: 要使SnapManager 正常运行、您必须安装ONTAP VSS硬件提供程序。ONTAP VSS硬件提供程序可将运行ONTAP 的SnapDrive 服务和存储系统集成到VSS框架中。对于在SAN存储上运行的VM、这是必需的。 
+---
+= ONTAP VSS硬件提供程序要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+要使SnapManager 正常运行、您必须安装ONTAP VSS硬件提供程序。ONTAP VSS硬件提供程序可将运行ONTAP 的SnapDrive 服务和存储系统集成到VSS框架中。对于在SAN存储上运行的VM、这是必需的。
+
+SnapDrive 附带的ONTAP VSS硬件提供程序无需单独安装。
+
+对于在SMB 3.0共享上运行的Hyper-V VM、Windows虚拟机管理程序将调用在Data ONTAP 8.2上运行的远程VSS硬件提供程序。

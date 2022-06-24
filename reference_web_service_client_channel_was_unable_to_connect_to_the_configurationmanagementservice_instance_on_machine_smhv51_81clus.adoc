@@ -1,0 +1,28 @@
+---
+permalink: reference_web_service_client_channel_was_unable_to_connect_to_the_configurationmanagementservice_instance_on_machine_smhv51_81clus.html 
+sidebar: sidebar 
+keywords: web, service, client, channel, unable, conntect, configurationmanagementservice, instance, machine, smhv51_81clus 
+summary: Web服务客户端通道无法连接到计算机smhv51_81cluss上的ConfigurationManagementService实例。 
+---
+= Web服务客户端通道无法连接到计算机smhv51_81cluss上的ConfigurationManagementService实例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 消息 *
++
+Web服务客户端通道无法连接到计算机smhv51_81cluss上的ConfigurationManagementService实例。
+
++
+net.tcp：//smhv51_81cluss/SnapManager/HyperV/ConfigMgmtService/v_10上没有可以接受此消息的端点侦听。这通常是由于地址或SOAP操作不正确所致。有关详细信息、请参见Inner Exception (如果存在)。
+
+* * 问题描述 *
++
+如果导出配置信息、则受管主机的本地Web服务端口设置将存储在导出的配置文件中。如果您稍后必须使用其他Web服务端口重新安装SnapManager for Hyper-V并导入以前的配置信息、则会遇到连接问题。
+
+* * 更正操作 *
++
+要防止出现此问题描述 、请在重新安装适用于Hyper-V的SnapManager 时使用导出的配置文件中包含的相同Web服务端口设置
+
+

@@ -1,0 +1,23 @@
+---
+permalink: task_adding_a_hyper_v_parent_host_or_host_cluster.html 
+sidebar: sidebar 
+keywords: add, hyper-v, parent, host, cluster, back, up, restore, virtua, machine 
+summary: 您可以添加Hyper-V父主机或主机集群来备份和还原虚拟机。 
+---
+= 添加Hyper-V父主机或主机集群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以添加Hyper-V父主机或主机集群来备份和还原虚拟机。
+
+. 在导航窗格中、单击*保护*。
+. 在操作窗格中、单击*添加主机*。
+. 运行添加主机向导。
+
+
+将主机添加到集群时、有关新主机的信息不会自动显示在图形用户界面中。手动将主机信息添加到安装目录中的xml文件中。
+
+必须在每个集群节点上安装SnapManager for Hyper-V。如果您未安装SnapManager for Hyper-V、系统将提示您运行远程主机安装向导。

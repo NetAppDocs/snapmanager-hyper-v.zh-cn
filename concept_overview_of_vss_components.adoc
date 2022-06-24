@@ -1,0 +1,46 @@
+---
+permalink: concept_overview_of_vss_components.html 
+sidebar: sidebar 
+keywords: microsoft, windows, server, volume, shadow, copy, service, vss, coordinate, data, backup, application, storage, management, consisten, backup 
+summary: '您可以使用Microsoft Windows Server卷影复制服务(Volume Shadow Copy Service、VSS)协调数据服务器、备份应用程序和存储管理软件来支持创建和管理一致的备份。' 
+---
+= VSS组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用Microsoft Windows Server卷影复制服务(Volume Shadow Copy Service、VSS)协调数据服务器、备份应用程序和存储管理软件来支持创建和管理一致的备份。
+
+VSS负责协调基于Snapshot副本的备份和还原操作、其中包括以下组件：
+
+* * VSS请求程序*
++
+VSS请求程序是一个备份应用程序、例如适用于Hyper-V的SnapManager 或NTBackup。它会启动VSS备份和还原操作。请求程序还会为其启动的备份指定Snapshot副本属性。
+
+* * VSS写入程序*
++
+VSS写入程序拥有并管理要在Snapshot副本中捕获的数据。Microsoft Hyper-V VSS写入程序就是一个VSS写入程序示例。
+
+* * VSS提供程序*
++
+VSS提供程序负责创建和管理Snapshot副本。提供程序可以是硬件提供程序、也可以是软件提供程序：
+
++
+** 硬件提供程序将存储阵列专用的Snapshot副本和克隆功能集成到VSS框架中。
++
+ONTAP VSS硬件提供程序可将运行Data ONTAP 的SnapDrive 服务和存储系统集成到VSS框架中。
+
++
+
+NOTE: ONTAP VSS硬件提供程序会在SnapDrive 软件安装过程中自动安装。
+
+** 软件提供程序在Windows系统上运行的软件中实施Snapshot副本或克隆功能。
++
+
+NOTE: 要确保ONTAP VSS硬件提供程序正常工作、请勿在Data ONTAP LUN上使用VSS软件提供程序。如果您使用VSS软件提供程序在Data ONTAP LUN上创建Snapshot副本、则无法使用VSS硬件提供程序删除该LUN。
+
+
+
+

@@ -1,0 +1,28 @@
+---
+permalink: task_downloading_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, download, software, package, netapp, support, site 
+summary: 在安装SnapManager for Hyper-V之前、您必须从NetApp支持站点下载软件包。 
+---
+= 正在下载适用于Hyper-V的SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在安装SnapManager for Hyper-V之前、您必须从下载软件包 link:http://mysupport.netapp.com["NetApp 支持站点"]。
+
+您必须具有 NetApp 支持站点的登录凭据。
+
+. 登录到 NetApp 支持站点。
+. 转到下载软件页面。
+. 从下拉列表中、选择要安装SnapManager for Hyper-V的操作系统、然后单击*执行！*。
+. 对于要安装的软件版本、请单击*查看并下载*。
+. 在问题描述 页面上、单击*继续*。
+. 查看并接受许可协议。
+. 在Download页面上、单击安装文件的链接。
+. 将SnapManager for Hyper-V文件保存到本地目录或网络目录。
+. 单击*保存文件*。
+. 验证校验和以确保软件下载正确。
+

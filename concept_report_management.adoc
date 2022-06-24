@@ -1,0 +1,37 @@
+---
+permalink: concept_report_management.html 
+sidebar: sidebar 
+keywords: view, delete, backup, restore, configuration, report, snapmanager, hyper-v, information, virtual, machine, vm, managing, manage 
+summary: 您可以在SnapManager for Hyper-V中查看和删除备份、还原和配置报告这些报告包含有关数据集、虚拟机和主机的重要信息。您还可以使用多种不同格式导出报告。 
+---
+= 管理报告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在SnapManager for Hyper-V中查看和删除备份、还原和配置报告这些报告包含有关数据集、虚拟机和主机的重要信息。您还可以使用多种不同格式导出报告。
+
+* *备份报告*
++
+备份报告显示属于特定数据集的所有主机的所有备份信息。您可以查看数据集或虚拟机的备份报告。为虚拟机显示的报告使用虚拟机名称、而不是其GUID。
+
++
+显示备份报告时、您可以将其导出为多种不同的格式。
+
+* *还原报告*
++
+还原报告按虚拟机显示有关还原操作的所有信息。
+
++
+显示还原报告时、您可以将其导出为多种不同格式。
+
+* *配置报告*
++
+配置报告显示选定主机的通知设置、报告路径和SnapInfo路径。
+
++
+显示配置报告时、您可以将其导出为多种不同的格式。
+
+

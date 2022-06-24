@@ -1,0 +1,14 @@
+---
+permalink: concept_configuring_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, configure, configuring, manage, host, virtual, machine, policies, policy 
+summary: 安装SnapManager for Hyper-V后、您可以通过添加策略来保护和还原数据来配置和管理主机和虚拟机。 
+---
+= 为Hyper-V配置SnapManager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+安装SnapManager for Hyper-V后、您可以通过添加策略来保护和还原数据来配置和管理主机和虚拟机。

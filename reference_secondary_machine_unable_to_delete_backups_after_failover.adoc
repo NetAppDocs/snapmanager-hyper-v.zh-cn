@@ -1,0 +1,25 @@
+---
+permalink: reference_secondary_machine_unable_to_delete_backups_after_failover.html 
+sidebar: sidebar 
+keywords: deleting, delete, backup, failover 
+summary: 在故障转移后删除备份。 
+---
+= 在故障转移后删除备份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 消息 *
++
+数据集中的某些对象不存在指定的备份。
+
+* * 问题描述 *
++
+故障转移到二级站点(站点B)后、您可能无法删除在主站点(站点A)创建的备份。如果您位于灾难恢复站点(站点B)上、并尝试删除在主站点(站点A)上创建的备份、则会从主站点(站点A)而不是灾难恢复站点(站点B)中删除备份。
+
+* * 更正操作 *
++
+执行灾难恢复操作后、只会删除在当前操作站点创建的备份。
+
+

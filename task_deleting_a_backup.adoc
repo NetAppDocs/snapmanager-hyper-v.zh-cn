@@ -1,0 +1,30 @@
+---
+permalink: task_deleting_a_backup.html 
+sidebar: sidebar 
+keywords: delete, backup, associate, dataset, virtual, machine, deleting 
+summary: 您可以删除与数据集或虚拟机关联的一个或多个备份。 
+---
+= 删除备份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以删除与数据集或虚拟机关联的一个或多个备份。
+
+. 在导航窗格中、单击*恢复*。
+. 选择数据集中包含要删除的备份的虚拟机。
++
+如果删除与数据集关联的备份、则与属于该数据集的任何虚拟机关联的备份也将被删除。如果删除与虚拟机关联的备份、则只会删除该备份。
+
+. 在备份窗格中、选择要删除的备份。
+. 单击 * 删除 * 。
++
+此时将显示*删除备份*对话框。您可以选择删除选定虚拟机或整个数据集的备份。
+
+. 选择相应的选项、然后单击*确认删除*。
++
+您可以在状态窗口中查看备份删除操作的状态。
+
+

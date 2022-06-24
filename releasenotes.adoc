@@ -1,0 +1,13 @@
+---
+permalink: releasenotes.html 
+sidebar: sidebar 
+keywords: release, notes, new, features, fixed, issues, known, limitations, snapmanager, oracle 
+summary: 介绍新增功能，升级说明，已修复的问题，已知限制和已知问题。 
+---
+= 《SnapManager 2.1.4 for Hyper-V发行说明》
+:allow-uri-read: 
+
+
+。 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2851116["《SnapManager 2.1.4 for Hyper-V发行说明》"] 描述新功能，升级说明，已修复的问题，已知限制和已知问题。
+
+您需要登录到 NetApp 支持站点才能访问发行说明。

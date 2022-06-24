@@ -1,0 +1,38 @@
+---
+permalink: reference_hotfix_requirements_for_windows_server_environments.html 
+sidebar: sidebar 
+keywords: manual, install, hotfixes, microsoft, windows, server, operate, operating, system, environment 
+summary: 您必须手动在Microsoft Windows Server操作系统环境中安装修补程序。 
+---
+= Windows Server环境的修补程序要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必须手动在Microsoft Windows Server操作系统环境中安装修补程序。
+
+
+NOTE: 有关Windows Server 2016和Windows Server 2019的要求、请参见 https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-on-windows-server:[]
+
+对于Windows Server 2012、需要以下修补程序：
+
+* http://support.microsoft.com/kb/2770917["KB2770917"]
+* http://support.microsoft.com/kb/2779768["KB2779768"]
+
+
+对于Windows Server 2008 R2、需要以下修补程序：
+
+* http://support.microsoft.com/kb/974909["974909"]
+* http://support.microsoft.com/kb/975354["KB95354"]
+* http://support.microsoft.com/kb/2637197["KB2637197"]
+
+
+对于Windows Server 2008 R2 SP1、需要以下修补程序：
+
+* http://support.microsoft.com/kb/2263829["KB2263829"]
+* http://support.microsoft.com/kb/2637197["KB2637197"]
+
+
+这些是最低修补程序级别。

@@ -1,0 +1,33 @@
+---
+permalink: task_installing_snapmanager_for_hyper_v.html 
+sidebar: sidebar 
+keywords: install, snapmanager, hyper-v, back, up, restore, data, snapdrive, windows 
+summary: 您可以安装SnapManager for Hyper-V、以便备份和还原数据。在安装SnapManager for Hyper-V之前、应先安装SnapDrive for Windows 
+---
+= 安装SnapManager for Hyper-V
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以安装SnapManager for Hyper-V、以便备份和还原数据。在安装SnapManager for Hyper-V之前、应先安装SnapDrive for Windows
+
+必须备份现有数据、并且必须准备好以下信息：
+
+* 许可证密钥
+* 登录凭据
+* 端口号(默认值：808；必须与SnapDrive for Windows安装端口号匹配)
++
+.. 双击SnapManager for Hyper-V可执行文件以启动SnapManager for Hyper-V安装程序。
+.. 选择安装位置并单击*下一步*。
+.. 完成SnapManager for Hyper-V安装向导中的步骤。
+.. 单击准备安装页面上的*安装*。
+.. 查看所选内容摘要、然后单击*完成*。
+
+
+
+
+* 相关信息 *
+
+xref:reference_hotfix_requirements_for_windows_server_environments.adoc[Windows Server环境的修补程序要求]

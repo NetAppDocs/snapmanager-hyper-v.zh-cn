@@ -1,0 +1,71 @@
+---
+permalink: reference_requirements_for_restoring_a_virtual_machine.html 
+sidebar: sidebar 
+keywords: restore, virtual, machine, backup, copy, requirement 
+summary: 要从备份副本还原虚拟机、必须先确定要如何还原备份副本。 
+---
+= 还原虚拟机的要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+要从备份副本还原虚拟机、必须先确定要如何还原备份副本。
+
+
+
+== VM备份副本名称
+
+您必须确定要还原的备份副本。
+
+所有备份副本都会在恢复管理窗口的备份窗格中按名称列出。
+
+
+
+== VM备份副本类型
+
+从应用程序一致的备份还原虚拟机可在VSS的协调下完成。Hyper-V VSS写入程序会在还原之前删除虚拟机、并在还原操作完成后将虚拟机注册到Hyper-V Manager。
+
+从崩溃状态一致的备份还原虚拟机不涉及VSS。在执行还原操作之前、虚拟机已关闭。从崩溃状态一致的备份还原时、虚拟机必须存在；从崩溃状态一致的备份还原已删除的虚拟机失败。
+
+
+
+== VM备份副本状态
+
+您必须确定虚拟机是否仍存在。
+
+如果虚拟机不再存在、则在创建虚拟机的LUN仍然存在时、您仍可以还原它。LUN的驱动器号和Windows卷GUID必须与备份时相同。
+
+如果删除Windows Server 2008 R2中的虚拟机、则可以从应用程序一致的备份还原该虚拟机、但在Windows Server 2012和Windows Server 2012 R2中、可以从崩溃和应用程序一致的备份还原已删除的虚拟机。
+
+如果在删除虚拟机之前已将其从所有数据集中删除、您仍可以通过选择未受保护的资源并选择其所属的备份来还原它。
+
+
+
+== VM备份副本配置状态
+
+您必须确定虚拟机配置是否与备份时相同。
+
+如果当前虚拟机配置与备份时的配置不同、则SnapManager for Hyper-V会通知您虚拟机布局已更改、并询问您是否要还原备份中存在的虚拟机配置和数据。
+
+
+NOTE: 由于SnapManager for Hyper-V不会备份虚拟机的集群配置、因此无法还原集群配置。如果虚拟机和集群配置丢失、您可以从SnapManager for Hyper-V还原虚拟机、但必须手动使其具有高可用性。
+
+如果虚拟机的配置与备份中虚拟机的当前配置不同、则可能需要更新集群配置以反映任何新添加或删除的虚拟硬盘(VHD)。
+
+
+
+== Snapshot副本状态
+
+在尝试执行还原操作之前、您可以验证备份Snapshot副本是否位于存储系统上。
+
+
+
+== VM重新启动
+
+您可以选择在虚拟机还原后启动它。
+
+* 相关信息 *
+
+http://technet.microsoft.com/library/ff182338(v=WS.10).aspx["Microsoft TechNet：Windows Server 2008 R2中的故障转移集群"]

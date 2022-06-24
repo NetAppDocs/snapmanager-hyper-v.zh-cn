@@ -1,0 +1,14 @@
+---
+permalink: concept_performing_disaster_recovery.html 
+sidebar: sidebar 
+keywords: disaster, recovery, feature, ensure, disaster, circumstance, critical, protect, data, primary, storage, powershell, perform 
+summary: 灾难恢复功能可确保在发生灾难或其他情况导致主存储站点上的关键受保护数据不可用时、您可以通过二级存储站点访问该数据的备份副本。灾难恢复只能使用PowerShell界面执行。 
+---
+= 执行灾难恢复
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+灾难恢复功能可确保在发生灾难或其他情况导致主存储站点上的关键受保护数据不可用时、您可以通过二级存储站点访问该数据的备份副本。灾难恢复只能使用PowerShell界面执行。

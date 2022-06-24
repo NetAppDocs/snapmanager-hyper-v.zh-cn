@@ -1,0 +1,29 @@
+---
+permalink: reference_error_snapdrive_sddiscoveryfilesystemlistinfo_response_is_null.html 
+sidebar: sidebar 
+keywords: snapdrive, sddiscoveryfilesystemlistinfo, response, null, back, up 
+summary: 备份时、SnapDrive SDDiscoveryFileSystemListInfo响应为空 
+---
+= 备份时、SnapDrive SDDiscoveryFileSystemListInfo响应为空
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+备份时收到错误SnapDrive SDDiscoveryFileSystemListInfo响应为空。
+
+* * 发生原因 *
++
+如果要备份到的SnapInfo位置不可用、则会显示此消息。
+
+* * 更正操作 *
++
+验证SnapInfo位置是否存在且可用。如果已更改、请重新运行配置管理器以指定新位置。再次尝试备份。
+
+
+
+* 相关信息 *
+
+xref:task_setting_up_a_snapinfo_lun.adoc[设置SnapInfo LUN]

@@ -1,0 +1,165 @@
+---
+permalink: reference_command_line_switch_descriptions.html 
+sidebar: sidebar 
+keywords: command, line, switch, perform, silent, installation, enable, script, snapmanager, hyper-v 
+summary: 您可以使用命令行开关执行静默安装、以便使用安装脚本安装SnapManager for Hyper-V 
+---
+= 列出用于静默安装的命令行开关的问题描述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用命令行开关执行静默安装、以便使用安装脚本安装SnapManager for Hyper-V
+
+下表列出了一些值、并介绍了每个可用的命令行安装交换机。
+
+|===
+| 交换机 | 价值 | Description 
+
+
+ a| 
+silent_mode=
+ a| 
+1.
+ a| 
+使SnapManager for Hyper-V能够正确执行无人参与的安装功能。首次安装、升级和完全卸载时需要使用此交换机。
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+ a| 
+指定要使用的重新安装模式。
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+五
+ a| 
+指示安装是从源软件包运行的、并且本地软件包已缓存。首次安装SnapManager for Hyper-V时、请勿使用此选项重新安装所有文件、而不管其版本、日期或校验和值如何。
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+答
+ a| 
+如果存在旧版本或缺少文件、则重新安装SnapManager for Hyper-V文件。
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+O
+ a| 
+指示应重新写入HKEY_LOCAL_MACHINE和HKEY_LOCAL_MACHINE和HKEY_LOCAL_MACHINE中所有SnapManager for Hyper-V所需的注册表条目。
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+M
+ a| 
+指示应重新写入HKEY_LOCAL_MACHINE和HKEY_LOCAL_MACHINE中所有SnapManager for Hyper-V所需的注册表条目。
+
+
+
+ a| 
+REINSTALLMODE=
+ a| 
+u
+ a| 
+重新安装所有快捷方式并重新断开所有图标、从而覆盖所有现有快捷方式和图标。
+
+
+
+ a| 
+reinstall=
+ a| 
+全部
+ a| 
+重新安装适用于Hyper-V的所有SnapManager 功能。
+
+
+
+ a| 
+/Li
+ a| 
+filename
+ a| 
+指定应生成SnapDrive 安装日志。
+
+
+
+ a| 
+smHV_license=
+ a| 
+license
+ a| 
+指定适用于Hyper-V的适当且有效的SnapManager 许可证。
+
+
+
+ a| 
+INSTALLDIR=
+ a| 
+目标安装目录
+ a| 
+指定安装SnapManager for Hyper-V的目标安装目录。只有在首次安装适用于Hyper-V的SnapManager 时、才需要此交换机。
+
+
+
+ a| 
+SVCUSERNAME=
+ a| 
+域\用户名
+ a| 
+指定SnapManager for Hyper-V在无人参与安装期间使用的域和用户名。
+
+
+
+ a| 
+SMHVSRV_password=
+ a| 
+password
+ a| 
+指定SMHVSRV_password用户的密码。
+
+
+
+ a| 
+SMHVSRV_CONFIRMUSERPASSWORM=
+ a| 
+password
+ a| 
+确认SMHVSRV_CONFIRMUSERPASSWORM用户的密码。
+
+
+
+ a| 
+SMHV_WEBSRV_tcp_port
+ a| 
+端口号
+ a| 
+指定SnapManager for Hyper-V Web服务将使用哪些端口来访问net.tcp。默认端口为808。
+
+|===
+以下语法显示了全新安装：
+
+`setup.exe /s /v"/qn silent_mode=1 /L* v SMHVInstall.log SVCUSERNAME=Domain\User Name SMHVSRV_password=password SMHVSRV_CONFIRMUSERPASSWORD=password"`
+
+以下语法显示了升级：
+
+`setup.exe /s /v"/qn REINSTALLMODE=vamus reinstall=all silent_mode=1 /L* v SMHVUpgrade.log SVCUSERNAME=Domain\User Name SMHVSRV_password=password SMHVSRV_CONFIRMUSPASSWORD=password"`
+
+以下语法显示了卸载：
+
+`setup.exe /s /x /v"/qn silent_mode=1 /L* v SMHVuninstall.log`

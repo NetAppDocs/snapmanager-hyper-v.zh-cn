@@ -1,0 +1,31 @@
+---
+permalink: reference_vss_returns_errors_against_microsoft_iscsi_target_vss_hardware_provider_during_nas_backup.html 
+sidebar: sidebar 
+keywords: vss, return, error, micorsoft, iscsi, target, hardware, provider, nas, backup 
+summary: 在NAS备份期间、VSS针对Microsoft iSCSI Target VSS硬件提供程序返回错误。 
+---
+= 在NAS备份期间、VSS针对Microsoft iSCSI Target VSS硬件提供程序返回错误
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+执行NAS备份时、可能会发生以下错误：
+
++
+VSS请求程序—备份组件失败。无法将卷[示例]添加到快照集。卷影复制提供程序在尝试处理指定操作时出现意外错误。
+
++
+Volume Shadow Copy Service error：Error creating the Shadow Copy Provider COM class with CLSID [example]。访问被拒绝。
+
+* * 发生原因 *
++
+这些错误会在NAS应用程序一致的备份期间发生。NAS备份不会失败、但VSS会记录一些与Microsoft iSCSI目标VSS硬件提供程序相关的错误。
+
+* * 更正操作 *
++
+备份未失败；您可以安全地忽略这些错误。
+
+

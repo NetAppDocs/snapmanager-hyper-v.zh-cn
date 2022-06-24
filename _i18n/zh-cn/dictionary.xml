@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="9bfd8a32b889847e7544ae67a481cb0d" category="summary">在安装SnapManager for Hyper-V之前、您的环境必须满足所有硬件、软件、ONTAP 和许可要求</block>
+  <block id="6d8dab0fd3c9ea56cfe745d20a01bd40" category="doc">安装SnapManager for Hyper-V的要求列表</block>
+  <block id="c943b0e1512420f89b9edf55a097a695" category="paragraph">在安装SnapManager for Hyper-V之前、您的环境必须满足所有硬件、软件、ONTAP 和许可要求如果不满足最低Windows操作系统和.Net 4.5的要求、安装程序将停止。</block>
+  <block id="5d722e584e1a97a5679db4ed5cb92204" category="section-title">Hyper-V父主机要求</block>
+  <block id="897063780c01dc20396e5da6c0282f4e" category="paragraph">Hyper-V父主机必须运行Windows Server 2008 R2或更高版本。您必须在父主机上启用Hyper-V角色。Hyper-V父主机上必须安装SnapDrive 7.1 for Windows或更高版本。</block>
+  <block id="7ec05202285461e981b02b5dcbc7656b" category="section-title">SnapManager for Hyper-V下载</block>
+  <block id="ce6b9a3666fd94fd87405be77506f061" category="paragraph">您必须已从NetApp支持站点下载适用于Hyper-V的SnapManager 软件。</block>
+  <block id="d03162b43387c334a9a83cf598f2fd61" category="section-title">存储系统要求</block>
+  <block id="be754fa0b9d0c138c623a151e60a595b" category="paragraph">存储系统必须运行相应版本的ONTAP 软件。您可以使用基于主机的许可或存储系统许可来安装SnapManager for Hyper-V</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="section-title">licenses</block>
+  <block id="70d0f7752ac42f36426dd9ceb4dc2f0f" category="paragraph">要运行适用于Hyper-V的SnapManager 、您必须具有相应的许可证</block>
+  <block id="2daf1cb573c2c61422faf64610cf9402" category="section-title">凭据</block>
+  <block id="8063a20349c31818a0c04557e1d87cfa" category="paragraph">要安装和运行适用于Hyper-V的SnapManager 、您必须具有相应的凭据</block>
+  <block id="0c5b330a73e771f120210c435e04f071" category="section-title">服务帐户和身份验证要求</block>
+  <block id="80e68172a10ff6564b15dbb37db24374" category="paragraph">您必须具有服务帐户、并且必须满足身份验证要求。您必须能够使用服务帐户登录到主机、并且该帐户必须具有管理权限。</block>
+  <block id="f39b6a9b25a6ed27972f8db96faa7a41" category="section-title">Web服务端口号</block>
+  <block id="fbceb177a4f4c3677a56c6edd3f42b34" category="paragraph">您必须具有可用的Web服务net.tcp端口号。默认端口号为808。在集群上安装SnapManager for Hyper-V时、必须确保所有节点使用相同的端口号。</block>
+  <block id="181a610b4d20942c5b822b18af229089" category="summary">您可以使用SnapManager for Hyper-V一次还原单个虚拟机(VM)、以便从备份副本恢复丢失或损坏的数据。</block>
+  <block id="b9ec9735f2fc80af25ba5efeb7b78413" category="doc">从备份副本还原虚拟机</block>
+  <block id="adb73ebea301b91a34c36f4c1e602e23" category="paragraph">您必须具有以下信息：</block>
+  <block id="ec8515af1b6337cfd04c9d14a72d8212" category="list-text">备份名称</block>
+  <block id="8b9a96e40ebcda35ce12190b41789b64" category="list-text">配置信息</block>
+  <block id="16a41b40c49bce3832efe8ede921db79" category="list-text">脚本信息</block>
+  <block id="fa110b4d619aaf7973eb98288cf66f1d" category="paragraph">还原到备用主机时、原始VM所在物理计算机上的CPU类型应与要还原VM的物理计算机兼容。或者、您也可以使用Hyper-V Manager指定允许将计算机还原到具有不同CPU类型的计算机。</block>
+  <block id="50596a99edaf07b5771150334053aca5" category="paragraph">存储实时迁移后、您无法从最新备份进行还原。</block>
+  <block id="0d4ce72f93bf0413766597f883589015" category="paragraph">如果您启动Hyper-V虚拟机的还原操作、并且正在对同一虚拟机进行另一次备份或还原、则此操作将失败。</block>
+  <block id="71d6438b419ce103a51afbfd672aae2b" category="list-text">在导航窗格中、单击*恢复*。</block>
+  <block id="12f2961bc27e7d9e3b1b7271af5b45bd" category="list-text">选择要还原的虚拟机。</block>
+  <block id="a6d2207079011f9756823f288b80e01a" category="list-text">在备份窗格中、选择要还原的备份副本的名称、然后单击*还原*。</block>
+  <block id="d515b8e04bcfab548d8f1baab6a431e6" category="paragraph">此时将显示还原向导。</block>
+  <block id="3159cd4bb0ddd7ee38e52445549eba6a" category="list-text">完成向导中的步骤以还原虚拟机备份副本。</block>
+  <block id="1966aa15da483387ba53e6ba8e5499ff" category="paragraph">关闭向导不会取消还原操作。SnapManager for Hyper-V会在开始还原操作之前验证虚拟机配置。如果虚拟机配置发生任何更改、则会显示一条警告、您可以选择继续或取消此操作。</block>
+  <block id="c7b1e280ade6237e8b59f4aef36828b1" category="paragraph">您可以在"作业管理"窗口中查看还原操作的状态、也可以通过在"报告管理"窗口中查看报告来检查操作结果。</block>
+  <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">* 相关信息 *</block>
+  <block id="ec9387de061fdcb3776eaeb56e48bb80" category="inline-xref-macro">故障恢复后从备份中还原</block>
+  <block id="6013efc1683d971230a863e5214ba856" category="paragraph"><block ref="6013efc1683d971230a863e5214ba856" category="inline-xref-macro-rx"></block></block>
+  <block id="3c5e1b6c5f4f2fdcbd144bc97871db3b" category="summary">在NAS备份期间、VSS针对Microsoft iSCSI Target VSS硬件提供程序返回错误。</block>
+  <block id="670234aa29b1d4558a6a023d6141e755" category="doc">在NAS备份期间、VSS针对Microsoft iSCSI Target VSS硬件提供程序返回错误</block>
+  <block id="9ff702207c5c34d0a659bd2093b21d08" category="list-text">* 问题描述 *</block>
+  <block id="abf74e69edb6ec9f21da76741d4507fa" category="paragraph">执行NAS备份时、可能会发生以下错误：</block>
+  <block id="3ce6a4932c3fbaf7cad27f10f4987aef" category="paragraph">VSS请求程序—备份组件失败。无法将卷[示例]添加到快照集。卷影复制提供程序在尝试处理指定操作时出现意外错误。</block>
+  <block id="54058ce4d3710059aa6cd67e7ed09b9a" category="paragraph">Volume Shadow Copy Service error：Error creating the Shadow Copy Provider COM class with CLSID [example]。访问被拒绝。</block>
+  <block id="3bef6104c92bf17bdfdf66c9a257bbfc" category="list-text">* 发生原因 *</block>
+  <block id="cc38ee1b14932166dacc83761bc5b8ba" category="paragraph">这些错误会在NAS应用程序一致的备份期间发生。NAS备份不会失败、但VSS会记录一些与Microsoft iSCSI目标VSS硬件提供程序相关的错误。</block>
+  <block id="9bcbf7a68cf7f81d5bf448a2e12ab26a" category="list-text">* 更正操作 *</block>
+  <block id="6a377d56f9974cf1af73e482fa03ad6d" category="paragraph">备份未失败；您可以安全地忽略这些错误。</block>
+  <block id="ff4b2bdd0c2f262230f1c5f3b038c78a" category="summary">必须先从非ONTAP主机导出虚拟机(VM\)、然后才能将其导入到ONTAP 主机。</block>
+  <block id="cc8203bf76d5372bf616cb5bdf8365ae" category="doc">从非ONTAP主机导出VM</block>
+  <block id="d83ef93fc96f4740e2fd1b5d36584bda" category="paragraph">必须先从非ONTAP主机导出虚拟机(VM)、然后才能将其导入到ONTAP 主机。</block>
+  <block id="b121d022fb2f3bb7e8451fbadc298777" category="paragraph">必须关闭要迁移的虚拟机的电源。</block>
+  <block id="93ce70605948b9f69c980a0ac9a50946" category="list-text">打开应用程序Server Manager。</block>
+  <block id="8d1e6d98e3839f6b2671eaf41c3ee5a2" category="list-text">在左窗格中、单击*角色*&gt;* Hyper-V *&gt;* Hyper-V Manager*。</block>
+  <block id="fe504689150e839fac7a749fb9f09892" category="list-text">选择要迁移的虚拟机当前所在的非ONTAP主机的名称。</block>
+  <block id="0b5ce316b9f199a9e5cb4bc986f76309" category="list-text">从虚拟机窗格中、右键单击要迁移的虚拟机的名称。</block>
+  <block id="fd69693d0742412c103070062d719603" category="list-text">单击*导出*。</block>
+  <block id="ba084e34315e08b7fbff1f32df7d07cc" category="image-alt">smhv导出服务器管理器中的VM</block>
+  <block id="6efb225c6a467f12571966e97fa50dc1" category="paragraph">此时将打开导出虚拟机窗口。</block>
+  <block id="f1faf4507c984826f3e72000d81e1ede" category="list-text">单击 * 浏览 * 。</block>
+  <block id="a903e3fe8a39ede0a3b25c9dba687732" category="paragraph">此时将打开一个窗口、其中显示了可用的硬盘驱动器。</block>
+  <block id="62b7ce616a5ff56a56d0e7c02e700925" category="list-text">单击虚拟机的ONTAP 主机目标。</block>
+  <block id="9991f8a2ce0aacbd556d6c0a273e288e" category="list-text">单击*选择文件夹*。</block>
+  <block id="298642c906879fec1830d1f7a785b17e" category="paragraph">虚拟机将导出到步骤7中选择的Data ONTAP 目标。</block>
+  <block id="f4e1484ecefdd106574b107ed3fa0434" category="paragraph">接下来、将虚拟机导入到您选择的Data ONTAP 主机。</block>
+  <block id="80811f0cfad7be4f8a8fe255a44dfe05" category="summary">您可以在SnapManager for Hyper-V中创建和监控按需备份或受管计划备份</block>
+  <block id="5425189468cabcf97238f146f46a82e4" category="doc">在SnapManager for Hyper-V中创建和管理备份作业</block>
+  <block id="5f7f6c59275d2508b722bb7d7c47440f" category="paragraph">您可以在SnapManager for Hyper-V中创建和监控按需备份或受管计划备份您还可以使用SnapManager for Hyper-V执行两种类型的备份作业：应用程序一致和崩溃一致。</block>
+  <block id="2f6395b7be292a20329791d34774e7ec" category="section-title">关于SnapManager for Hyper-V备份</block>
+  <block id="b5953a27b96d0c1bcf15c4ee0428dc16" category="paragraph">您可以创建按需备份作业并根据需要运行这些作业、也可以使用附加到数据集的策略创建计划的备份作业。按需备份作业可以包括保留和复制策略以及备份前后要运行的脚本。您可以创建、修改、查看和删除构成计划备份作业的策略。</block>
+  <block id="743f46f5672759d8ff0f2a51a71f8bf1" category="section-title">SnapManager for Hyper-V可以执行的备份作业类型</block>
+  <block id="77b111d8e22579078bd3a1b224232739" category="paragraph">您可以使用SnapManager for Hyper-V执行两种类型的备份作业：应用程序一致和崩溃一致。</block>
+  <block id="b1e1d702d45b2fe56a635c1d9a086595" category="section-title">应用程序一致的备份作业</block>
+  <block id="86a576351a2514a29670b00507fcb5ae" category="paragraph">应用程序一致的备份作业是全面、可靠且占用大量资源的。它们是在Microsoft卷影复制服务(VSS)的协调下执行的、以确保在创建Snapshot副本之前虚拟机上运行的每个应用程序都处于静默状态。此备份方法可确保应用程序数据一致性。您可以使用它来还原VM及其上运行的应用程序。但是、应用程序一致的备份作业非常耗时、并且可能非常复杂。</block>
+  <block id="aa61bce02174045e5bdaef86871fa67c" category="section-title">崩溃状态一致的备份作业</block>
+  <block id="8116b9761ac61a18ef89d32ee3338130" category="paragraph">崩溃状态一致的备份作业是指数据集中涉及的VM所使用的所有LUN的快速Snapshot副本。生成的备份副本与崩溃或突然关闭的虚拟机的数据捕获类似。崩溃状态一致的备份作业提供了一种快速捕获数据的方法、但要从崩溃状态一致的备份中还原、必须存在虚拟机。崩溃状态一致的备份作业不能替代应用程序一致的备份作业。</block>
+  <block id="1de394836ecef8224e4b8254952e84bb" category="section-title">SnapManager for Hyper-V备份要求和限制</block>
+  <block id="067eba14c9f4607fcf90781d9a4c1665" category="paragraph">您应了解SnapManager for Hyper-V备份的要求和限制：</block>
+  <block id="fc9931312928df647cf75c365b5cedea" category="list-text">如果要对MetroCluster 配置执行切换或切回操作、则不支持备份和还原操作。如果备份和还原操作以及切换或切回操作同时运行、则在Windows Server 2012 R2系统中、VM的.vhd文件格式可能会更改为.avhdx。此虚拟机不受此更改的影响。</block>
+  <block id="ed0d328b7fb80959810b4fc480776152" category="list-text">通过分布式应用程序一致的备份选项、在从备份节点创建的一个硬件Snapshot副本中、可以使配对集群节点上运行的多个VM保持一致。在Windows故障转移集群中的多个节点上运行CSV 2.0 Windows卷的所有VM均支持此选项。</block>
+  <block id="686eb5e51905e84129f4a85c8d8608c5" category="list-text">在7-模式下运行时、应用程序一致的备份作业使用VSS硬件提供程序创建两个Snapshot副本。Snapshot副本称为snapshot_name和snapshot_name_backup。创建这两个Snapshot副本是为了便于在VSS备份期间自动恢复。</block>
+  <block id="a0b47801edb2ca75ad47a72c52e11d7b" category="list-text">在集群模式环境中、应用程序一致的备份在自动恢复过程中只需要一个Snapshot副本。利用SIS克隆执行自动恢复、自动恢复完成后、第一个Snapshot副本(snapshot_name)将被删除。</block>
+  <block id="1e151112af779c428fe9c9cac2417357" category="list-text">虚拟机中的每个Windows卷必须至少具有300 MB的可用磁盘空间。其中包括与VHD对应的Windows卷、iSCSI LUN以及连接到VM的直通磁盘。</block>
+  <block id="392415fca3acb1157d91685eaf8290a1" category="list-text">崩溃状态一致的备份作业始终仅创建一个Snapshot副本。它不提供VSS集成。</block>
+  <block id="807b110a0e042fe8c27556d3d3ac10c2" category="list-text">多个崩溃状态一致的备份作业可以并行执行。崩溃状态一致的备份作业可以与应用程序一致的备份作业并行运行。</block>
+  <block id="929d94772a38d01d0346ef8be9fc617c" category="list-text">AllowSavedStateBackup不适用于崩溃状态一致的备份作业。</block>
+  <block id="9a31c7a9558ce86e67c18872ab08b215" category="summary">您可以使用适用于Hyper-V的SnapManager 添加、查看和删除Hyper-V父主机或集群</block>
+  <block id="de98141b0ad67e6316b7ab5e9dd2c37f" category="doc">配置主机</block>
+  <block id="1f06fec52f443cb0114558d4a03ac4f4" category="summary">您可以在SnapManager for Hyper-V中查看和删除备份、还原和配置报告这些报告包含有关数据集、虚拟机和主机的重要信息。您还可以使用多种不同格式导出报告。</block>
+  <block id="bfc713844931617994d610549182f8c4" category="doc">管理报告</block>
+  <block id="3843efe20892823d0077617cd08721f1" category="list-text">*备份报告*</block>
+  <block id="b02be203c89094674d38b9a3987ecc0d" category="paragraph">备份报告显示属于特定数据集的所有主机的所有备份信息。您可以查看数据集或虚拟机的备份报告。为虚拟机显示的报告使用虚拟机名称、而不是其GUID。</block>
+  <block id="bd9b838529db2595b0e1547f1c815a73" category="paragraph">显示备份报告时、您可以将其导出为多种不同的格式。</block>
+  <block id="9bb984b5c024d988b7e3e8ec3b7ccd37" category="list-text">*还原报告*</block>
+  <block id="ed18f9107c301780412fa2703cf175c4" category="paragraph">还原报告按虚拟机显示有关还原操作的所有信息。</block>
+  <block id="9b2c6523a445bb2f1588789fece50627" category="paragraph">显示还原报告时、您可以将其导出为多种不同格式。</block>
+  <block id="612ef4d91419f2ffde9ba70ba314e4ec" category="list-text">*配置报告*</block>
+  <block id="d8a0e0306aec7605dc1e445c36068a9d" category="paragraph">配置报告显示选定主机的通知设置、报告路径和SnapInfo路径。</block>
+  <block id="414009e6625ececab68d6d137e0ee333" category="paragraph">显示配置报告时、您可以将其导出为多种不同的格式。</block>
+  <block id="3d1e3ba4492b6cf4530a7b58ed4e3033" category="summary">成功导入虚拟机(VM)后、您可以从非ONTAP主机中删除该VM。</block>
+  <block id="de6d3cade9f2e76948843a171ace99d8" category="doc">从非ONTAP主机中删除先前导出的虚拟机</block>
+  <block id="af1dbf1b444caeefdf74dc523a82f849" category="paragraph">必须已成功导入此VM。</block>
+  <block id="32985b828adb5af0b314616c8d2cf3bc" category="list-text">选择最初托管VM的非ONTAP主机。</block>
+  <block id="486f2710a6e73fc6621e917d0d55037e" category="list-text">从虚拟机窗格中、右键单击先前导出的虚拟机的名称。</block>
+  <block id="874db297b2254479eeb702a2d7fa8dab" category="list-text">单击 * 删除 * 。</block>
+  <block id="5a9cb16bfaab21a3d02cda41e32a3842" category="paragraph">此时将打开一个窗口、要求您确认要删除此虚拟机。</block>
+  <block id="9d94ad975dd5a96bdbe907efd93940a5" category="paragraph">虚拟机将从其原始主机中删除。</block>
+  <block id="b6a443741a988a90f257684109af60d4" category="summary">您必须手动在Microsoft Windows Server操作系统环境中安装修补程序。</block>
+  <block id="fc798bdb49d3c2d605a7d8c0e960849f" category="doc">Windows Server环境的修补程序要求</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="7f5fa70f7f0de20b1035c6057b6b7faf" category="admonition">有关Windows Server 2016和Windows Server 2019的要求、请参见<block ref="9ac0821921acbcb7ffc8a04e39ee2613" category="inline-link-rx"></block></block>
+  <block id="b5751ec538393c23a1c85e5ec3501f50" category="paragraph">对于Windows Server 2012、需要以下修补程序：</block>
+  <block id="d28a0d13680c18c0dcb27b242726e800" category="inline-link">KB2770917</block>
+  <block id="18e5626edd40ef3fe1538cbeef23603d" category="list-text"><block ref="18e5626edd40ef3fe1538cbeef23603d" category="inline-link-rx"></block></block>
+  <block id="985c8622762c01cb2f7e269eeaf60576" category="inline-link">KB2779768</block>
+  <block id="dbbae3f0fbe198bc8431215f4b56b8c2" category="list-text"><block ref="dbbae3f0fbe198bc8431215f4b56b8c2" category="inline-link-rx"></block></block>
+  <block id="5326e05dfd3d1e0574d27a8c06918940" category="paragraph">对于Windows Server 2008 R2、需要以下修补程序：</block>
+  <block id="822cede87b8018748d5147db6ff9320a" category="inline-link">974909</block>
+  <block id="c50877258eedb8b82c375daf1d407fe6" category="list-text"><block ref="c50877258eedb8b82c375daf1d407fe6" category="inline-link-rx"></block></block>
+  <block id="90b7cafa5e177790b498421563f2b9c8" category="inline-link">KB95354</block>
+  <block id="05851b952c69a06740862d73fa159681" category="list-text"><block ref="05851b952c69a06740862d73fa159681" category="inline-link-rx"></block></block>
+  <block id="bcdfc22b39056fcbba39e3e75098e3c7" category="inline-link">KB2637197</block>
+  <block id="7e0092151e83f3a9eae69921b72f534d" category="list-text"><block ref="7e0092151e83f3a9eae69921b72f534d" category="inline-link-rx"></block></block>
+  <block id="99fa3d9c10817df24809b9c564d97b43" category="paragraph">对于Windows Server 2008 R2 SP1、需要以下修补程序：</block>
+  <block id="7cc18a2a00146ce0cd8282666ef707cf" category="inline-link">KB2263829</block>
+  <block id="014c976ce6a6b61ef9825f767517099e" category="list-text"><block ref="014c976ce6a6b61ef9825f767517099e" category="inline-link-rx"></block></block>
+  <block id="9d9c405131f63960e2964c6c3180074e" category="paragraph">这些是最低修补程序级别。</block>
+  <block id="5fbcbeac1c9323edbfaa4d42e8498112" category="summary">安装SnapManager for Hyper-V后、您可以通过添加策略来保护和还原数据来配置和管理主机和虚拟机。</block>
+  <block id="3c982a72c20a469b8dccc548d71219d4" category="doc">为Hyper-V配置SnapManager</block>
+  <block id="195506677cdc504f967b8ebba196fef1" category="summary">SnapManager for Hyper-V在主机或存储系统上未获得许可。</block>
+  <block id="33876ac921b2bc632aaef6a42256b23d" category="doc">SnapManager for Hyper-V在主机或存储系统上未获得许可</block>
+  <block id="2dd9a9fa1ac0d7911deb623eb2417bf4" category="list-text">* 消息 *</block>
+  <block id="2d20eb8c65308e47a2b08e27aba5c8e3" category="paragraph">SnapManager for Hyper-V未在主机或存储系统上获得许可、备份将中止</block>
+  <block id="f14c276c07197ebef1394a5a219087a1" category="list-text">* 问题描述 *</block>
+  <block id="59e79108618fff704166fe7ce5803dd7" category="paragraph">如果您的系统未获得许可、或者枚举、虚拟机缓存或主启动记录(MBR)磁盘使用出现问题、则会显示此消息。</block>
+  <block id="40383a03fe003a75842d350885aab9aa" category="list-text">确保您的系统已获得许可。</block>
+  <block id="a49dbab3319247004e60533531fcbd19" category="list-text">将SnapManager for Hyper-V不支持的任何MBR磁盘迁移到GUID分区表(GPT)磁盘。</block>
+  <block id="e4e2c69c7412318a9a9284557e14419f" category="list-text">重新启动适用于Hyper-V的SnapManager如果此操作无法解决问题描述 、则您很可能遇到枚举问题、应联系技术支持。</block>
+  <block id="38a569a8b695810bedfc219326f7c957" category="summary">执行集群操作系统滚动升级后、您必须更新所有节点上的数据集和SnapInfo。</block>
+  <block id="749f93cdad32206d42f7b7eb9e6d064b" category="doc">在所有节点上更新数据集和SnapInfo</block>
+  <block id="8422363b530efa373f87e696b2f3bef3" category="admonition">支持从Windows Server 2016到Windows Server 2019的集群滚动升级；混合模式操作系统不支持共享磁盘备份。</block>
+  <block id="ce544eb22035e6c0d3d0ec2c7e390f58" category="list-text">编辑Windows 2012 R2节点上的所有数据集。</block>
+  <block id="5bc780c2a398c9061cab5e0436fbeb95" category="list-text">验证所有可用数据集是否均显示在Windows 2016节点上。</block>
+  <block id="a511914199a96e0d1ed1fbc3859f85fd" category="list-text">在Windows 2012 R2节点上设置SnapInfo路径。</block>
+  <block id="bd57c56b4b1557c4bb21f8806d726880" category="list-text">验证Windows 2016节点上显示的SnapInfo路径是否正确。</block>
+  <block id="aaad8541861f53cba82fd2c8926d87f4" category="summary">在安装SnapManager for Hyper-V之前、您必须从NetApp支持站点下载软件包。</block>
+  <block id="f5c6fbf2b0b52b4277040990046cd128" category="doc">正在下载适用于Hyper-V的SnapManager</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp 支持站点</block>
+  <block id="15065f0cec37f47f6fb478d2c9e38d16" category="paragraph">在安装SnapManager for Hyper-V之前、您必须从下载软件包 <block ref="ddde3f632635f1214fcf71477f4c4e6e" category="inline-link-macro-rx"></block>。</block>
+  <block id="99e5e607db77c21714ad56713649336a" category="paragraph">您必须具有 NetApp 支持站点的登录凭据。</block>
+  <block id="ef2f0d900bc744477aadbce9b212dc20" category="list-text">登录到 NetApp 支持站点。</block>
+  <block id="e558d54c61af5c40188d0d8d288bebd4" category="list-text">转到下载软件页面。</block>
+  <block id="96409ef47356e6f1ca404e4dbbd0d460" category="list-text">从下拉列表中、选择要安装SnapManager for Hyper-V的操作系统、然后单击*执行！*。</block>
+  <block id="1f7538967ef0ad283767576991eadfeb" category="list-text">对于要安装的软件版本、请单击*查看并下载*。</block>
+  <block id="6af81455b6e2cdd1ac9ad149922600be" category="list-text">在问题描述 页面上、单击*继续*。</block>
+  <block id="1cec04b1fe6e3bfdcaddfffedd400a12" category="list-text">查看并接受许可协议。</block>
+  <block id="075090d125619d0f714d37cba8f9b2c1" category="list-text">在Download页面上、单击安装文件的链接。</block>
+  <block id="7639edcd0f857dee5c37824943c0a04b" category="list-text">将SnapManager for Hyper-V文件保存到本地目录或网络目录。</block>
+  <block id="27992f0f5ff15a395474dac5a64524e2" category="list-text">单击*保存文件*。</block>
+  <block id="1590b7a8b0b7acb35abe40ef018e8451" category="list-text">验证校验和以确保软件下载正确。</block>
+  <block id="116057e59777a6912b053f16846276cb" category="summary">以下虚拟机的备份失败、因为无法联机备份、或者找不到要备份的虚拟机。</block>
+  <block id="1b9a0ddcc331d08d4f33c6463540d181" category="doc">以下虚拟机的备份失败、因为无法联机备份、或者找不到要备份的虚拟机</block>
+  <block id="3499864f6d7f2acfc5b060995b6720a4" category="paragraph">以下虚拟机的备份失败、因为无法联机备份或找不到要备份的虚拟机</block>
+  <block id="f94e13e741fbfd2853be90b741817480" category="paragraph">如果在未启用允许已保存状态的VM备份选项的情况下备份Windows 2008 R2 SP1 Hyper-V父系统中的Windows 2012 VM、则会出现此消息。</block>
+  <block id="5c7f36b1862101e85b1a1b08bf86801a" category="paragraph">对于Windows 2012备份、请在启用允许保存状态VM备份选项的情况下运行备份。</block>
+  <block id="78b156c09fb275854cd9790780867e65" category="summary">错误1935</block>
+  <block id="d4c99b76e5537b45dc567045ef457d62" category="doc">错误1935。安装组件组件期间出错</block>
+  <block id="ba6fe311c47aed667d14e39981d8bb8a" category="paragraph">错误1935。安装组件｛2A030FEB-29B5-314B-97B5-ED38673CC885｝期间发生错误。HRESULT：0x80070BC9。</block>
+  <block id="2f143f115d15603e6a80bcb544ababa5" category="paragraph">如果由于在安装或卸载Microsoft修补程序后Hyper-V系统未重新启动而导致SnapManager for Hyper-V安装程序失败、则会出现此消息。</block>
+  <block id="72f3c5d3524a276f01951f5ccce1b021" category="paragraph">重新启动计算机并再次运行SnapManager for Hyper-V安装程序。</block>
+  <block id="e04e5493bbdf3730d702cbaec9351bf3" category="summary">在安装SnapManager for Hyper-V之前、必须在所有主机上安装SnapDrive for Windows如果主机是集群的成员、则集群中的所有节点都需要安装SnapDrive for Windows。</block>
+  <block id="e9e04761b2e3fa887c771ddefa5c5e27" category="doc">SnapDrive for Windows和SnapManager for Hyper-V的安装顺序</block>
+  <block id="db047a0b521ee4cf896d8ec09df2654a" category="paragraph">当SnapManager for Hyper-V启动时、它会与SnapDrive for Windows进行通信、以获取主机上运行的所有虚拟机的列表。如果主机上未安装SnapDrive for Windows、则此API将失败、并且SnapManager for Hyper-V内部缓存不会使用虚拟机信息进行更新。</block>
+  <block id="bdd6036ee8da78481c757800c761826d" category="paragraph">您可能会收到以下消息：Error：SnapManager for Hyper-V is not licensed on the host or in the Storage System、backup is aborted：。</block>
+  <block id="ef15a4ad935b2f543c56737f52c1c4a7" category="summary">某些平台上无法安装所需的热修补程序KB2263829。</block>
+  <block id="d8289df174ac8376e457700b7ea3669c" category="doc">某些平台上无法安装所需的热修补程序KB2263829</block>
+  <block id="54a025a9ba847dcaa62c40b9b4fa5734" category="paragraph">安装SnapManager for Hyper-V时、尝试安装Windows Server 2008 R2 SP1的修补程序KB2263829可能会失败。安装程序指出此修补程序不适用于此服务器。</block>
+  <block id="427697515b04257202a3b4b5ced27901" category="paragraph">您的平台不支持此修补程序。</block>
+  <block id="0cd04650c65665d252b5bab48c43e335" category="paragraph">与Microsoft一起创建支持案例、并与Microsoft一起解决问题描述。</block>
+  <block id="f36427a62208ca85bd66f68cbde021ba" category="summary">备份时、SnapDrive SDDiscoveryFileSystemListInfo响应为空</block>
+  <block id="00d8b617d19c6e8fe50aa280d0dd3c2b" category="paragraph">备份时收到错误SnapDrive SDDiscoveryFileSystemListInfo响应为空。</block>
+  <block id="6f5d8bff5f9a9b51ec9f28ae04e4cd4c" category="paragraph">如果要备份到的SnapInfo位置不可用、则会显示此消息。</block>
+  <block id="b47b81a663a4385889567ca313b5ee4c" category="paragraph">验证SnapInfo位置是否存在且可用。如果已更改、请重新运行配置管理器以指定新位置。再次尝试备份。</block>
+  <block id="37b6c1d7a1911698f121cf35fc05635f" category="inline-xref-macro">设置SnapInfo LUN</block>
+  <block id="345616fad0a5efb9525cd15ead6ffe9e" category="paragraph"><block ref="345616fad0a5efb9525cd15ead6ffe9e" category="inline-xref-macro-rx"></block></block>
+  <block id="62433c1b4908b09a13b12e252aea86da" category="summary">您可以配置报告路径设置、以便存储SnapManager for Hyper-V操作的报告。必须先配置报告路径设置、然后才能向数据集添加虚拟机资源。</block>
+  <block id="2a408ba97edbb024d7f44a8d395af0d8" category="doc">报告路径设置</block>
+  <block id="1434cb8a3957b70ee9c78bd57a6604df" category="paragraph">如果在将Hyper-V父主机添加到适用于Hyper-V的SnapManager 时未配置报告设置、您可以稍后使用配置向导配置(甚至更改)这些设置。</block>
+  <block id="fd01b6e9cb06a08b5efd79c6ddbc99de" category="paragraph">如果为父主机集群配置报告路径设置、则必须在每个集群节点上手动创建报告目录。报告路径不应驻留在集群共享卷(CSV)或共享LUN上。</block>
+  <block id="89d96bd3d0dc88897d9d64bb8d7f3a1b" category="inline-link">Microsoft TechNet：在故障转移集群中使用集群共享卷</block>
+  <block id="23d97dc1e44781b784267d24c6612cf6" category="paragraph"><block ref="23d97dc1e44781b784267d24c6612cf6" category="inline-link-rx"></block></block>
+  <block id="4047d1480c3bf3bce47e92233f31eb75" category="summary">您必须在SnapManager for Hyper-V中添加SnapInfo LUN以存储数据集备份元数据。SnapInfo路径必须驻留在ONTAP LUN上、因为SnapManager for Hyper-V会在定期备份后对SnapInfo副本进行备份。</block>
+  <block id="ca0df1c246099b20635f5248e47d5158" category="paragraph">如果您运行的是Windows Server 2012集群、则SnapInfo路径可以位于集群共享卷(CSV)上。如果管理专用虚拟机、则SnapInfo位置必须位于专用ONTAP LUN上。如果管理共享虚拟机、则SnapInfo位置必须位于共享ONTAP LUN上。</block>
+  <block id="5dee2f155ee1c019097cbb50fd895737" category="list-text">使用适用于Windows的SnapDrive 创建新的共享磁盘。</block>
+  <block id="47c523e4160395991828dd7708819c66" category="list-text">如果提供了选择Microsoft集群服务组的选项、请选择*创建新集群组*选项</block>
+  <block id="e8696b5f1d764b584ec3b71702cc4812" category="list-text">将组命名为`smhv_snapinfo`并完成此过程。</block>
+  <block id="d0243888dfd577361004f24bc3d5aa25" category="list-text">打开Windows故障转移集群(WFC)并验证新组是否联机。</block>
+  <block id="c7ddc96fc71ae15138dae6f005172621" category="list-text">在集群中的每个节点上安装SnapManager for Hyper-V。</block>
+  <block id="8b15ab699a64964dc8016e4e9be49c2c" category="list-text">运行配置向导并将SnapInfo配置设置应用于集群中的所有节点。</block>
+  <block id="44479736f11e9fce68ee0cda1b9c2554" category="list-text">选择一个主机。</block>
+  <block id="66e15320eaa4b8d0027de27e817f001b" category="list-text">在导航窗格中、单击*保护*&gt;*主机*。</block>
+  <block id="101fb1f032906579fae5b6b3ae4ec822" category="list-text">从操作窗格中、运行配置向导。</block>
+  <block id="cbe4dad7c2b6e8efec7c982b5d8ddff3" category="list-text">将SnapInfo设置应用于新创建的LUN。</block>
+  <block id="99f60cd8e244cd40d9c2dc24aff6528d" category="paragraph">运行配置向导时、SnapInfo配置设置将复制到集群中的所有节点。</block>
+  <block id="1dfacf3a4a2dc4b1a044f60476b25d08" category="inline-xref-macro">错误：SnapDrive SDDiscoveryFileSystemListInfo响应为空</block>
+  <block id="2fec41eed06733ee453ea97dc28c5409" category="paragraph"><block ref="2fec41eed06733ee453ea97dc28c5409" category="inline-xref-macro-rx"></block></block>
+  <block id="e6c9d03a83d3c42bfefb7f9540a1aa80" category="summary">SnapManager for Hyper-V为您提供了一个解决方案 、用于为运行ONTAP 的存储系统上的Microsoft Hyper-V虚拟机(VM)提供数据保护和恢复。</block>
+  <block id="095c71dfe395f1dd95b26c1e823cfccd" category="doc">什么是适用于Hyper-V的SnapManager</block>
+  <block id="c72c944bad626d5a390b1257b6c64fae" category="paragraph">您可以根据备份管理员设置的数据集保护策略执行应用程序一致和崩溃一致的数据集备份。您也可以从这些备份还原VM。通过报告功能、您可以监控备份状态并获取有关备份和还原作业的详细信息。</block>
+  <block id="7820862667bfa910e751c06790cd735a" category="summary">您可以使用作业管理窗口的已计划选项卡查看特定数据集的已计划备份作业。您还可以使用作业管理窗口的运行选项卡查看当前正在运行的备份和还原作业。</block>
+  <block id="4ed8431411d5fef3b64d119526c3ffe2" category="doc">监控备份作业</block>
+  <block id="799cb6b22bc4ea869d10d055fc411c20" category="paragraph">您可以使用作业管理窗口计划选项卡查看特定数据集的计划备份作业。您还可以使用作业管理窗口运行选项卡查看当前正在运行的备份和还原作业。</block>
+  <block id="be89dad1c86129724507ac60f1ad2654" category="list-text">在导航窗格中、单击*作业*。</block>
+  <block id="c6d6ab0819681f4ca89d08a08a36c6a2" category="list-text">单击已计划选项卡或正在运行选项卡。</block>
+  <block id="be7b6b8818a371284fe07445983923da" category="list-text">选择要监控的已计划或正在运行的备份作业或还原作业。</block>
+  <block id="e02a3b064cf13fc8319be37f8e87c48c" category="paragraph">有关作业的信息将显示在详细信息窗格中。</block>
+  <block id="546135fcea6d9fbd992cd82adaa3ace0" category="list-text">如果要查看正在运行的作业的实时报告、请使用*报告视图*中的"正在运行的作业"报告。</block>
+  <block id="31d804fb6bd7923bde1fe3ccf923b2c5" category="admonition">您还可以使用Microsoft的SCOM控制台监控备份作业。有关详细信息、请参见Microsoft网站。</block>
+  <block id="bdf6ede069059d1339abd9feceab855d" category="summary">在主存储系统上备份VM后、您可以使用从主存储系统到二级存储系统建立的SnapMirror关系返回到原始配置。</block>
+  <block id="b36d71bc4a614643ff8848ccdeed0f00" category="doc">还原独立主机的原始配置</block>
+  <block id="6905363f2ff637dfe1824c0c135cf4ea" category="list-text">关闭在二级存储系统上运行的VM。</block>
+  <block id="22a8deae65a653eb66d09c8bd5c93646" category="list-text">删除在二级存储系统上运行的VM。</block>
+  <block id="ed79b11793c8f11f09c0f2d15546dfdc" category="list-text">使用SnapDrive 断开SnapInfo磁盘和包含VM的磁盘的连接。</block>
+  <block id="3e444e6d7a9c632d1317e7e4a62e4388" category="list-text">重新同步主存储系统与二级存储系统之间的SnapMirror关系。</block>
+  <block id="1d9947062d6e98a2105dd6ea828d692a" category="summary">从Hyper-V Manager中删除虚拟机后、备份失败。</block>
+  <block id="5ec728668c45e8f81f752d3a99f5fc70" category="doc">从Hyper-V Manager中删除虚拟机后、备份失败</block>
+  <block id="351c4bb4de2a7fa3d4d5aee0bcbfb656" category="paragraph">从Hyper-V Manager中删除Hyper-V虚拟机(VM)后、如果不更新与该虚拟机关联的数据集、备份操作将失败。</block>
+  <block id="94b5d7ad6b008a73cb35522d042dbd04" category="paragraph">从Hyper-V管理器中删除Hyper-V虚拟机并在不修改数据集的情况下尝试备份时、会发生此问题描述。此外、如果重新创建了VM、则必须修改数据集。SnapManager for Hyper-V会根据虚拟机ID (GUID)创建数据集。删除、删除或重新创建虚拟机后、备份将失败、从而创建新的GUID。虽然这不会触发整个备份过程的故障、但如果删除某个虚拟机、然后使用相同名称重新创建该虚拟机、则该虚拟机不会自动受到SnapManager for Hyper-V的保护</block>
+  <block id="982da8f4f7a8b617dfd506f15e3ea531" category="paragraph">从VM数据集列表中删除VM、然后将任何重新创建的VM添加到数据集。</block>
+  <block id="1c4e774476d6e9e35f8181fb870d437b" category="inline-xref-macro">配置数据集</block>
+  <block id="19225b7ee14c0729e84adc67933fa763" category="paragraph"><block ref="19225b7ee14c0729e84adc67933fa763" category="inline-xref-macro-rx"></block></block>
+  <block id="2b8bb77363e2ba918a8d55ad17103d3c" category="inline-xref-macro">修改数据集</block>
+  <block id="d5ee393555404ba1169add677cccdea7" category="paragraph"><block ref="d5ee393555404ba1169add677cccdea7" category="inline-xref-macro-rx"></block></block>
+  <block id="96e906863598881be256d4f66fe5c641" category="summary">指定的虚拟机不存在或无法联机备份</block>
+  <block id="d6dc8dbe67888f96e6c4ef8c9b23f2b4" category="paragraph">出现此消息的一个原因是、如果虚拟机上的直通磁盘大小小于300 MB、则应用程序一致的备份失败。您的错误日志将类似于以下示例：</block>
+  <block id="573c1a9a1891d01ab86fe011704619b0" category="paragraph">没有其他应用程序或系统错误消息可指示此故障。</block>
+  <block id="bb7c1bc48907ca3e4f78ca51d6cb1b2a" category="paragraph">您可以将直通磁盘的大小调整为大于300 MB、也可以在启用了允许保存状态VM备份选项的情况下运行备份。</block>
+  <block id="ce9d4a08dd94289de7bf285d9ec36538" category="admonition">此更正操作适用于SAN和NAS环境。</block>
+  <block id="33db5ea89996dba4c6cf5df66fa05f7f" category="paragraph">出现此消息的第二个原因是、Windows无法对此系统执行联机备份、因为Hyper-V VM的范围快照选项已启用。范围内的快照主要用于Windows关键更新。</block>
+  <block id="261b099cdac97297efd2b2e108ec8695" category="paragraph">您必须通过在中创建值为0的DWORD ScopeSnapshots参数来禁用范围快照选项：</block>
+  <block id="a0b1a7b293c6d3225d181ea291319ebf" category="paragraph">HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\WindowsNT\CurrentVersion\SystemRestore\</block>
+  <block id="6e33f9576af76aa1d9895211dfc03c84" category="summary">SnapManager for Hyper-V可与Microsoft Hyper-V卷影复制服务(VSS)写入程序集成、以便在为虚拟机创建应用程序一致的Snapshot副本之前暂停虚拟机(VM)。</block>
+  <block id="3fc4ca26d6624903b7c1896f0151b7bc" category="doc">SnapManager for Hyper-V如何使用VSS</block>
+  <block id="c928cc6a46d871561d1a99bf84fd2b56" category="paragraph">SnapManager for Hyper-V是VSS请求程序、可使用Data ONTAP 适用于SAN上运行的Hyper-V VM的VSS硬件提供程序和适用于SMB 3.0共享上运行的Hyper-V VM的远程VSS提供程序来协调备份操作、以创建一致的Snapshot副本。</block>
+  <block id="d8f1ba52a2fb60b761725669851909c6" category="paragraph">如果虚拟机中的虚拟硬盘(VHD)上运行了Microsoft Exchange、Microsoft SQL或任何其他VSS感知型应用程序、则SnapManager for Hyper-V可用于对虚拟机进行应用程序一致的备份。SnapManager for Hyper-V可与虚拟机中的应用程序写入程序进行协调、以确保在进行备份时应用程序数据保持一致。</block>
+  <block id="2334b1c6a70e9b217e27598a51229941" category="paragraph">您还可以从应用程序一致的备份还原VM。虚拟机中存在的应用程序将还原到备份时的相同状态。SnapManager for Hyper-V可将虚拟机还原到其原始位置。</block>
+  <block id="8e4c01549f579899f8ef80cf7b0edfec" category="admonition">VSS集成仅适用于应用程序一致的备份。崩溃状态一致的备份不使用VSS。</block>
+  <block id="618658254a548ad9f293de94cb0515c7" category="summary">SnapManager for Hyper-V不包含迁移向导、可帮助您将虚拟机(VM)从非ONTAP存储迁移到ONTAP 存储、以便将其与SnapManager for Hyper-V结合使用而是必须使用Server Manager手动导出和导入虚拟机。</block>
+  <block id="515e0d9cceee07e1b69a3ad974c9451d" category="doc">为SnapManager for Hyper-V操作迁移Hyper-V虚拟机</block>
+  <block id="f6845f349e886d648b65a1dc8778589c" category="summary">您可以添加Hyper-V父主机或主机集群来备份和还原虚拟机。</block>
+  <block id="1b0d508f3e49b91fa74189bf35f7c3d3" category="doc">添加Hyper-V父主机或主机集群</block>
+  <block id="0d3666cebabc77e7590a58bc267ed47d" category="list-text">在导航窗格中、单击*保护*。</block>
+  <block id="d882a70142a49ef1a13cbfa42d2bdae8" category="list-text">在操作窗格中、单击*添加主机*。</block>
+  <block id="414231897072d6d0f0d3fc0213b8924c" category="list-text">运行添加主机向导。</block>
+  <block id="bb5ba928513232a58b2bf0eadc1bdd6b" category="paragraph">将主机添加到集群时、有关新主机的信息不会自动显示在图形用户界面中。手动将主机信息添加到安装目录中的xml文件中。</block>
+  <block id="97530fe40e9f75dabd2b2120f27b812f" category="paragraph">必须在每个集群节点上安装SnapManager for Hyper-V。如果您未安装SnapManager for Hyper-V、系统将提示您运行远程主机安装向导。</block>
+  <block id="346b8a90c0a9cbe0b9b480432a61f0bf" category="summary">故障恢复后从备份中还原。</block>
+  <block id="d5aea7672ff6c50c0bf6637337f6ff66" category="paragraph">如果您执行故障转移和故障恢复、则可能无法在故障转移之前从同一主站点上创建的备份还原主站点上的VM。</block>
+  <block id="bdb6843d3cb4e489fd8137e5d6a3789b" category="paragraph">Snapshot副本验证使用卷GUID。GUID在灾难恢复后发生更改。</block>
+  <block id="50ffd216d2c153e1bd4523e537df92b0" category="list-text">*更正操作*</block>
+  <block id="b5fb2fa4979d9d115456123ae739908a" category="paragraph">您可以通过PowerShell或还原向导禁用验证快照选项：</block>
+  <block id="be6a68d587794c4e3ef0edd55eb2a248" category="list-text">取消选中还原向导*还原选项*页面中的"启用Snapshot验证"选项。</block>
+  <block id="98ad663ef86e393dc076e356ec682cab" category="list-text">使用PowerShell、确保指定-DisableVerifySnapshot参数。</block>
+  <block id="8f93ffc98ff1aa5b53c36e0b48f4b624" category="paragraph"><block ref="8f93ffc98ff1aa5b53c36e0b48f4b624" category="inline-xref-macro-rx"></block></block>
+  <block id="91eb3a157665ba3101f39439240029e4" category="summary">故障转移到二级存储系统后、SnapManager for Hyper-V将通过故障恢复到原始主存储系统来完成灾难恢复。</block>
+  <block id="2756e749caa0fb49a20fae8b02820313" category="doc">在灾难恢复故障恢复后重新配置存储系统</block>
+  <block id="9f18ba857214d13e434316a92491862a" category="paragraph">故障转移到二级存储系统后、SnapManager for Hyper-V将通过故障恢复到原始主存储系统来完成灾难恢复。在重新启用或更换主存储站点的存储系统后、故障恢复会将主存储功能还原到原始主存储站点。</block>
+  <block id="4d0b2c0caba9cdb12c8fe559c5f70754" category="list-text">根据主存储系统的状况、执行以下操作之一：</block>
+  <block id="ea758a7ca74b1868ab2e94c0888a85ef" category="cell">主存储系统</block>
+  <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">那么 ...</block>
+  <block id="52f3b9f4c13b3350850c24bc26c0cef8" category="paragraph">可恢复</block>
+  <block id="9b1f5f712954cb0c8e42a3d02051f301" category="paragraph">将数据从二级主机移回主存储系统。</block>
+  <block id="30e1dbbeba51424baca4534efcd6f744" category="paragraph">已完全销毁</block>
+  <block id="4559b57412d978d8aedaa78c1b755d6c" category="paragraph">配置新存储系统。</block>
+  <block id="b9c0f7263d9f4b74ca352eeeec1788f5" category="list-text">管理SnapMirror关系：</block>
+  <block id="23bcbeee430d4451cdd2b8442e1495ff" category="list-text">初始化从二级存储系统到主存储系统的SnapMirror关系以恢复数据。</block>
+  <block id="69eaaf7236570fe614a7249b56ae98eb" category="list-text">重新同步从二级存储系统到主存储系统的现有SnapMirror关系。</block>
+  <block id="d24b335b2900fcc4d4a507dbfb1372d9" category="list-text">在二级存储系统上使用SnapDrive 、为二级存储系统上的每个LUN或SMB共享启动SnapMirror更新。</block>
+  <block id="103c33edbc4c31e9da06cf321cf1ad2a" category="list-text">根据您的配置、执行以下操作之一：</block>
+  <block id="6c343fe7191b0b21f030da153bbfc23b" category="paragraph">独立主机(SAN)</block>
+  <block id="4f3f9daf16157a89452e2fb33242bb09" category="paragraph">连接到同一类型的主存储系统上的所有挂载点和LUN。</block>
+  <block id="279ecd0411f7b2239e889bb68565c313" category="paragraph">集群模式主机(SAN)</block>
+  <block id="256716dd432d5e5251239b4b79bd3c0e" category="paragraph">从集群组联机的节点、连接到集群中的所有挂载点和LUN。</block>
+  <block id="d215e9e1ded4e8681f61596f2d2793a7" category="paragraph">Data ONTAP 8.1.x配置了一个LUN、用于托管源FlexVol 卷(SAN)上的VM</block>
+  <block id="e1bcac0c7757d99a0c904af2b662da63" category="paragraph">要成功更新SnapMirror、您必须在源FlexVol 卷上创建一个更小的第二个LUN (10 MB到100 MB)、然后再启动备份作业。从集群组联机的节点、连接到集群中的所有挂载点和LUN。</block>
+  <block id="c4d0bcec99058a563641699c4862eb6f" category="paragraph">独立主机或集群主机(NAS)</block>
+  <block id="380b1ce18897e8b63553fbcce8999af1" category="paragraph">卸载数据保护(DP)卷、将DP卷挂载为可重写卷、验证此卷是否具有rwx权限、然后为不同卷创建CIFS共享。</block>
+  <block id="d18c9439f740d30f58fa37337a304801" category="list-text">根据您的环境重新配置SnapInfo：</block>
+  <block id="b6929e4968ce2ed48274a887d3709bf9" category="cell">如果您的配置 ...</block>
+  <block id="62a0282d39568be094470486eaf70c4f" category="paragraph">SAN</block>
+  <block id="accaa22437e5cea04eb223a535dac0fc" category="paragraph">从最后一个Snapshot副本还原SnapInfo LUN。</block>
+  <block id="c07ee5debf5f3a3fef16c1ee5e8e4942" category="paragraph">NAS</block>
+  <block id="f53763874d1457ea2ee8c5e65bfabc4e" category="paragraph">挂载SnapInfo目录。</block>
+  <block id="90de4e0ecbf1d2fa55cc2e5d55f1a151" category="paragraph">对于NAS、如果出现拒绝访问错误、或者无法浏览到公开的SMB共享位置、则可能需要重置共享上的ACL。</block>
+  <block id="6e1ab6d83c2d55dae5d355da64e1f4fb" category="list-text">在SnapManager for Hyper-V MMC中添加主主机或集群、并使用SnapInfo路径对其进行配置。</block>
+  <block id="9c49fc0b62a513703fa7951f104d1176" category="list-text">输入以下cmdlet：</block>
+  <block id="2c8078b6f9aeeaf3f09a6e309ca41d90" category="list-text">使用Get-VMsFromBackup cmdlet检索备份元数据中存在的VM列表。</block>
+  <block id="e7d0f94f0c4a0c0a09dd748d1e657c6d" category="list-text">使用Get-Backup cmdlet获取每个VM的备份副本、以获取每个VM的备份副本。</block>
+  <block id="c7c18dd465bc05a730bc9b5ff6fc0db6" category="list-text">要还原、请将Restore-Backup与VM GUID结合使用、并将备份副本与以下参数结合使用：</block>
+  <block id="133b2bd617dde70f06e63226fd43f991" category="cell">还原自...</block>
+  <block id="aad95273f4e1ccb563059e89127b7019" category="cell">输入此命令 ...</block>
+  <block id="e77ed35fef2422ab5f8dabdd102bb22e" category="paragraph">备用主机</block>
+  <block id="0a14af9930a6ef240d14232a286ff4e4" category="paragraph">Restore-Backup -Server Secondary_host_system_or_cluster_name -DisableVerifySnapshot -RestoreToAlternateHost</block>
+  <block id="7c219775f90068e2f59bca43ac97aa7f" category="paragraph">列出的备份副本</block>
+  <block id="a926027a6303fbe4beb9df2ade39e7f0" category="paragraph">Restore-Backup -Server -VirtualMachinePath -SnapShot FilePath @VHD</block>
+  <block id="28e33116b6a22ddc29a7cc9bc3d8bdfa" category="paragraph">对于@VHD、一个虚拟机可能具有多个VHD；您必须输入为每个VHD指定的源路径对和目标路径对。</block>
+  <block id="c44ac792f6318b4caca8ab6004b27c7c" category="list-text">如果辅主机系统是集群、请完成以下步骤：</block>
+  <block id="266390977a761c1a63d6ea1ffe21ba82" category="list-text">确保VM所在的LUN在拥有集群组的集群节点上处于联机状态。</block>
+  <block id="ec84a4212b9b0b3453d0aaf2408af16d" category="list-text">使用故障转移PowerShell cmdlet使VM具有高可用性。</block>
+  <block id="5b889c3cda07c72df504f46500e9d3ab" category="paragraph">对于NAS、在VM从一个集群节点公开为SMB共享后、配置为使用存储系统集群的所有主机都可以访问这些VM。</block>
+  <block id="9e84326e8ebd79d26eac2feba9d1788a" category="section-title">故障恢复示例</block>
+  <block id="e336fc280b9f4967e6a4aae8034e6155" category="paragraph">以下示例显示了一个双集群设置、其中smhv-cluster-01是主站点、而hv-19-cluster是二级站点：</block>
+  <block id="1c0b2b3f3a8e5866b0b3af648b3d2750" category="paragraph">以下示例显示了一个SAN还原操作、该操作会还原到一个备用路径、其中N：\是目标路径、I：\是源LUN路径：</block>
+  <block id="5ded6738b7d3767a7d3860c051770680" category="paragraph">以下示例显示了一个NAS还原操作、该操作将还原到备用路径、其中\\172.17.162.174\是源SMB共享路径、\\172.17.175.82\是目标SMB共享路径：</block>
+  <block id="cab828e5fe824c4d8d020edecb16ac87" category="inline-link">《Data ONTAP 8.2 7-模式数据保护联机备份和恢复指南》</block>
+  <block id="c18d0d6796474338de71386e6ee5160f" category="paragraph"><block ref="c18d0d6796474338de71386e6ee5160f" category="inline-link-rx"></block></block>
+  <block id="a0a59362e21ec3c80e71e3d02aa6a8b8" category="inline-link">SMB/CIFS 参考</block>
+  <block id="7768fb642347147278f012855e9b95f1" category="paragraph"><block ref="7768fb642347147278f012855e9b95f1" category="inline-link-rx"></block></block>
+  <block id="857864c9e0841bb5665f5e1c2d468333" category="summary">您可以向数据集添加保留、计划和复制策略以及脚本、以便保护数据。</block>
+  <block id="963979f14d8afd442b64acbb14977ac4" category="doc">正在添加策略</block>
+  <block id="089e99f0946277f67f391a816ed1f2b1" category="list-text">策略名称和说明</block>
+  <block id="52ccd4cdf171ac2228358ba547bf1d3a" category="list-text">保留信息</block>
+  <block id="ca1a21dab93efdbb79370e3b2b61c7ea" category="list-text">计划信息</block>
+  <block id="dfce3effc9eeb1bbd0c45a39f75e72c2" category="list-text">备份选项信息</block>
+  <block id="c778e64c846dd4cb3d237e56d6c2f07c" category="list-text">备份脚本信息</block>
+  <block id="a4c5d123ad41ec29536c7e3da07ceb8e" category="list-text">在导航窗格中、单击*保护*&gt;*数据集*。</block>
+  <block id="c34b2c89f78638601a9b28feb2a6f89a" category="list-text">选择要添加策略的数据集。</block>
+  <block id="4dfc62daf461f1d3989bdacd11e8b943" category="list-text">从操作窗格中、单击*添加策略*。</block>
+  <block id="83d1abf74bb79d006c4652f7176d9d13" category="paragraph">此时将显示创建策略向导。</block>
+  <block id="150041fc62ca2850bf50581976c08928" category="list-text">完成向导中的步骤、为数据集创建保护策略。</block>
+  <block id="bc62e14afadb6d3675a824c92feacbd6" category="summary">要运行SnapManager for Hyper-V、您必须在安装许可证期间选择基于主机的许可证或存储系统许可证。</block>
+  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="doc">许可证要求</block>
+  <block id="d3ebc6b65771da45bd1e393dac2ffc77" category="section-title">SnapManager 套件许可证</block>
+  <block id="2f35ac1b0a5cdae94237fb18ed27a693" category="paragraph">Windows主机系统上需要SnapManager 套件许可证。您可以选择基于主机的许可或存储系统许可。</block>
+  <block id="be663e43fbbbd588987bb44c0192f82b" category="section-title">按服务器许可证</block>
+  <block id="b20a1269302d3675bf122fb4356e322f" category="paragraph">这也称为基于主机的许可。如果选择基于主机的许可、则必须在安装期间提供SnapManager 套件许可证密钥、您可以稍后根据需要进行更改。您可以在安装后通过单击SnapManager for Hyper-V欢迎窗口中的*许可证设置*来更改许可证密钥。每个父主机都需要一个SnapManager 套件许可证。</block>
+  <block id="573abdf739bc16ae5833c5d14076dd5c" category="section-title">每个存储系统许可证</block>
+  <block id="1d7f9f2cb4ae223172db904691326dcd" category="paragraph">这也称为存储系统许可。如果选择存储系统许可、则必须将SnapManager 套件许可证添加到所有存储系统、才能运行SnapManager for Hyper-V操作。</block>
+  <block id="3b17063956c4c952dad8e287ec101d6f" category="section-title">按客户端系统许可证</block>
+  <block id="7b3e45ecd2ec97799e785c56b5bee0c8" category="paragraph">在安装管理控制台时、应使用此许可选项。</block>
+  <block id="67691fe1543bb4b0f6bd22784a467cfc" category="summary">您可以根据保护需求创建、修改、查看和删除数据集。</block>
+  <block id="854e17480073a7f9c44ad0bf2ae3b20b" category="summary">要手动备份数据集、您必须先为数据集命名并进行说明、选择备份类型和选项、然后设置保留策略。</block>
+  <block id="5af60a8f86833b3c24f3910e384ecdcc" category="doc">手动备份数据集的要求</block>
+  <block id="00e3bc5cca936cfe2f7a532e3431ce70" category="section-title">备份名称和问题描述</block>
+  <block id="d58429eac46a83cff222f5a814ee3f97" category="paragraph">您必须为备份分配一个名称和问题描述。</block>
+  <block id="7cbb4b04d4c3e5f4833593507bbb3eaf" category="paragraph">备份的默认命名约定为DatasetName_Timestamp。您可以更改备份名称中的所有内容、但时间戳除外、时间戳始终显示为备份名称的一部分。</block>
+  <block id="7ac371a0a57b60af2b0578fb07b34c1e" category="paragraph">备份名称和说明仅限于以下字符：</block>
+  <block id="85e3f5662f5d8393f464b6fbe9873e2b" category="list-text">a到z</block>
+  <block id="deff25dbe9011091c8682fd6f93f3a90" category="list-text">A到Z</block>
+  <block id="58c8d474025154d587eb8a3becc73b11" category="list-text">0到9</block>
+  <block id="ca5170dffdff86791bd333afa0818321" category="list-text">_(下划线)</block>
+  <block id="6816a980223bd400a4d7d7e1110de913" category="list-text">连字符</block>
+  <block id="3fa8be6addd8848ea558f9dbf62bc509" category="section-title">策略选择</block>
+  <block id="ce56b535f1d19e7ca636cef262c4137b" category="paragraph">您必须确定要用于按需备份的策略。</block>
+  <block id="03e7cacff10e2e2fa9503bc3712a028f" category="paragraph">您可以在备份向导中选择特定策略。您可以覆盖保留或复制策略以及与此策略关联的脚本、而无需更改此策略本身。</block>
+  <block id="b3aabbded8211defce55f1bd8e9bfba8" category="paragraph">您还可以选择无、这样您无需创建任何策略即可按需进行备份。此选项将使用保留策略、复制策略和脚本的默认值。</block>
+  <block id="099c99cfc3001f7909f2d8d330a5b4ba" category="section-title">保留值</block>
+  <block id="2d372a1baef2785504e6b047dff465f7" category="paragraph">您可以选择覆盖选定策略中指定的保留策略。如果执行此操作、则必须先确定要保留每小时、每天、每周、每月或无限制备份副本的最短时间、然后再将其删除。</block>
+  <block id="aa70ad86bef93d3cfb4a27fa47521e30" category="paragraph">您可以根据备份时间或指定数量来保留备份。例如、您可以保留10个最新备份、也可以删除15天之前的备份。</block>
+  <block id="d9f0173ed577dd9b2d9a1d9ca85e330c" category="section-title">备份类型</block>
+  <block id="2b2cbec8203aefb9b0989459586754a3" category="paragraph">您可以执行应用程序一致或崩溃一致的备份。</block>
+  <block id="30c210e0173f2ff607cc84dc01ffc1f0" category="section-title">备份选项</block>
+  <block id="05baf42e4b79b1711411c01fec58f8f7" category="paragraph">您可以允许保存状态备份。</block>
+  <block id="65f97906e6328cfb3f1495716700a4a5" category="paragraph">SnapManager for Hyper-V的默认行为是、如果一个或多个虚拟机无法联机备份、备份将失败。如果虚拟机处于已保存状态或已关闭、则无法执行联机备份。在某些情况下、虚拟机处于已保存状态或已关闭以进行维护、但备份仍必须继续、即使无法进行联机备份也是如此。为此、您可以将处于已保存状态的虚拟机移动或关闭到其他数据集、其中一个数据集的策略允许进行已保存状态备份。</block>
+  <block id="a4d7ee1a85b8d50766da39bca77ded30" category="paragraph">您也可以通过选中允许已保存状态的VM备份复选框来修改现有策略。这样、SnapManager for Hyper-V便可在已保存状态下备份虚拟机。如果选择此选项、则在Hyper-V VSS写入程序以已保存状态备份虚拟机或对虚拟机执行脱机备份时、适用于Hyper-V的SnapManager 不会使备份失败。执行已保存状态或脱机备份可能会导致发生原因 停机。</block>
+  <block id="d40be83026c6456f464275814f7029db" category="paragraph">通过分布式应用程序一致的备份功能、在从备份节点创建的一个硬件Snapshot副本中、可以使配对集群节点上运行的多个VM保持一致。在Windows故障转移集群中的多个节点上运行CSV 2.0 Windows卷的所有VM均支持此功能。</block>
+  <block id="92f511b9eb4bb4295082fbe39d70e007" category="section-title">SnapMirror备份中的二级存储</block>
+  <block id="edb68b35126b90d94565aba284e497f3" category="paragraph">通过这些选项、您可以接受适用于SnapMirror关系中定义的二级存储的选项。您可以选择*备份后更新Snapmirror*。在存储标签选项窗格下、您可以选择*备份后更新SnapVault *。如果选择*备份后更新SnapVault *、则必须从下拉菜单中选择存储标签或输入自定义标签。</block>
+  <block id="bc4ed710ca65416d05c8ac48d8a677ad" category="section-title">备份脚本</block>
+  <block id="71b9d00eedc881643233fd1a13f8ffbd" category="paragraph">您可以覆盖选定策略中指定的脚本选项。</block>
+  <block id="63d0e153d3a329eb9a4d7fe711618579" category="paragraph">除非您在脚本中指定了特定主机、否则这些脚本将在所有数据集成员主机上运行。</block>
+  <block id="3fb2d7deed7a56ffb590575548a5a1db" category="inline-link">Microsoft TechNet：Hyper-V</block>
+  <block id="a9736cb44394cf7f4c33dc1e9789dd1d" category="paragraph"><block ref="a9736cb44394cf7f4c33dc1e9789dd1d" category="inline-link-rx"></block></block>
+  <block id="04da4a36dc8631592fed38ad742813b1" category="inline-link">《使用 SnapVault 备份 ONTAP 9 卷快速指南》</block>
+  <block id="f83ca4a2b0b656560769c0ea618a9675" category="paragraph"><block ref="f83ca4a2b0b656560769c0ea618a9675" category="inline-link-rx"></block></block>
+  <block id="b14b7c56846be90893ffb5cb1391cd34" category="summary">数据集不会自动复制到Windows故障转移集群中的新节点。</block>
+  <block id="961ac221e81a771d5cdcc72399350995" category="doc">数据集不会自动复制到Windows故障转移集群中的新节点</block>
+  <block id="b6b5c0b074a3420f9148b4a52b40a14f" category="paragraph">向Windows故障转移集群添加新节点后、数据集不会自动传输到新节点。</block>
+  <block id="6526d728800b72f66aee2d2eb2831ba8" category="paragraph">在向Windows故障转移集群添加新节点时、SnapManager for Hyper-V不会自动将现有数据集复制到集群中的新节点。</block>
+  <block id="757c846baf71761f3cda1fac61cb7804" category="paragraph">运行修改数据集向导、然后在"基本详细信息"页面上单击*更新所有数据集成员节点的计划策略*。</block>
+  <block id="1061247acb05ca020e1156e308573e87" category="paragraph">必须为每个包含虚拟机的数据集运行此向导。</block>
+  <block id="a3100bf3334206028c894a5568ddcf09" category="summary">介绍新增功能，升级说明，已修复的问题，已知限制和已知问题。</block>
+  <block id="e82ed7d0fe395ab8617386f9b6bc3fdd" category="doc">《SnapManager 2.1.4 for Hyper-V发行说明》</block>
+  <block id="50b158528d4ca57587b5d68d878bf767" category="paragraph">。 <block ref="bc76e11df837d05db8b5f12a7909292f" category="inline-link-macro-rx"></block> 描述新功能，升级说明，已修复的问题，已知限制和已知问题。</block>
+  <block id="dbd469acdcbd52648cb242bcfda6add3" category="paragraph">您需要登录到 NetApp 支持站点才能访问发行说明。</block>
+  <block id="8bd0c4b2e4019d7421496ea9febc69d8" category="summary">介绍如何安装、配置和操作适用于Hyper-V的SnapManager 软件。</block>
+  <block id="091af7b23f310c94c6c082a427b321c4" category="doc">《安装和管理指南》</block>
+  <block id="31b5ce19fb2f7d7064d9d1b248313ee3" category="paragraph">本指南介绍如何安装、配置和操作适用于Hyper-V的SnapManager 2.1.4软件。</block>
+  <block id="2679aa040e48e5b5b4518fba7adb6852" category="summary">SnapManager for Hyper-V可使用数据集和策略对虚拟机进行分组、然后将规则应用于这些组以控制其行为。</block>
+  <block id="14ecf602c9be3e8bdbbadaf9997b7d31" category="doc">数据管理概念</block>
+  <block id="58b883c0ea08b0acb505c5d4c026ea0f" category="paragraph">SnapManager for Hyper-V可使用数据集和策略对虚拟机进行分组、然后将规则应用于这些组以控制其行为。在使用SnapManager for Hyper-V计划备份并指定备份保留策略的情况下、此信息非常有用。</block>
+  <block id="56b5c63c9100767f0aadf367bb078b02" category="list-text">*数据集*</block>
+  <block id="8794e19266d669cfdfa406148cd60756" category="paragraph">数据集是一组虚拟机(VM)、可用于使用保留、计划和复制策略保护数据。您可以使用数据集对具有相同保护要求的虚拟机进行分组。一个VM可以是多个数据集的一部分。</block>
+  <block id="f38052a5ab09ec66d507983761353c29" category="list-text">* Hyper-V父主机*</block>
+  <block id="0dab573323092ace51a6943553527f73" category="paragraph">Hyper-V父主机是启用了Hyper-V角色的物理服务器。包含虚拟机的主机将添加到SnapManager for Hyper-V中以进行保护和恢复。必须在每个Hyper-V父主机上安装并运行SnapManager for Hyper-V。</block>
+  <block id="a29fa5416ddd4d214af7fb92dbfa5ce6" category="list-text">*未受保护的资源*</block>
+  <block id="9fa0ab140b3c3a5104a8ee6dd0263161" category="paragraph">未受保护的资源是指不属于任何数据集的虚拟机。您可以通过将这些资源添加到数据集来保护这些资源。</block>
+  <block id="35acce734a6f9b6ff298df226a181050" category="list-text">*虚拟机*</block>
+  <block id="3b1bc0aa1babd01f15814fb1e544ff6a" category="paragraph">在Hyper-V父主机上运行的虚拟机表示物理机、具有自己的操作系统、应用程序和硬件。</block>
+  <block id="18721329fe471d8632030da31ae5819e" category="paragraph">SnapManager for Hyper-V会跟踪虚拟机的全局唯一标识符(GUID)、而不是虚拟机名称。如果删除了受SnapManager for Hyper-V保护的虚拟机、然后创建了一个同名的其他虚拟机、则新虚拟机将不受保护、因为它具有不同的GUID。</block>
+  <block id="4f0736bd5c813db580e42dc56c4b509d" category="list-text">*管理控制台*</block>
+  <block id="3fac341cfb30c99df4fa149330b6edea" category="paragraph">管理控制台是指安装了SnapManager for Hyper-V并作为客户端运行的计算机。您可以使用管理控制台在远程Hyper-V父主机上远程管理SnapManager for Hyper-V操作。</block>
+  <block id="57bc5f868b2a34d67d2b51cd651905f1" category="list-text">*计划策略*</block>
+  <block id="b1743b5ded88d798fb37d7879685b3d3" category="paragraph">计划策略会为特定时间分配备份作业、使您能够自动执行计划过程。您可以添加多个计划策略、这些策略适用于属于数据集成员的所有虚拟机。SnapManager for Hyper-V使用Windows计划程序创建计划的任务。</block>
+  <block id="1d2c69df5ae41f138f31eb423bba82f4" category="list-text">*保留策略*</block>
+  <block id="8b907a68bc81cf1099542120200c8de6" category="paragraph">保留策略是您在SnapManager for Hyper-V中管理数据集备份保留的方式保留策略可根据备份副本的时间或数量确定数据集备份的保留时间。</block>
+  <block id="12e81317e988a1f84f2c5ed8b9d86f7f" category="paragraph">您在保留策略中设置的限制可确保数据备份不会影响未来的存储容量。</block>
+  <block id="2621c15f6df51f6afc625d4142579d55" category="paragraph">您可以在SnapManager for Hyper-V中设置以下保留期限：</block>
+  <block id="850370b35ca3844744e11e622f28254b" category="list-text">一小时</block>
+  <block id="20faf5d958f1d5b65f3a4c67163254f5" category="list-text">一天</block>
+  <block id="d9346ea346566c2f4aaef585681ce309" category="list-text">一周</block>
+  <block id="974985cd65fa0617f7596b848e78a456" category="list-text">一个月</block>
+  <block id="13911d0d343fdc99201f5754a49a07c4" category="list-text">无限制*注：*您可以为每个数据集指定一次保留期限。</block>
+  <block id="4f3dcf3fbeedb384dcc84518e9e22d4f" category="paragraph">选择删除数据集备份的频率后、您可以选择删除早于指定时间段的备份或超过最大总数的备份。</block>
+  <block id="c5185b0cce4a2698d6e28faa2cfc0a18" category="paragraph">+如果您的系统似乎保留了旧备份、请检查您的保留策略。要使保留策略触发Snapshot副本的删除、共享Snapshot副本的所有要备份的对象都必须满足备份删除标准。</block>
+  <block id="e589c1855acbac9c3ff9fc9a48997a89" category="list-text">*复制策略*</block>
+  <block id="334e1a4837375f19e8e71c008ef71137" category="paragraph">复制策略可确定是否在成功执行备份操作后更新SnapMirror目标。SnapManager for Hyper-V仅支持基于卷的SnapMirror。在尝试执行SnapMirror更新之前、您必须在两个存储系统上配置SnapMirror关系。这对于源和目标都是必需的。</block>
+  <block id="25fcd91ebda526a77dcafdb7165ed986" category="inline-link">NetApp 文档： SnapDrive for Windows （当前版本）</block>
+  <block id="ece0d01a9e0eca4a9f1ff2e684cb3db6" category="paragraph"><block ref="ece0d01a9e0eca4a9f1ff2e684cb3db6" category="inline-link-rx"></block></block>
+  <block id="171e08e666552d8c38607395fe6a2212" category="summary">为每个备份创建两个Snapshot副本时占用的空间。</block>
+  <block id="764fc9826ef4435c4d9480e76a029697" category="doc">为每个备份创建两个Snapshot副本时占用的空间</block>
+  <block id="4cfd514589a1cec5a5a54eb22abe34b1" category="paragraph">对于包含Hyper-V对象的每个备份、都会创建两个Snapshot副本、这可能会导致对空间消耗的担忧。</block>
+  <block id="cb466dbf6d5ccf88bca37aef42b7a338" category="admonition">这只是适用场景 应用程序一致的备份。</block>
+  <block id="97c289884aa9d4e93a2d07080e0030f9" category="paragraph">Microsoft Hyper-V VSS写入程序会在VM中创建VM和应用程序一致的备份副本、并将应用程序驻留在VHD上。为了创建软件一致的备份副本和虚拟机一致的备份副本、VSS会采用原生 自动恢复过程、从而将虚拟机设置为与软件Snapshot副本一致的状态。Hyper-V VSS写入程序会联系备份中的每个虚拟机、并创建软件一致的Snapshot副本。</block>
+  <block id="19565b6bd9947d4486fafdd4cb7caeee" category="paragraph">创建Snapshot副本后、父分区将为托管这些VM的整个磁盘(LUN)创建一个VSS Snapshot副本。创建父分区Snapshot副本后、VSS需要挂载先前创建的父分区、将每个VM回滚到软件一致的状态、并删除在创建软件Snapshot副本后对VM所做的任何更改。对VHD进行的这些修改必须永久保留。由于默认情况下这些Snapshot副本为只读副本、因此必须创建新的Snapshot副本以保留更新后的VHD副本。因此、将为卷创建第二个Snapshot副本。此Snapshot副本标有后缀*；backup*、是用于还原操作的备份副本。</block>
+  <block id="445bebb4a3acef418334f1a863c41277" category="paragraph">这两个Snapshot副本被视为一对。当备份的保留期限结束时、两个Snapshot副本都会被删除。您不应手动删除第一个Snapshot副本、因为它对于还原操作是必需的。</block>
+  <block id="7e37cd32041062bd7c868857d5575e79" category="paragraph">Microsoft VSS仅支持在拥有集群共享卷(CSV)的主机上备份VM、因此CSV所有权会在节点之间移动、以便为集群中每个主机上的VM创建备份。</block>
+  <block id="9e2129e081a7307a723c1e562db578cf" category="paragraph">备份CSV时、SnapManager for Hyper-V会在集群中运行该CSV中的虚拟机的每个主机上创建两个Snapshot副本。这意味着、如果在一个CSV上备份15个VM、并且这些VM均匀分布在三个Hyper-V服务器上、则每个备份总共会有六个Snapshot副本。</block>
+  <block id="ecfcb2ea2b7a7e6cd20c217ac4449946" category="summary">您可以安装SnapManager for Hyper-V、以便备份和还原数据。在安装SnapManager for Hyper-V之前、应先安装SnapDrive for Windows</block>
+  <block id="7f4fd040e5f989a8a41b8c2ce4b46efb" category="doc">安装SnapManager for Hyper-V</block>
+  <block id="64eecf62d9a993f9fd78bf8ccf62a2c7" category="paragraph">必须备份现有数据、并且必须准备好以下信息：</block>
+  <block id="a77d1540925b8613ddf32b875e4c4685" category="list-text">许可证密钥</block>
+  <block id="7160f16e7fce9cb3115837588b08a8ac" category="list-text">登录凭据</block>
+  <block id="a47bfbfbde5a03a03b9498fe7de36f9d" category="list-text">端口号(默认值：808；必须与SnapDrive for Windows安装端口号匹配)</block>
+  <block id="6df8a2f6b4884dd72cd827631f0c8151" category="list-text">双击SnapManager for Hyper-V可执行文件以启动SnapManager for Hyper-V安装程序。</block>
+  <block id="fc3e022ba062e33a2d214b632fe690b1" category="list-text">选择安装位置并单击*下一步*。</block>
+  <block id="ccc36e976afe5008e316e7a1746101ff" category="list-text">完成SnapManager for Hyper-V安装向导中的步骤。</block>
+  <block id="acdaf650222f3c0237becc043e307413" category="list-text">单击准备安装页面上的*安装*。</block>
+  <block id="46b9843e7c5f5ff5fbe2ea34495b1cae" category="list-text">查看所选内容摘要、然后单击*完成*。</block>
+  <block id="d97d7bf86f453c78e0139b9a54f5ec65" category="paragraph"><block ref="d97d7bf86f453c78e0139b9a54f5ec65" category="inline-xref-macro-rx"></block></block>
+  <block id="53531bae4b4c3f1b7404a971d070bb17" category="summary">尽管只能从一个管理控制台管理主机、但如果需要从多个控制台管理主机、则可以将主机和数据集配置信息从一个远程管理控制台导入和导出到另一个远程管理控制台、以确保数据一致性。</block>
+  <block id="5a72cd6cdd662de73934212c5acbd0af" category="doc">导入或导出主机和数据集配置信息</block>
+  <block id="a919825400f339d57b335c9acdc82ab0" category="paragraph">您不应将配置信息导入或导出到安装SnapManager for Hyper-V的目录。如果卸载SnapManager for Hyper-V、则此文件将丢失。</block>
+  <block id="6ab078cbfe1468fcdf159e54ea8679ea" category="admonition">您可以使用导入和导出向导将主机和数据集配置设置更改为先前导出的设置。如果在集群环境中执行此操作、则必须导入集群中所有节点上的设置、以使所有主机和数据集配置相同。</block>
+  <block id="f52324a8ae59b8f3c62c3580634a3f65" category="list-text">在操作窗格中、单击*导入和导出*。</block>
+  <block id="9b2df22ebea734763e9b824b5dfb58d1" category="paragraph">此时将显示导入和导出向导。</block>
+  <block id="a97803fe311ef1d2b2cc248b41fb592f" category="list-text">完成向导中的步骤、将主机和数据集配置信息从一个管理控制台导出到另一个管理控制台。</block>
+  <block id="a29cc82b0ee32a993180bad71ccebe76" category="admonition">只有在执行导出文件时、此导出文件才是静态和当前文件。</block>
+  <block id="161ff79e48ce5cf248366acf43d2a3bf" category="list-text">完成向导中的步骤、将主机和数据集配置信息导入到目标管理控制台。</block>
+  <block id="3800c0cdaeccf43c635a1ef2fd8c3b82" category="summary">请务必了解Hyper-V在SnapManager 2.1及更高版本中不支持某些功能</block>
+  <block id="7c676e363a34616fe899b41f9e540d3c" category="doc">SnapManager for Hyper-V限制列表</block>
+  <block id="6e29aba098db79a1ab1f939863149b9a" category="paragraph">请务必了解Hyper-V的SnapManager 2.1及更高版本不支持某些功能。</block>
+  <block id="7f6ee1b72e3402fa0b65e6ca171f8937" category="list-text">不支持取消、暂停和恢复备份和还原作业。</block>
+  <block id="c1e824495741db9a98e533bb60d5755a" category="list-text">无法跨数据集复制策略。</block>
+  <block id="45a471dbdf158d2103da0a832d074a64" category="list-text">不支持基于角色的访问控制(Role-Based Access Control、RBAC)。</block>
+  <block id="fc4b9e2f932c4d0f4e49d421dfae0d6b" category="list-text">不支持从适用于Hyper-V卷影复制服务(VSS)的SnapManager 备份作业中排除虚拟硬盘(VHD)。</block>
+  <block id="6293a05f9293306fe723125f627da55f" category="list-text">本机不支持从备份副本还原单个文件。</block>
+  <block id="1be60482b0c174c58e2b31dcfe218727" category="list-text">不支持跨版本管理；例如、您不能使用客户端控制台1.2管理适用于Hyper-V的SnapManager 2.0、反之亦然。</block>
+  <block id="6c9d0544955bca5ff2e1b6f7cb20a4af" category="list-text">如果您开始还原Hyper-V虚拟机(VM)、并且正在对同一VM进行另一次备份或还原、则尝试将失败。</block>
+  <block id="c1a6011e9e5599de4f9a5695dbf8542e" category="list-text">只有Windows Server 2012才支持从崩溃状态一致的备份副本还原已删除的VM。</block>
+  <block id="3900c2af50dfd662383f4640686f9d90" category="list-text">不支持在故障转移集群的不同节点上运行不同版本的SnapManager for Hyper-V。</block>
+  <block id="4a62f9c3483c269241e02248563f7d6b" category="list-text">不支持从SnapManager 2.1 for Hyper-V还原。</block>
+  <block id="610ff5c0597676311607c8e989c00e7e" category="list-text">如果用户在备份或还原期间更改集群所有权节点、则不支持虚拟机的备份或还原作业。</block>
+  <block id="04aff58db2c60859b2deece463b4f0b9" category="list-text">不支持混合模式备份(CSV 2.0卷和SMB共享上包含文件的虚拟机)。</block>
+  <block id="05fd7159f14393ffd71e7ac1717c6813" category="list-text">使用Windows Server 2012将虚拟机的存储迁移到其他位置后、您无法从迁移前创建的备份副本还原该虚拟机。</block>
+  <block id="8f9386708694ecb3a129f6dc8ad1faa2" category="list-text">对于Windows Server 2012、如果备份集同时包含集群共享卷(CSV)和共享磁盘、则无法执行备份作业。</block>
+  <block id="cf3468db2f1d778c40a58eaf163abc6d" category="list-text">在配置管理存储连接设置时、不能使用远程操作步骤 调用(RPC)协议；只能使用HTTP和HTTPS协议。</block>
+  <block id="f85bb370e755df9a8873b1bdc35d35c7" category="list-text">Windows Server 2012 Hyper-V操作系统不支持为存储在NAS存储上的虚拟机(VM)创建应用程序一致的备份。</block>
+  <block id="5a3dfbdac5b696f02b128aaf7e587d89" category="paragraph">此限制不适用于崩溃状态一致的备份。它仅适用场景 免费的Hyper-V服务器、不包括文件共享卷影复制服务。</block>
+  <block id="935b08257442d9573c059f052b17b83f" category="list-text">VM的虚拟交换机名称对于主Windows主机和二级Windows主机必须完全相同。</block>
+  <block id="9b595f6c0bc59490774c69c592fd7b88" category="list-text">如果通过SMB 3.0部署Hyper-V VM、则备份和还原操作需要FlexClone许可证。</block>
+  <block id="2dce1098f4447d308f7e77337653b2cb" category="list-text">还原操作支持的最大LUN大小为14 TB。</block>
+  <block id="c881d99f27b8d012db97b1f839b10b42" category="list-text">以下Hyper-V服务器不支持对VM进行应用程序一致的备份：</block>
+  <block id="e0693813bfc92e2a66d11bb92de96adb" category="list-text">Microsoft Hyper-V Server 2016 (免费版)</block>
+  <block id="10864acdf6f438d7b026430077a02b30" category="list-text">Microsoft Hyper-V Server 2019 (免费版)请注意、此限制不适用于崩溃状态一致的备份或以下Windows平台：</block>
+  <block id="f25ae1b1e1c33b9eae4b2b668af49026" category="list-text">Microsoft Windows Server 2016标准版和数据中心版</block>
+  <block id="21fae6ca9851125bcb8a2ae0fceec434" category="list-text">Microsoft Windows Server 2019标准版和数据中心版</block>
+  <block id="4bebac47bea2fd62c2530bd391076ae9" category="summary">您可以从数据集中删除不再需要的策略。</block>
+  <block id="6e229fa95b4d823df101ee953df5195d" category="doc">正在删除策略</block>
+  <block id="65ccc1f4dbb5fa94ffb4607070db942a" category="list-text">选择包含要删除的策略的数据集。</block>
+  <block id="0c877e3a2ccc5492c9c14104b8831f2e" category="list-text">从策略窗格中、选择要删除的特定策略。</block>
+  <block id="051a915e46f9908c3d0351dda83750bc" category="list-text">在操作窗格中、单击*删除*并单击*确定*以删除此策略。</block>
+  <block id="6564101cefe24665c433a7ea662f58e0" category="paragraph">删除此策略还会从属于数据集的所有主机中删除已计划的作业。</block>
+  <block id="585e8b16c6d583e9923b5b6886e6da71" category="summary">在执行还原操作期间执行的虚拟机备份可能无效。</block>
+  <block id="f87315bce70a053e760c3006bf545883" category="doc">在执行还原操作期间执行的虚拟机备份可能无效</block>
+  <block id="41deb5cf6b541b6400cca093802e55a8" category="paragraph">在执行还原操作期间创建的应用程序一致的备份可能无效。从此不完整的备份还原虚拟机会导致数据丢失、并且虚拟机会被删除。</block>
+  <block id="078fc9e4f0435e919bdb5862cab1513e" category="paragraph">备份副本中缺少SnapManager for Hyper-V配置信息。备份操作成功、但备份副本无效、因为不包含虚拟机配置信息。在执行还原操作之前、适用于Hyper-V的SnapManager 还原操作会从Hyper-V主机中删除虚拟机配置信息。此行为是在Microsoft Hyper-V写入程序中设计的。</block>
+  <block id="176da1c87a61427a737b5d19d2bba4d3" category="paragraph">确保备份计划与还原操作不一致、或者您要执行的按需备份不会与对相同数据执行的还原操作重叠。</block>
+  <block id="e3a1a05da7993c293b498f9d9fc624b7" category="summary">您可以为数据集创建按需备份。</block>
+  <block id="fb66e3fca73de007d0d242693c367595" category="doc">手动备份数据集</block>
+  <block id="cf3e70cf8191160db8090e6540b904ef" category="list-text">策略名称(如果需要)</block>
+  <block id="46bfeff4660732494a60393596febe5e" category="list-text">策略覆盖信息(如果您计划更改先前指定的任何策略选项)</block>
+  <block id="a3c82f66d39159c3e9d428cd534beb34" category="list-text">备份类型</block>
+  <block id="2ae563510af7f43208bdf0a049250571" category="list-text">选择要为其创建手动备份的数据集、然后单击*备份*。</block>
+  <block id="f8695fe9c9e85add97ec8947ef849b4c" category="paragraph">此时将显示备份向导。</block>
+  <block id="ec296684cb531baf002c1737a8bad6ec" category="list-text">完成向导中的步骤以创建按需备份。</block>
+  <block id="51f0a22711cc496c6ee23ecc6181d9ff" category="paragraph">关闭向导不会取消按需备份。</block>
+  <block id="05c32c67e41cb1a26526aad9bfbb5d51" category="paragraph">您可以在作业管理窗口中查看按需备份的状态。</block>
+  <block id="b0339bb9133f07dc81220bf45bf3aee8" category="summary">VSS请求程序—备份组件失败。系统中未收到预期磁盘</block>
+  <block id="17ebef2f1536eecf24febe2f3ff80eb5" category="paragraph">如果使用适用于Hyper-V的SnapManager 备份数据集、并且Hyper-V主机上的Windows应用程序事件日志显示以下错误、则会出现此消息。</block>
+  <block id="f9a8dae1650ede42aa40b730930e4bdb" category="paragraph">重试数据集备份。</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
+  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="paragraph"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
+  <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
+  <block id="547ea2e305891e64d8e744949b0aca2c" category="paragraph"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
+  <block id="50921fca0d376fca62102a5e608994e2" category="paragraph"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
+  <block id="24efa7ee4511563b16144f39706d594f" category="section-title">通知</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
+  <block id="c5b9e90bde2fb032b0e52bfb24173ab1" category="inline-link-macro">SnapManager for Hyper-V注意事项</block>
+  <block id="0331d89981f387a88bcac9456bb6b3c2" category="paragraph"><block ref="0331d89981f387a88bcac9456bb6b3c2" category="inline-link-macro-rx"></block></block>
+  <block id="6ba0d06cfc8e02c6b42874c98ef3e318" category="summary">如果您不再需要SnapManager for Hyper-V、则可以从Windows主机卸载该软件。您必须以交互方式运行卸载程序。</block>
+  <block id="2dfe0a7f9309d495d0d3c25f2bcc72fe" category="doc">在Windows上卸载SnapManager for Hyper-V</block>
+  <block id="f4b321874f1eac53048a073337df9eae" category="summary">错误：VSS请求程序-备份组件失败。</block>
+  <block id="9372ca9d1d85f69ebdacefd5b1139eb0" category="doc">错误：VSS请求程序-备份组件失败</block>
+  <block id="17e15f437867a5f4e6b814c901ae864e" category="paragraph">SnapManager for Hyper-V报告和Windows事件日志中显示以下错误消息：Error：VSS Requestor - Backup组件失败。备份或还原中涉及的写入程序Microsoft Hyper-V VSS写入程序遇到可重试的错误。写入程序返回故障代码0x800423f3。写入程序状态为XXX。有关详细信息、请参见Windows事件查看器中的Hyper-V VMM事件日志。</block>
+  <block id="d8fc3002325e48a0d3fc0d78174308e8" category="paragraph">如果收到VSS重试错误、导致应用程序一致的备份失败、则SnapManager for Hyper-V会重试备份三次、每次尝试之间等待一分钟。</block>
+  <block id="dd5d812d0bb2e347a06973d2fa0346f1" category="paragraph">您可以使用以下注册表项配置重试次数(重试次数)和两次重试之间的等待时间(重试间隔)：</block>
+  <block id="2ca21b57463c72312d5d629525355c87" category="paragraph">`密钥：HKLM\System\CurrentControlSet\Services\OnCommandHyperV\Parameters DWORD值(以秒为单位)：vss_retry_leep (两次重试之间等待的时间持续时间) DWORD值：vss_retry (重试次数)`</block>
+  <block id="cdbb776ad5142b1b207ebc2e52decdcf" category="paragraph">这些设置在Hyper-V主机级别、应在Hyper-V主机上为每个虚拟机设置密钥和值。如果虚拟机已加入集群、则应在集群中的每个节点上设置密钥。</block>
+  <block id="4a0be8cd9c11021849e7fc56b44fe038" category="paragraph">在更改或添加这些注册表项后、您必须重新启动SnapManager for Hyper-V。</block>
+  <block id="ba88d591f87671b80a620329f4aa3c68" category="summary">故障转移集群事件ID 5121。</block>
+  <block id="ee6211ef27874cc88b293c816304c2fa" category="doc">故障转移集群事件ID 5121</block>
+  <block id="15afc85c4d48627126a12dbbb73addb7" category="paragraph">应用程序事件日志中的故障转移集群事件ID 5121或主机消息no_direct_io_due_to_failure。</block>
+  <block id="858e4f65a625a9aa6cfeaef1248c7e87" category="paragraph">如果无法再从集群节点直接访问集群共享卷(CSV)、并且I/O访问重定向到拥有该卷的存储设备、则会出现此错误消息。之所以出现这种情况、是因为只有协调节点才能使用VSS备份执行操作。在备份操作期间、协调节点会锁定CSV并要求所有非协调节点重定向I/O</block>
+  <block id="78ebdbc1a2994ad181451bf7f4fe6ce1" category="paragraph">操作完成后、协调节点将释放CSV上的锁定、并且不再重定向I/O。如果仅在VSS备份期间出现错误消息、则不会出现故障、这是预期行为。</block>
+  <block id="e40ccea93b8bd7fd60bb288a3d07c31f" category="summary">要使SnapManager 正常运行、您必须安装ONTAP VSS硬件提供程序。ONTAP VSS硬件提供程序可将运行ONTAP 的SnapDrive 服务和存储系统集成到VSS框架中。对于在SAN存储上运行的VM、这是必需的。</block>
+  <block id="bfe7a7ad3d1a7441ee7b75e8f14e60e2" category="doc">ONTAP VSS硬件提供程序要求</block>
+  <block id="93ec4cda146bea59af1d02092a5e99ed" category="paragraph">SnapDrive 附带的ONTAP VSS硬件提供程序无需单独安装。</block>
+  <block id="f5ecea394661f7f0b3901b762ff354b1" category="paragraph">对于在SMB 3.0共享上运行的Hyper-V VM、Windows虚拟机管理程序将调用在Data ONTAP 8.2上运行的远程VSS硬件提供程序。</block>
+  <block id="ad2bb8c14d7977a39ba5cdd2b6945f22" category="summary">要完全启用SnapManager for Hyper-V实施以实现灾难恢复、您必须确保主主机和二级主机具有相同的配置、并且知道您只能使用PowerShell执行灾难恢复。</block>
+  <block id="51a3cdfcc13216a372d56996eedb0049" category="doc">为Hyper-V配置SnapManager 以实现故障转移</block>
+  <block id="bf5e9b3f5954bedb975ebb72a1703bce" category="paragraph">以下类型的设置支持灾难恢复：</block>
+  <block id="a51993adcd77282fd3ab8c60861f760b" category="list-text">独立主主机和独立二级Hyper-V主机</block>
+  <block id="ce4a0560534be6e4184a28d4140603a4" category="list-text">集群模式主Hyper-V主机和二级Hyper-V主机</block>
+  <block id="cbea32125c692a82b2f18365172f641e" category="list-text">主Hyper-V主机和二级Hyper-V主机上的集群共享卷(CSV)</block>
+  <block id="e76d850f5bdb791eadd09b85ffa60e94" category="paragraph">例如、主主机上的集群虚拟机(VM)必须作为集群VM进行恢复、专用(独立) VM必须作为专用VM进行恢复、CSV VM必须作为CSV VM进行恢复。</block>
+  <block id="44170356ae052f02c7081a5cbbdd2cb8" category="paragraph">二级主机上的LUN应与主主机上的LUN连接方式相同。也就是说、主主机和二级主机上的LUN类型(专用、共享或CSV)和驱动器盘符、挂载点或CSV重新解析点应相同。如果将SAN还原操作设置为备用路径位置、则可以在二级位置为LUN还原操作指定不同的驱动器盘符。</block>
+  <block id="0dda7108073e7d311318541d5362a5d8" category="admonition">支持驱动器号或CSV以及卷挂载点。</block>
+  <block id="c17b3b535d69b83ec58875d048aa7c1b" category="paragraph">以下示例显示了基本的灾难恢复设置：</block>
+  <block id="6381565192b9680b5689671c36c9b041" category="list-text">站点A (主站点)包含存储系统和独立Hyper-V主机系统或Hyper-V主机集群。</block>
+  <block id="d0efe2a2cfe2ce4b13e79ea3bcadf29e" category="paragraph">在这些主机上运行的VM位于Data ONTAP 存储上。</block>
+  <block id="12b4c0bc9da6cbd802b09d4ce65b106f" category="list-text">站点B (二级)包含存储系统和Hyper-V主机或集群(与主站点相同)。</block>
+  <block id="dbd5a2d122952b7b10d3bec5e2f5827e" category="list-text">SnapDrive for Windows和SnapManager for Hyper-V同时安装在站点A和B上</block>
+  <block id="d026771d7d8aa2c2af2f0415ad5a1173" category="list-text">SnapMirror关系将从站点A初始化到站点B</block>
+  <block id="3ef3c01221fbc24ebd60feb4cf80d48b" category="list-text">在站点A上、添加到SnapManager for Hyper-V中的Hyper-V主机或集群以及VM均使用SnapManager for Hyper-V进行备份</block>
+  <block id="b37cd8506f84d61a0b44abf9093bfab2" category="paragraph">检查备份后更新SnapMirror的策略。每次备份后、二级站点都会使用VM的新Snapshot副本和SnapInfo副本进行更新。</block>
+  <block id="206a69513a554c2ee397148c18f7fd5e" category="summary">SnapManager for Hyper-V许可取决于您使用的ONTAP 版本。</block>
+  <block id="00e2fe0a2c0dcf10ebcbb5322c13827a" category="doc">适用于ONTAP 的SnapManager for Hyper-V许可</block>
+  <block id="2d3afe83061284bdabbffa76a340dbaa" category="paragraph">对于基于主机的许可和基于存储的许可、您必须使用Data ONTAP 8.0或更高版本。</block>
+  <block id="6e8ccd8744d9d11213db2a72e5a3bada" category="paragraph">您必须使用MultiStore (vFiler单元)的Data ONTAP 8.2或更高版本与SnapManager for Hyper-V结合使用</block>
+  <block id="419f32ca591e98830773cb732397b9b4" category="paragraph">如果您使用的是8.2之前的Data ONTAP 版本、则某些操作会受到一些限制。</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
+  <block id="d38df2295bfe768071dcfe28649a9438" category="paragraph"><block ref="d38df2295bfe768071dcfe28649a9438" category="inline-link-rx"></block></block>
+  <block id="74ea49fa75cd05fb118325f9605dccd5" category="summary">您可以在保护需求发生变化时删除数据集。</block>
+  <block id="3e15174cd54ab9db4679ac6ced74d91f" category="doc">删除数据集</block>
+  <block id="4de283003835ce9c753ed01c103206d2" category="paragraph">删除数据集不会删除属于该数据集的虚拟机。删除数据集后、如果属于该数据集的虚拟机不属于其他数据集、则这些虚拟机将不受保护。</block>
+  <block id="4089200b34fa99a60b145b36fb4f8018" category="list-text">从导航窗格中、单击*保护*&gt;*数据集。*</block>
+  <block id="9a7f2045e29c7015a5aef725cf21d715" category="list-text">选择要删除的数据集。</block>
+  <block id="73b57cbe35150d214e13c1470f8599ae" category="list-text">在操作窗格中、单击*删除*并单击*确定*以删除数据集。</block>
+  <block id="25bc160d143584c0503a8a7d599d4268" category="paragraph">删除数据集还会从属于该数据集的所有主机中删除已计划的作业。删除数据集时、SnapManager for Hyper-V不再管理备份的保留、即使重新创建了同名数据集也是如此。</block>
+  <block id="69ce911ef79a734ef7855400a092a1fc" category="paragraph">SnapManager for Hyper-V不再保护与已删除数据集关联的资源、除非这些资源属于另一数据集。</block>
+  <block id="ae05e937f1abf80c94aa8e13db1fe036" category="summary">VSS请求程序—备份组件失败。无法调用保留快照集。</block>
+  <block id="ee1aa480797e2ea152dcfd86124099de" category="list-text">* 错误 *</block>
+  <block id="10d98066ee40a7661c2106e4067993ca" category="paragraph">VSS请求程序—备份组件失败。无法调用保留快照集。原因索引和计数必须引用字符串中的某个位置。</block>
+  <block id="146fa05f11b1650e7028db3c82c620c6" category="paragraph">如果备份作业中的VM位于同名Storage Virtual Machine和CIFS服务器上、则会发生此错误。</block>
+  <block id="f5768417859475b0d881b6f2a24a4cc6" category="paragraph">此版本不支持任何版本。</block>
+  <block id="4fd11abfd3c4f9f62f320ec74063e750" category="list-text">*故障示例*</block>
+  <block id="e3bb9328db1513b58e625cf33de9e1bd" category="list-text">创建同名Storage Virtual Machine和CIFS服务器：例如、"`test1`"。</block>
+  <block id="0aa9ef3b09293cef1028fa824a84ae58" category="list-text">使用这两个IP地址将test1名称添加到DNS中。</block>
+  <block id="b5dd78876564ec0040f73a144770f5ea" category="list-text">在Windows Server 2012主机上、安装SnapManager for Hyper-V并使用test1中的CIFS共享创建一些VM。</block>
+  <block id="c4fab528a2073847eeca7f2dcd6bb96e" category="list-text">创建一个包含这些VM的备份副本。</block>
+  <block id="c8fe51e0515bca6e21087bea49bb5400" category="list-text">请注意、备份作业失败、并显示错误备份组件失败。无法调用保留快照集。原因索引和计数必须引用字符串中的某个位置。</block>
+  <block id="9bf4093831798b5c4d2e0e0f0c2613ed" category="summary">在将父主机或主机集群添加到SnapManager for Hyper-V之前、您必须具有所有必要的配置信息</block>
+  <block id="3ccdc0cb8d7b5aef750244f0678e3759" category="doc">添加Hyper-V父主机或主机集群的要求</block>
+  <block id="c3dc9dedf1883d5556cb3815e4da2a40" category="section-title">SnapManager for Hyper-V安装</block>
+  <block id="cd91a0db6ff13cff1cf946cbb36133b4" category="paragraph">要添加的Hyper-V主机上必须安装SnapManager for Hyper-V。</block>
+  <block id="578181228f759b1ac8b95355ef4d2cc0" category="paragraph">如果您未安装SnapManager for Hyper-V、系统将提示您运行远程主机安装向导。每个集群节点上必须安装相同版本的SnapManager for Hyper-V。</block>
+  <block id="d0d22e03456c3fce1282b8574dfd0c8f" category="section-title">配置设置</block>
+  <block id="4781cebe5be96afc4191c4cc744a5378" category="paragraph">必须为SnapManager for Hyper-V配置要添加的Hyper-V父主机</block>
+  <block id="889bdecb58cbb9ece5485c8823bee365" category="paragraph">如果未为适用于Hyper-V的SnapManager 配置SnapInfo设置、报告目录设置和通知设置、则可以在添加主机后使用配置向导对其进行配置。</block>
+  <block id="e36bfe5e64d7355ac969bea6f8212660" category="paragraph">最初、*管理存储连接*选项卡为空。您可以从*管理存储连接*选项卡添加存储连接、但新添加的连接可从SnapDrive for Windows (SDW)传输协议设置(TPS)中查看。</block>
+  <block id="2f2d6a0c53fd036afaf80fe6a624bcfa" category="paragraph">您必须使用SnapManager for Hyper-V配置备份存储库和报告目录设置以添加和管理虚拟机通知设置为可选设置。</block>
+  <block id="bec2d798891a82b99b71e36d3086f2ef" category="section-title">虚拟机和ONTAP LUN</block>
+  <block id="2f3d173ac3b3e7e911aca4487aca0738" category="paragraph">与虚拟机关联的所有文件(包括配置文件、Snapshot副本文件位置和VHD)都必须驻留在ONTAP LUN上。</block>
+  <block id="d702234e21af8bf8c02b69bd028091b6" category="paragraph">这是成功执行备份所必需的。</block>
+  <block id="c7291559f829d8719895a830d63494fa" category="admonition">如果在创建虚拟机后将虚拟机Snapshot文件位置更改为其他ONTAP LUN、则应在使用适用于Hyper-V的SnapManager 创建备份之前、使用Hyper-V Manager至少创建一个虚拟机Snapshot副本如果更改Snapshot副本文件位置、并且在创建备份之前未创建虚拟机Snapshot副本、则备份操作可能会失败。</block>
+  <block id="0ebae4c420d4fb62257765f30622a1ea" category="section-title">专用虚拟机和集群虚拟机</block>
+  <block id="dc8a4c68152b6375c4d7f566aabd0e19" category="paragraph">虚拟机可以是专用虚拟机、也可以是集群的一部分。</block>
+  <block id="8c0677e5dff0ab0a92910776b4c7a62f" category="paragraph">如果添加单个主机、则SnapManager for Hyper-V将管理该主机上的专用虚拟机。如果添加主机集群、则SnapManager for Hyper-V将管理主机集群上的共享虚拟机。位于SAN和NAS上属于同一主机集群的虚拟机不应位于同一数据集中。如果将这些类型的资源添加到单个数据集、则发生原因 数据集备份可能会失败。</block>
+  <block id="970377b7107098d943ff5763e6bcdcb6" category="paragraph">对于应用程序一致的备份、当集群虚拟机在集群的不同节点上运行时、完成集群虚拟机的数据集备份需要较长时间。当虚拟机在不同节点上运行时、集群中的每个节点都需要单独的备份操作。如果所有虚拟机都在同一节点上运行、则只需要执行一次备份操作、从而加快备份速度。</block>
+  <block id="f41eab292eefef8cd8354d80d20462ab" category="section-title">虚拟机数量</block>
+  <block id="9852703357683b259e9a71033740086a" category="paragraph">如果Hyper-V主机或主机集群中的虚拟机数超过1、000个、则必须增加Hyper-V Cache Manager的SnapMgrServiceHost.exe配置文件中的maximumElementsInCacheBeforeScavenging属性的值。此值应大于或等于在独立主机或集群上运行的Hyper-V主机数。应在集群的每个节点上更改此值、并且在更改此值后、必须重新启动适用于Hyper-V的SnapManager 服务。您必须使用文本编辑器手动编辑SnapMgrServiceHost.exe配置文件。</block>
+  <block id="3ea2fc0fb28b3fb504dc6193ce5a3c54" category="section-title">SnapManager for Hyper-V服务帐户要求</block>
+  <block id="6e164dd4ec04738f16abddb3cb99f5db" category="paragraph">使用SnapManager for Hyper-V管理Hyper-V主机集群时、SnapManager for Hyper-V和SnapDrive for Windows服务帐户必须是在服务器上具有本地管理员权限的域用户帐户。</block>
+  <block id="27f5c527b6f2a36da432d987fbe2a974" category="paragraph">SnapManager for Hyper-V应用程序一致的备份在虚拟机运行的集群节点上运行。如果虚拟机使用的集群共享卷(CSV)不属于同一节点、则在Hyper-V SnapManager 服务使用本地系统帐户时、虚拟机备份可能会失败(即使该帐户具有管理员权限)。在这种情况下、SnapManager for Hyper-V无法检测到虚拟机文件驻留在CSV上、从而导致备份失败。</block>
+  <block id="f2b435cb61126cb2311539a153d03b8a" category="admonition">要使集群模式Data ONTAP SMB 3.0持续可用性(CA)共享上存储的虚拟机的远程卷影复制服务(VSS)操作正常运行、 您必须为SnapDrive for Windows服务帐户的共享授予完全控制权限、并为SnapManager for Hyper-V Web服务帐户授予最低读取级别访问权限。</block>
+  <block id="a56dd8abb3798a37b1c7790e2a456ec5" category="summary">在故障转移后删除备份。</block>
+  <block id="c1ed94f45c8e142708aaee604ef8045e" category="doc">在故障转移后删除备份</block>
+  <block id="e770210a45f72b4979b63a196c5e8504" category="paragraph">数据集中的某些对象不存在指定的备份。</block>
+  <block id="3b84a70fe39b4ce1f059c75552736b65" category="paragraph">故障转移到二级站点(站点B)后、您可能无法删除在主站点(站点A)创建的备份。如果您位于灾难恢复站点(站点B)上、并尝试删除在主站点(站点A)上创建的备份、则会从主站点(站点A)而不是灾难恢复站点(站点B)中删除备份。</block>
+  <block id="5dee9d1a21781195d092306928ae41a6" category="paragraph">执行灾难恢复操作后、只会删除在当前操作站点创建的备份。</block>
+  <block id="5e7c1128e5aa53e6eebe201a3ce32c30" category="summary">您可以查看与特定数据集关联的策略详细信息。</block>
+  <block id="61e83173e8e1c0e9bf88676e53b8f06c" category="doc">查看策略</block>
+  <block id="d18d9a78ded0e8683f187facef65a666" category="list-text">选择包含要查看的策略的数据集。</block>
+  <block id="d0aa3f91258aff5ef8af7b3895ef0a45" category="list-text">从策略窗格中、选择要查看其详细信息的特定策略。</block>
+  <block id="c22e9c878557311ee6057ff5a762d372" category="paragraph">有关此策略的信息将显示在详细信息窗格中。</block>
+  <block id="dc719ab420cea5c8b267d389e0f0d53a" category="summary">您可以使用Microsoft Windows Server卷影复制服务(Volume Shadow Copy Service、VSS)协调数据服务器、备份应用程序和存储管理软件来支持创建和管理一致的备份。</block>
+  <block id="d32cae400d3bb5771392999f91088572" category="doc">VSS组件</block>
+  <block id="e4b92cec3fd6cb910c8feb81698305c6" category="paragraph">VSS负责协调基于Snapshot副本的备份和还原操作、其中包括以下组件：</block>
+  <block id="2dd4d3e504508a7dd4ded7a84b29c3fb" category="list-text">* VSS请求程序*</block>
+  <block id="c6cda2cfc23517cc7820477f609cd30a" category="paragraph">VSS请求程序是一个备份应用程序、例如适用于Hyper-V的SnapManager 或NTBackup。它会启动VSS备份和还原操作。请求程序还会为其启动的备份指定Snapshot副本属性。</block>
+  <block id="407f749f95d0beadeccedd18e9d94e9d" category="list-text">* VSS写入程序*</block>
+  <block id="a96fd1c100fb63ec8634a45eb47f6a28" category="paragraph">VSS写入程序拥有并管理要在Snapshot副本中捕获的数据。Microsoft Hyper-V VSS写入程序就是一个VSS写入程序示例。</block>
+  <block id="1995dcadb2aca2f14c66842f1aba1795" category="list-text">* VSS提供程序*</block>
+  <block id="339c65802c22c15b90eb26e484e892c8" category="paragraph">VSS提供程序负责创建和管理Snapshot副本。提供程序可以是硬件提供程序、也可以是软件提供程序：</block>
+  <block id="b00334ca1b5ca102c5e2e25c45b8ed4e" category="list-text">硬件提供程序将存储阵列专用的Snapshot副本和克隆功能集成到VSS框架中。</block>
+  <block id="a287aaac307fe15de37c683693f07b47" category="paragraph">ONTAP VSS硬件提供程序可将运行Data ONTAP 的SnapDrive 服务和存储系统集成到VSS框架中。</block>
+  <block id="9cd86d400babd755f769fd83ccefe0d7" category="admonition">ONTAP VSS硬件提供程序会在SnapDrive 软件安装过程中自动安装。</block>
+  <block id="cf40ffd26ee3a761d09d3d4db27c8968" category="list-text">软件提供程序在Windows系统上运行的软件中实施Snapshot副本或克隆功能。</block>
+  <block id="8c215fb257b71c6d8444c7f5cb307458" category="admonition">要确保ONTAP VSS硬件提供程序正常工作、请勿在Data ONTAP LUN上使用VSS软件提供程序。如果您使用VSS软件提供程序在Data ONTAP LUN上创建Snapshot副本、则无法使用VSS硬件提供程序删除该LUN。</block>
+  <block id="15e537c840bde26c4ac33c19cf7f2454" category="summary">您可以使用适用于您的操作系统的控制面板卸载应用程序从Windows服务器卸载SnapManager for Hyper-V。</block>
+  <block id="1f51ec339f54504123e26bd4e5568895" category="doc">卸载适用于Hyper-V的SnapManager</block>
+  <block id="1611f491344ff052478e1e6db93fdc82" category="paragraph">您可以使用适用于您的操作系统的控制面板卸载应用程序从Windows服务器卸载SnapManager for Hyper-V。您可以使用"保护"窗口的"操作"窗格中的"远程主机安装"向导在独立节点或集群节点或主机上远程卸载SnapManager for Hyper-V。</block>
+  <block id="fed856d312ae48967d1259bd555d517b" category="paragraph">卸载SnapManager for Hyper-V将删除所有数据集和策略。卸载完成后、您将无法恢复此信息。如果要保存数据集和主机配置信息、可以在卸载之前导出这些信息。</block>
+  <block id="78e3081567a103abe2e00fabb77db9db" category="list-text">在安装了SnapManager for Hyper-V的Windows服务器上、导航到控制面板并选择*控制面板*&gt;*程序*&gt;*程序和功能*。</block>
+  <block id="e60317a9056bd822eab4cccc59424c22" category="list-text">滚动已安装程序列表以查找SnapManager for Hyper-V</block>
+  <block id="9d35c0608963f2df159f7d7f145b31f9" category="list-text">单击程序的名称、然后单击*卸载*。</block>
+  <block id="d9e82483fc02d94efd8c3c7f1f024825" category="list-text">当系统提示确认卸载时、单击*是*。</block>
+  <block id="424104f002a58b60418f31efbf7bf5a6" category="paragraph"><block ref="424104f002a58b60418f31efbf7bf5a6" category="inline-xref-macro-rx"></block></block>
+  <block id="ccdcdb65514509fa0bc73249ccd8dba7" category="summary">某些类型的备份故障不会导致部分备份失败。</block>
+  <block id="d8b5d4992ee6e8865582c7b07b5beb9f" category="doc">某些类型的备份故障不会导致部分备份失败</block>
+  <block id="b99ec583cc5282d67e9e5e18215ee7df" category="paragraph">如果数据集中的一个虚拟机出现错误、则SnapManager for Hyper-V无法成功完成数据集备份、在某些情况下也不会生成部分故障。在这些情况下、整个数据集备份将失败。</block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="list-text">* 示例 *</block>
+  <block id="67c2917af8830bc6c5370cb1bc747b1f" category="paragraph">如果一个存储系统卷超过255个Snapshot副本限制、则SnapManager for Hyper-V会生成部分故障、即使此问题与数据集中的一部分虚拟机相关也是如此。</block>
+  <block id="711c59ccc9dd16e21b6c667e38228187" category="paragraph">要成功完成备份操作、您需要修复具有问题描述 的虚拟机。如果无法做到这一点、您可以暂时将虚拟机移出数据集、或者创建一个仅包含已知没有问题的虚拟机的数据集。</block>
+  <block id="8bcb602f8f424d5f10e5fff8a3110791" category="summary">如果备份作业涉及来自同一存储系统的15个以上CSV、则可能会失败。</block>
+  <block id="a2eba6171afed7bf3ab72b21a0d96241" category="doc">如果备份作业涉及来自同一存储系统的15个以上CSV、则可能会失败</block>
+  <block id="fad4af869b760fa472fd968f4a185f8a" category="paragraph">如果涉及同一存储系统中15个以上集群共享卷(CSV)的SnapManager for Hyper-V备份作业失败、并显示以下错误：</block>
+  <block id="375150297edd599b7d34916c85c1f285" category="paragraph">这是Data ONTAP 导致的一个限制、用于防止系统资源的持有。只有当所有LUN都属于同一存储系统时、才会限制15个LUN。如果创建备份数据集、使一个存储系统中涉及的CSV不超过15个、则不会发生此问题描述。</block>
+  <block id="7961b1422035900b7f2fdace77d2a99e" category="paragraph">如果要从同一存储系统创建备份、其中包含15个以上的LUN、请创建多个数据集以避免此失败。</block>
+  <block id="1788e977f20e1f86df49d2cedec68849" category="summary">备份报告在报告名称中使用管理控制台时区信息。</block>
+  <block id="bf99ca448ce8f3d20c202a99dd06a747" category="doc">备份报告在报告名称中使用管理控制台时区信息</block>
+  <block id="232951cc31d37beb2ec28193d43493f2" category="paragraph">如果使用的客户端主机所在的时区与父主机不同、则在生成备份报告时、报告名称将使用客户端主机时区信息、而报告内容将使用父主机时区。</block>
+  <block id="31a824937ad8b8aab6be6fc62cb03c7e" category="paragraph">备份报告名称中的时间戳会与客户端主机时区信息一起显示。</block>
+  <block id="abb046be6cec841f4556bc725146d71f" category="paragraph">无需采取更正操作。</block>
+  <block id="975cb3813294b8e39c92f42ca0227a52" category="summary">添加主机后、您应输入所有存储连接\(适用于Windows的SnapDrive 和适用于Hyper-V的SnapManager)以使用"保护\数据集管理"中的"管理存储连接设置"。</block>
+  <block id="ade2be58fd2780db17586ba0e3e6286a" category="doc">管理存储连接设置</block>
+  <block id="03aeaa33152b631e06799c38d29ca83d" category="paragraph">添加主机后、您应输入所有存储连接(适用于Windows的SnapDrive 和适用于Hyper-V的SnapManager)、以便使用*保护*&gt;*数据集管理*中的管理存储连接设置。</block>
+  <block id="be9a73a0e98cd7be7f653ad024e20233" category="paragraph">您必须至少向SnapManager for Hyper-V添加一台主机、然后才能管理存储连接设置。</block>
+  <block id="5327a47470ebf139d313fdc30faa4fde" category="list-text">从*保护*&gt;*数据集管理*中、选择管理存储连接设置。</block>
+  <block id="e5743733f43978d18adb5eded4d83059" category="list-text">添加存储连接。</block>
+  <block id="71b09a5ad5bfea4835869efab410501f" category="paragraph">可以在适用于Windows TPS的SnapDrive 中查看所有存储连接。</block>
+  <block id="36c5838aab4fa29bd5c9cdad6fa9ac89" category="summary">通知的多个电子邮件收件人必须用逗号分隔。</block>
+  <block id="1d6ad37292fd66fcad97d0d0c43b584c" category="doc">配置电子邮件通知</block>
+  <block id="32e3caa78e4a147c7040d3108a792237" category="paragraph">在SnapManager for Hyper-V中为电子邮件通知配置多个电子邮件收件人时、请使用逗号分隔每个收件人。此要求与SnapManager for SQL不同、在该要求中、每个电子邮件通知收件人都必须用分号分隔。</block>
+  <block id="1447d6708050e5e3ed4d0c1bdd5c70bc" category="summary">如果您在安装或配置SnapManager for Hyper-V期间遇到意外行为、可以按照特定的故障排除过程确定并解决此类问题的发生原因。</block>
+  <block id="c06247ab3f7830ed4ddeac878f635b94" category="doc">对SnapManager for Hyper-V进行故障排除</block>
+  <block id="c5dbce49f6fd4c7e1bae3afca4cec4d4" category="summary">从虚拟机的详细信息窗格的虚拟机选项卡和VHD选项卡中、您可以查看有关该虚拟机的信息并监控其状态。</block>
+  <block id="7bb2d74d450c1bbfdc22700d91e51efd" category="doc">查看虚拟机</block>
+  <block id="6784dcf6fa583322f2fe694fef065d7b" category="list-text">在导航窗格中、单击*保护*&gt;*主机*或*保护*&gt;*数据集*。</block>
+  <block id="7b753f96317e26050f91e5b27eee026b" category="list-text">选择虚拟机所属的数据集或主机。</block>
+  <block id="951892dc8a79b705bf58b07591dcaf0f" category="list-text">选择相应的虚拟机。</block>
+  <block id="13f16352257850b119e32a9509413e14" category="paragraph">虚拟机选项卡可显示选定虚拟机的名称、GUID和状态。</block>
+  <block id="38f6536040e293e93bc3792d9a34e07f" category="paragraph">VHD选项卡可显示系统磁盘、挂载点、VHD完整路径、LUN路径、存储系统名称、 序列号以及与选定虚拟机关联的卷名称。</block>
+  <block id="fedcd7638790c189ed6bac7695336514" category="summary">您必须先为主机配置SnapInfo设置、然后才能将该主机中的虚拟机资源添加到数据集。</block>
+  <block id="16466e0f244fbc8d627772c9c9e7cc51" category="doc">配置SnapInfo目录设置</block>
+  <block id="7fdbb32fcd2831a317f5b4cfb0f71a78" category="paragraph">您必须先为主机配置SnapInfo设置、然后才能将该主机中的虚拟机资源添加到数据集。如果在将Hyper-V主机添加到SnapManager for Hyper-V时未配置SnapInfo设置、则可以稍后使用配置向导或* SnapInfo设置*操作来配置这些设置。</block>
+  <block id="f01f7a731768e13af1949951a3c80879" category="paragraph">此外、您还可以在将主机添加到SnapManager for Hyper-V后更改SnapInfo设置但是、如果更改SnapInfo设置、则必须手动将所有文件移动到新位置；SnapManager for Hyper-V不会自动更新这些文件。如果不移动文件、则无法从备份副本还原或管理备份副本、SnapManager for Hyper-V也不会列出备份副本。</block>
+  <block id="c2aa3d9f61982da148456721ae79587e" category="paragraph">从SnapManager for Hyper-V开始、SnapInfo路径可以位于集群共享卷(CSV)上、也可以位于Windows Server 2012的SMB共享上。</block>
+  <block id="54bbbae6b75598d96e01a8ef292c1580" category="summary">您可以为具有相同保护要求的虚拟机资源创建数据集。您可以根据需要将虚拟机添加到多个数据集。</block>
+  <block id="d82a6aed3492ef2e7f7b5cbf1eddf8da" category="doc">创建数据集</block>
+  <block id="618322761e8dcd886ce91475cd7877a5" category="list-text">数据集名称和问题描述</block>
+  <block id="e50edd97d3a01977ba8ffe981ab1a2fc" category="list-text">计划添加到数据集的虚拟机资源</block>
+  <block id="5625da2889c91899be39a9e7a1f676d1" category="paragraph">属于同一主机集群的专用磁盘和共享磁盘不应放置在同一数据集中。如果将这些类型的资源添加到单个数据集、则发生原因 数据集备份可能会失败。每个数据集只能有一种类型的VM：NAS或SAN。您不能拥有混合模式数据集。</block>
+  <block id="0e71afb1ed54e227a67b45b4ddd9578b" category="paragraph">默认情况下、验证数据集复选框处于选中状态。SnapManager for Hyper-V会在创建或修改数据集期间检查所有VM中的任何配置错误。如果不希望启用数据集验证、则必须确保未选中此复选框。</block>
+  <block id="bb2d7ceb9599c8ee580a614582533e4e" category="list-text">从操作窗格中、单击*创建数据集*。</block>
+  <block id="799b0434e98e576358bbb4ff50f65a46" category="list-text">完成向导的各个页面。</block>
+  <block id="19bb48d3ade7ccf63660ddd80481e1cc" category="paragraph">接下来、您应向创建的数据集添加保护策略。</block>
+  <block id="d6cc51cf29a35476bbb45dd0854ea089" category="summary">您可以添加、修改或删除与数据集关联的策略、以便保护数据。</block>
+  <block id="bbf4d8084facd429e86123ec7b6a9bd0" category="doc">配置策略</block>
+  <block id="2e09f66acdc6e3807831e87c2c274677" category="summary">将数据集更新到新节点时、Web服务客户端通道无法连接。</block>
+  <block id="8b3b23156be5ac30b137f82199c93fb2" category="doc">将数据集更新到新节点时、Web服务客户端通道无法连接</block>
+  <block id="5d26a3bbb243b9111fa1388872d4d277" category="paragraph">如果未明确启动Web服务客户端、它将无法连接到SnapManager for Hyper-V</block>
+  <block id="fd3156c5d3666c9e747ad687a4899e98" category="paragraph">SnapManager for Hyper-V不再自动启动Web服务客户端通道。如果在将数据集更新到新节点时Web服务客户端通道无法连接、可能的原因如下：</block>
+  <block id="9518dd0bf8afe06c3cffa0628aed4c71" category="list-text">Web服务尚未启动。</block>
+  <block id="5c68c7379217e4320b79c2a7352f0fc8" category="list-text">未安装SnapManager for Hyper-V。</block>
+  <block id="d0c1faeb6e379a4a2d5039749dd8e9c5" category="list-text">Web服务主机已关闭。</block>
+  <block id="432196714b84ebf92fe914667704041c" category="paragraph">要更正此行为、请确保已执行以下任务：</block>
+  <block id="c59865ab79a0744a0aec9654ddfc8a5a" category="list-text">启动Web服务。</block>
+  <block id="70b3a6db887e39dac6f6c45a12d5b44e" category="list-text">安装SnapManager for Hyper-V</block>
+  <block id="0f99140d32024a77e05b26ec975e43fa" category="list-text">重新启动Web服务主机。</block>
+  <block id="c27423bb8e5e6cf832538373c8eaffc3" category="summary">卷影副本创建已在进行中备份失败错误</block>
+  <block id="2ef940b95f23ccd7106b4fd53c93110c" category="doc">备份失败、并显示错误"正在创建卷影副本"</block>
+  <block id="8dadc1857407aef266dee20961d67d99" category="paragraph">之所以出现此问题描述 、是因为先前的备份未中止且仍处于活动状态。使用以下命令检查是否列出了任何条目：`cifs share show -ShadowCopy`</block>
+  <block id="fb6f2e6782f9cbfac9dc69d562f3b75e" category="paragraph">中止上一个备份作业、然后重试此操作。</block>
+  <block id="6ce4fc9e1ea4b9bdd5944a4c4fef1693" category="summary">VSS请求程序—备份组件失败、并出现部分写入程序错误。</block>
+  <block id="5aec979810f717c2bd06a3f109296bb6" category="doc">VSS请求程序—备份组件失败、并出现部分写入程序错误</block>
+  <block id="d93505cbb4de4cf55bbd8a4f9730af33" category="paragraph">Hyper-V主机上的Windows应用程序事件日志中显示以下错误：</block>
+  <block id="9b0af1bcd79b97399ce6605073c34a5a" category="paragraph">对数据集执行应用程序一致的备份时、会显示此消息。此错误会导致数据集中某些虚拟机的备份失败。</block>
+  <block id="6832ae75ebdd3174319fb1eb8b03aa45" category="list-text">如果重试尝试再次失败、请将数据集拆分为两个数据集、以便将备份失败的所有VM放置在一个数据集中、而所有其他VM将放置在另一个数据集中。然后再次运行备份。</block>
+  <block id="a1f1032aa2d3baced636ad4ef4333b28" category="summary">您可以删除与数据集或虚拟机关联的一个或多个备份。</block>
+  <block id="4574586aa737250bfcda95872412374c" category="doc">删除备份</block>
+  <block id="e296d076e980ec567325795266c68391" category="list-text">选择数据集中包含要删除的备份的虚拟机。</block>
+  <block id="10fdc0e5c9a54280b130aed4d7a0b6e0" category="paragraph">如果删除与数据集关联的备份、则与属于该数据集的任何虚拟机关联的备份也将被删除。如果删除与虚拟机关联的备份、则只会删除该备份。</block>
+  <block id="87372cabc36ee202e94b8b4d26eaa578" category="list-text">在备份窗格中、选择要删除的备份。</block>
+  <block id="3b2dc7db426da50807132dd7a1aee03a" category="paragraph">此时将显示*删除备份*对话框。您可以选择删除选定虚拟机或整个数据集的备份。</block>
+  <block id="43c71a832bf25c4e9d1dbb3ef536b79d" category="list-text">选择相应的选项、然后单击*确认删除*。</block>
+  <block id="6fd2f78e84faf0f67adc4307fbd62724" category="paragraph">您可以在状态窗口中查看备份删除操作的状态。</block>
+  <block id="1d54878873bda79ba6f6f488be52b7db" category="summary">您可以删除不再需要的一个或多个报告。</block>
+  <block id="db0a7e575789aeec7430c480d1cdbf90" category="doc">删除报告</block>
+  <block id="492d10510b8068b0b2bd4fd6b5e7db8f" category="list-text">在导航窗格中、单击*报告*&gt;*数据集*或*报告*&gt;*主机*。</block>
+  <block id="cfdb6ad6562c35577220f2d2ea051140" category="list-text">选择包含要删除的报告的数据集、虚拟机或主机。</block>
+  <block id="177e4969ffcd1fb05e9df1da6273fc62" category="list-text">从报告窗格中、选择要删除的一个或多个报告。</block>
+  <block id="160729de3f7b7c0a18a074f71e6d5660" category="list-text">在操作窗格中、单击*删除报告*、然后单击*确定*以删除。</block>
+  <block id="56186ca948e6e2f0d7873e6938dad843" category="summary">为多个应用程序配置单个Storage Virtual Machine (SVM)或CIFS服务器可能会导致资源共享问题、进而影响Hyper-V环境。</block>
+  <block id="cfab628a3188c03c7095801849d2119e" category="doc">为基于SMB的Hyper-V配置SVM或CIFS服务器</block>
+  <block id="2a451f26e097f6452847e824aff787d8" category="paragraph">为多个应用程序配置单个Storage Virtual Machine (SVM)或CIFS服务器可能会导致资源共享问题、进而影响Hyper-V环境。您应根据需要为基于SMB的Hyper-V配置专用SVM或CIFS服务器。</block>
+  <block id="7c9f946d8fc9c1bc8c966878e44efc69" category="inline-link">NetApp知识库文章1015099：How to set up SVM/CIFS for Hyper-V over SMB</block>
+  <block id="4c842a7c58d79eb45e70fb117cba80d3" category="paragraph"><block ref="b51738f37f5bb4b910df6838f087c67c" category="inline-link-rx"></block></block>
+  <block id="ddb1e3ae2fe994cd6f2cbf626ec1aec2" category="summary">通过SnapManager for Hyper-V、您可以在多个主机之间备份和还原多个虚拟机。您可以创建数据集并对其应用策略、以自动执行计划、保留和复制等备份任务。</block>
+  <block id="56e00e502522f8f9c1bf72739fc7d6b0" category="doc">您可以使用适用于Hyper-V的SnapManager 执行什么操作</block>
+  <block id="1942f365945297729bd80e08dbd9ef55" category="paragraph">您可以使用适用于Hyper-V的SnapManager 执行以下任务：</block>
+  <block id="b20cb048b9feda6e061835940fc5f6ca" category="list-text">将虚拟机分组到具有相同保护要求的数据集中、并对这些数据集应用策略</block>
+  <block id="0686f7937978ebba5e524899d138763a" category="list-text">备份和还原运行ONTAP 软件的存储系统上的专用虚拟机和集群虚拟机</block>
+  <block id="54d4c0474d7100ef471223471ea39232" category="list-text">备份和还原集群共享卷(CSV)上托管的虚拟机</block>
+  <block id="c1ba19d1fa9f7fe81b4469bf18569455" category="list-text">使用计划策略自动执行数据集备份</block>
+  <block id="c0b5b722d2fc5e7702a26493b71e7284" category="list-text">对数据集执行按需备份</block>
+  <block id="08a84764e165844b72e72b3c361f75bf" category="list-text">使用保留策略、根据需要将数据集备份保留任意时间</block>
+  <block id="ff913bf483085ae67b6db660a9b54769" category="list-text">备份成功完成后、更新SnapMirror目标位置</block>
+  <block id="df30d2a876f35e3c55ab84e445c1bdee" category="list-text">指定要在备份前后运行的自定义脚本</block>
+  <block id="2b6f0d8477449afa9c1f20ac00cfac4c" category="list-text">从备份还原虚拟机</block>
+  <block id="fecd9fbae73a24e6d80dc51a54a9d6d6" category="list-text">监控所有已计划和正在运行的作业的状态</block>
+  <block id="3c2190647b63a0bc718d912624647267" category="list-text">从管理控制台远程管理主机</block>
+  <block id="b71cbe96d87276f01b10df5bc5ff5166" category="list-text">为数据集备份、还原和配置操作提供综合报告</block>
+  <block id="4623328acd481dbe715800e88dc07488" category="list-text">同时执行崩溃状态一致的备份和应用程序一致的备份</block>
+  <block id="b218fcb26f722d30f041dd0af9669b87" category="list-text">使用PowerShell cmdlet执行灾难恢复操作</block>
+  <block id="85ce68ce75d094769a965ba2dc1947a6" category="list-text">执行集群操作系统(OS)滚动升级</block>
+  <block id="f375afd3b93b2a4700a74a4d41f5e198" category="summary">尽管SnapManager for Hyper-V的默认行为是对包含处于已保存状态的虚拟机的发生原因 备份执行关闭或失败操作、但您可以通过将虚拟机移动到具有允许已保存状态备份的策略的数据集来执行已保存状态备份。</block>
+  <block id="0bf1b700eaedae30d9d1c644e8027120" category="doc">SnapManager for Hyper-V如何处理已保存状态的备份</block>
+  <block id="9845564fe8752b966d5bc32e7dd5b247" category="paragraph">此外、您还可以创建或编辑数据集策略、以允许进行已保存状态的虚拟机备份。如果选择此选项、则当发生原因 Hyper-V VSS写入程序使用已保存状态备份虚拟机或对虚拟机执行脱机备份时、SnapManager for Hyper-V不会将备份失败。但是、执行已保存状态或脱机备份可能会导致发生原因 停机。</block>
+  <block id="32d1bfdf8c6344fe503f87687f5a8962" category="summary">已删除SnapInfo Snapshot副本。</block>
+  <block id="c5d492b9a95788785d322809db0f5d3a" category="doc">已删除SnapInfo Snapshot副本</block>
+  <block id="1e24c774a941f73ff113ac649bb5ee65" category="paragraph">SnapManager for Hyper-V未维护或删除SnapInfo Snapshot副本。</block>
+  <block id="952de9aa949a3ae5e9c9175bd9f009ac" category="paragraph">创建数据集备份后、SnapManager for Hyper-V会为SnapInfo LUN创建一个Snapshot副本。如果删除了备份、则不会删除SnapInfo Snapshot副本。默认情况下、SnapManager for Hyper-V会保留30个SnapInfo LUN Snapshot副本、每当最新副本超过30个副本阈值时、将最旧的副本替换为最新副本。</block>
+  <block id="8ae7a4b621e7286f83f2e0b5b0e7abdb" category="paragraph">您可以使用以下注册表项之一配置要为每个Hyper-V主机保留的SnapInfo Snapshot副本数：</block>
+  <block id="a462ca2398fe279403cf60c92d13855d" category="paragraph">对于独立Hyper-V主机：key：HKLM\SOFTWARE\NetApp\SnapManager for Hyper-V\Server\&lt;hostname&gt; DWORD值：snapinfo_snaps_count (要保留的SnapInfo Snapshot副本数)</block>
+  <block id="6058b8b336df7e71c918e9bfaa78a869" category="paragraph">对于集群模式Hyper-V主机(要在集群中的每个节点上配置)：key：HKLM\Cluster\SOFTWARE\NetApp\SnapManager for Hyper-V\Server\&lt;clustername&gt; DWORD值：snapinfo_snaps_count (要保留的SnapInfo Snapshot副本数)</block>
+  <block id="335cdc1cdd845dd68fb0af4318d17323" category="summary">在静默安装中使用的MSI自定义属性。</block>
+  <block id="c2b018668fb0b779ead5f9f95bae0698" category="doc">在静默安装中使用的MSI自定义属性</block>
+  <block id="e33f003e65659cbd1b34de1441c9a0b6" category="paragraph">运行Windows Server 2008或Vista且安装了Windows安装程序4.5的系统无法识别SnapManager for Hyper-V安装的内置属性。</block>
+  <block id="840a7fa4f3f1957770bb36e45ef90ae3" category="paragraph">在安装时使用MSIRESTABMANAGERCONTROL=Disable命令开关参数。</block>
+  <block id="4ea9f7e1381b19e48a38a7a35061e916" category="inline-link">Microsoft开发人员网络(MSDN)库</block>
+  <block id="fe7c1b974e579dd2b5c229a1c5cebf3c" category="paragraph"><block ref="fe7c1b974e579dd2b5c229a1c5cebf3c" category="inline-link-rx"></block></block>
+  <block id="585932dc663b862a65f668864742bb10" category="summary">Microsoft使用SMB目标上运行的新远程VSS硬件提供程序对VSS基础架构进行了增强、以支持对SMB 3.0共享上运行的Hyper-V虚拟机(VM)进行应用程序一致的备份。</block>
+  <block id="01cb67706eed4ef65de10c645b6657c1" category="doc">在Windows Server 2012中为Hyper-V VM提供SMB 3.0支持</block>
+  <block id="67c8b8d5e0462b6752a2c97f85948d9d" category="paragraph">Windows 2012虚拟机管理程序中提供了一个名为SMB文件共享提供程序的新提供程序、用于支持和协调SMB 3.0共享上运行的Hyper-V VM备份。</block>
+  <block id="2d9c02a3cfb8e65c9c1aaa46b2fc8e86" category="paragraph">当VSS请求程序(适用于Hyper-V的SnapManager)将包含Hyper-V VM的SMB 3.0共享添加到VSS Snapshot集时、VSS会调用新的SMB文件共享副本提供程序、将MSRPC命令发送到SMB目标以协调VSS备份。</block>
+  <block id="4ae232dd83c1800c9700a41a957e5a0a" category="paragraph">SMB目标上运行的新文件共享卷影复制代理(远程VSS提供程序)负责创建实际的硬件Snapshot副本。</block>
+  <block id="066bf8e788a744db3f1d3d776ae6d60b" category="paragraph">Data ONTAP 8.2实施文件共享卷影复制代理(远程VSS硬件提供程序)来执行SMB共享的应用程序一致的备份副本。</block>
+  <block id="d329328b4b22a529b57fff240766dc66" category="summary">创建数据集后、您可以修改数据集问题描述 以及与该数据集关联的资源。</block>
+  <block id="6d98fc44786239f4b5144fd84d482ba8" category="list-text">选择要修改的数据集。</block>
+  <block id="8b003fa95f73f3b785cb6e0ec4ec2df7" category="list-text">从操作窗格中、单击*修改数据集*。</block>
+  <block id="a35bd6b16b9341c7c3c28c63b800b49e" category="list-text">完成向导中的步骤。</block>
+  <block id="113433cb14879d5855c0cfcff78e7366" category="summary">灾难恢复功能可确保在发生灾难或其他情况导致主存储站点上的关键受保护数据不可用时、您可以通过二级存储站点访问该数据的备份副本。灾难恢复只能使用PowerShell界面执行。</block>
+  <block id="455a9d5e4a47da0f33133f449ad5f856" category="doc">执行灾难恢复</block>
+  <block id="e1c209ac85bfb81e9855f0e3b99afb7e" category="summary">查询IVssWriteCallback接口时出现意外错误。HR = 0x80070005、访问被拒绝。</block>
+  <block id="521166875196b366b08ccb1fe3582b86" category="paragraph">如果CSV归集群组所有者所有、而VM归配对节点所有、则虚拟机备份成功完成、应用程序事件日志中会显示VSS错误。这通常是由于写入程序或请求程序进程中的安全设置不正确所致。</block>
+  <block id="7ea39b60427774995e2bee8e874dca9e" category="paragraph">None：可以忽略此错误消息。</block>
+  <block id="601935beb642d668b3969656d707806c" category="summary">创建Snapshot副本后、您可以验证是否已成功使用Data ONTAP VSS硬件提供程序。</block>
+  <block id="4817f39c0025365c4b2b581ea7d8627a" category="doc">验证是否已成功使用VSS硬件提供程序</block>
+  <block id="f66fa44621c6a877026312208f6c7ae1" category="list-text">导航到MMC中的*系统工具*&gt;*事件查看器*&gt;*应用程序*、查找具有以下值的事件：</block>
+  <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">源</block>
+  <block id="1be7f4094822039b4634c93c23dd7efb" category="cell">事件 ID</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Description</block>
+  <block id="311859000270251f433cd8b94760970d" category="paragraph">Navsssv</block>
+  <block id="be93cca187e923aabc702667ba5f0d06" category="paragraph">4089</block>
+  <block id="a9b5235dd78cbe7fe1b1c523e48d02a7" category="paragraph">VSS提供程序已在n毫秒内成功完成SnapshotSetId的CommitSnapshots。</block>
+  <block id="38b3dc2a6f667646b5f282943f9f6219" category="paragraph">*注：* VSS要求提供程序在10秒内提交Snapshot副本。如果超过此时间限制、Data ONTAP VSS硬件提供程序将记录事件ID 4364。由于出现瞬时问题、可能会超过此限制。如果备份失败时记录了此事件、请重试此备份。</block>
+  <block id="358bb410ee4fdb1466406179a2d7e7c1" category="summary">您可以使用修改策略向导修改用于保护数据集的策略。</block>
+  <block id="03d1659c055878f5063665deaef01e56" category="doc">修改策略</block>
+  <block id="0fff1f36590a637c233d1cddf99f3433" category="list-text">选择包含要修改的策略的数据集。</block>
+  <block id="cf9e7be685e452f2c08dda68d30ae872" category="list-text">选择要修改的策略。</block>
+  <block id="ca9c50f2667ce74f476bc4348cbdb40e" category="list-text">从操作窗格中、单击*修改策略*。</block>
+  <block id="b3dd7ffc8a54676ed3847b3f7998dc8a" category="paragraph">此时将显示修改策略向导。</block>
+  <block id="2f7f4ca12b1f546b90c2369696eddb77" category="list-text">完成向导中的步骤以修改数据集的保护策略。</block>
+  <block id="07553da01bd8f0509367dab702f0df9b" category="summary">您可以使用SnapManager for Hyper-V从备份副本还原虚拟机(VM)。您还可以还原属于集群一部分的虚拟机。SnapManager for Hyper-V可确定集群中要将虚拟机还原到的相应节点。</block>
+  <block id="b2423fe04190a4d2fa2e997bc883b91f" category="paragraph">要还原VM、SnapManager for Hyper-V会使用SnapDrive for Windows中的文件级还原功能。您可以将虚拟机的关联文件(包括配置文件、Snapshot副本和任何VHD)分布在多个ONTAP LUN中。一个LUN可以包含属于多个VM的文件。</block>
+  <block id="f7535d861055071a871a1a379dc967cd" category="paragraph">如果某个LUN仅包含与要还原的虚拟机关联的文件、则SnapManager for Hyper-V将使用LCSR (LUN克隆拆分还原)还原此LUN。如果某个LUN包含与要还原的虚拟机无关的其他文件、则SnapManager for Hyper-V将使用文件副本还原操作来还原虚拟机。</block>
+  <block id="154cac16b753308457b9a262443343ba" category="summary">在安装SnapManager for Hyper-V之前、最好先确定要如何配置环境、其中包括在安装SnapManager for Hyper-V之前在所有Hyper-V主机上安装SnapDrive for Windows</block>
+  <block id="8a58858995de7d124bdacc564f7d7d41" category="summary">重命名存储系统卷后还原失败。</block>
+  <block id="9d56008e7cafbef0c16363409787df4b" category="doc">重命名存储系统卷后还原失败</block>
+  <block id="b73953d69b5826bc994c59820fe70281" category="paragraph">还原虚拟机所需的某些存储系统快照缺失或不一致。</block>
+  <block id="414fc30787c8e1cec056910d40c873e9" category="paragraph">如果存储系统卷已重命名、则无法从重命名卷之前创建的备份还原虚拟机(VM)。</block>
+  <block id="e240593319cfdae29dea4e050a0b9c5d" category="paragraph">如果存储系统卷已重命名、并且您需要从重命名卷之前创建的备份还原VM、请完成以下操作：</block>
+  <block id="391acb1460138f2c146d23275cb16d0e" category="list-text">从MMC还原VM时、请确保在还原向导的"*还原选项"*页面中未选中"启用Snapshot验证"选项。</block>
+  <block id="f7c055253485e427f46278db4076d0bf" category="list-text">使用PowerShell还原VM时、请确保指定-DisableVerifySnapshot参数。</block>
+  <block id="ee1fb48cf427020b1bc11a95d41e1b89" category="summary">您可以查看有关SnapManager for Hyper-V中管理的数据集或虚拟机资源的报告</block>
+  <block id="6e0141f614c580e105922d35f1522f47" category="doc">查看数据集报告</block>
+  <block id="3fb30d8f1e545b766aa6fbe1fb0270c9" category="list-text">在导航窗格中、单击*报告*&gt;*数据集*。</block>
+  <block id="f76c0baf15ead2975d705e3c32493a76" category="list-text">选择包含要查看的报告的数据集或虚拟机。</block>
+  <block id="93b5a720f8e4504a3412458bd9c452d7" category="list-text">在报告窗格中、单击备份选项卡或恢复选项卡。</block>
+  <block id="5f6940ecd347062b2a819310646bd413" category="list-text">选择要查看的报告、然后单击*查看报告*。</block>
+  <block id="2143271db1b4deadd83681d45a3475e6" category="cell">要查看的对象</block>
+  <block id="d1f0ba34e78627dc049ace1d8ae99de8" category="paragraph">*数据集报告*</block>
+  <block id="b593829a06bd7d897992774622814a90" category="paragraph">您可以查看备份报告。</block>
+  <block id="12ae71df924eae6ed493da1acd0a74f5" category="paragraph">*虚拟机报告*</block>
+  <block id="e4a52aa830b539c290e19001441428ff" category="paragraph">您可以查看备份或恢复报告。</block>
+  <block id="6dc624ee7751a3136ddfb2246d7a757f" category="paragraph">此报告将显示在一个单独的窗口中。</block>
+  <block id="b8bfde7509ea6e746a0d2dc3fa8e035b" category="summary">通过远程主机安装向导、您可以在独立主机或节点以及集群主机或节点上远程安装或卸载SnapManager for Hyper-V。</block>
+  <block id="f288e721031c69ab5958873c60b80a6c" category="doc">在节点或主机上远程安装或卸载SnapManager for Hyper-V</block>
+  <block id="7c7073c19cc9ef7ce5633f713af732c6" category="paragraph">通过远程主机安装向导、您可以在独立主机或节点以及集群主机或节点上远程安装或卸载SnapManager for Hyper-V。如果您希望一次在集群的所有节点上安装SnapManager for Hyper-V、而不是在每个节点上安装该软件、则可以远程安装该软件。</block>
+  <block id="92ca4e5f52582eb9dfaa6711eeeeb8aa" category="paragraph">要使用远程主机安装向导、您必须已在主机节点上安装SnapManager for Hyper-V。</block>
+  <block id="c1228ebb2ee56220624e3fc941f39a1d" category="list-text">从操作窗格中、单击*远程主机安装*。</block>
+  <block id="9713a6b14a0ea321bda5f3bf2348ebd6" category="list-text">运行远程主机安装向导。</block>
+  <block id="0f1ab98cd7d8b82174962ce96d682725" category="paragraph">运行远程主机安装向导时、主机节点会将SnapManager for Hyper-V安装或卸载推送到集群中的其他节点或主机。</block>
+  <block id="a824865ad11687b869fb7c3688b30aab" category="summary">在主存储系统上备份VM后、您可以使用从主存储系统到二级存储系统建立的SnapMirror关系返回到原始配置。</block>
+  <block id="229eb0a0aaf5bb5e417996de47006416" category="doc">还原集群主机的原始配置</block>
+  <block id="1e85116c51e33e89bd1860490e8526bf" category="list-text">使所有VM的虚拟机资源和虚拟机配置资源脱机。</block>
+  <block id="8193de4cd637235b89646ee62bd3ae58" category="list-text">从集群中删除这些资源。</block>
+  <block id="27f116dd2c8a9ae5e03e493e359cc954" category="list-text">从Hyper-V Manager中删除所有VM。</block>
+  <block id="7a6480918ea2439065c4289577ac8e48" category="list-text">使用SnapDrive 断开所有磁盘的连接。</block>
+  <block id="c3ba3fc89fcdafe39f808075d73d0f49" category="summary">您可以使用命令行开关执行静默安装、以便使用安装脚本安装SnapManager for Hyper-V</block>
+  <block id="e306b1733b6ed9e0a5c51db654088e20" category="doc">列出用于静默安装的命令行开关的问题描述</block>
+  <block id="4e895b550bc9aa4297d558e23e3849a5" category="paragraph">下表列出了一些值、并介绍了每个可用的命令行安装交换机。</block>
+  <block id="bbc155fb2b111bf61c4f5ff892915e6b" category="cell">交换机</block>
+  <block id="689202409e48743b914713f96d93947c" category="cell">价值</block>
+  <block id="198b4e57fb63a5deedec193f2fb2325c" category="paragraph">silent_mode=</block>
+  <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1.</block>
+  <block id="266a184f6d07d85f07a8590b69dc4bc7" category="paragraph">使SnapManager for Hyper-V能够正确执行无人参与的安装功能。首次安装、升级和完全卸载时需要使用此交换机。</block>
+  <block id="ad03e4e307289bacbb9cc0a680af3da0" category="paragraph">REINSTALLMODE=</block>
+  <block id="47a5489e00a9e07702fa39ff6845dce4" category="paragraph">指定要使用的重新安装模式。</block>
+  <block id="9e3669d19b675bd57058fd4664205d2a" category="paragraph">五</block>
+  <block id="2d64b7b8ec30590efc918a142a275576" category="paragraph">指示安装是从源软件包运行的、并且本地软件包已缓存。首次安装SnapManager for Hyper-V时、请勿使用此选项重新安装所有文件、而不管其版本、日期或校验和值如何。</block>
+  <block id="0cc175b9c0f1b6a831c399e269772661" category="paragraph">答</block>
+  <block id="457e9669098ea7596bf25b32e8216120" category="paragraph">如果存在旧版本或缺少文件、则重新安装SnapManager for Hyper-V文件。</block>
+  <block id="d95679752134a2d9eb61dbd7b91c4bcc" category="paragraph">O</block>
+  <block id="837b0d7799666e7109f4312ed3c8aca4" category="paragraph">指示应重新写入HKEY_LOCAL_MACHINE和HKEY_LOCAL_MACHINE和HKEY_LOCAL_MACHINE中所有SnapManager for Hyper-V所需的注册表条目。</block>
+  <block id="6f8f57715090da2632453988d9a1501b" category="paragraph">M</block>
+  <block id="c95a26abe96bacd1248a25f386e6a53d" category="paragraph">指示应重新写入HKEY_LOCAL_MACHINE和HKEY_LOCAL_MACHINE中所有SnapManager for Hyper-V所需的注册表条目。</block>
+  <block id="7b774effe4a349c6dd82ad4f4f21d34c" category="paragraph">u</block>
+  <block id="080fb47f00779e46697aa15e68ce40da" category="paragraph">重新安装所有快捷方式并重新断开所有图标、从而覆盖所有现有快捷方式和图标。</block>
+  <block id="6837cb2ef440deda62cdfd92f893462c" category="paragraph">reinstall=</block>
+  <block id="5fb1f955b45e38e31789286a1790398d" category="paragraph">全部</block>
+  <block id="b3caa15fd4cdc96f686c9e3caa66672c" category="paragraph">重新安装适用于Hyper-V的所有SnapManager 功能。</block>
+  <block id="b3f1e272edb813115cf66bf7b2bcc282" category="paragraph">/Li</block>
+  <block id="435ed7e9f07f740abf511a62c00eef6e" category="paragraph">filename</block>
+  <block id="d40d4ca09f94bec6ac232ec9abdb8a75" category="paragraph">指定应生成SnapDrive 安装日志。</block>
+  <block id="76ffdf03cd11a15447f8ff236347a48f" category="paragraph">smHV_license=</block>
+  <block id="718779752b851ac0dc6281a8c8d77e7e" category="paragraph">license</block>
+  <block id="aa9997668080e600098201c800794a9a" category="paragraph">指定适用于Hyper-V的适当且有效的SnapManager 许可证。</block>
+  <block id="902e50640559acf2618232cb467d71c6" category="paragraph">INSTALLDIR=</block>
+  <block id="92174ec7a91131c3d23e5ec8e145b56e" category="paragraph">目标安装目录</block>
+  <block id="f6136c894dd665b771dc27dfcdb15e5b" category="paragraph">指定安装SnapManager for Hyper-V的目标安装目录。只有在首次安装适用于Hyper-V的SnapManager 时、才需要此交换机。</block>
+  <block id="4308fbf9e781c7b5b49ce2679e42f116" category="paragraph">SVCUSERNAME=</block>
+  <block id="5e5fdbee204306d3d25070f14577adb5" category="paragraph">域\用户名</block>
+  <block id="b1a5a00134f1d26f309333310a714bb3" category="paragraph">指定SnapManager for Hyper-V在无人参与安装期间使用的域和用户名。</block>
+  <block id="b3bafd27e7a73f30ce8732de686ce492" category="paragraph">SMHVSRV_password=</block>
+  <block id="5f4dcc3b5aa765d61d8327deb882cf99" category="paragraph">password</block>
+  <block id="983e205468372f5b54306075f011c3e7" category="paragraph">指定SMHVSRV_password用户的密码。</block>
+  <block id="50bd414adb9352637601f7b9213aa96d" category="paragraph">SMHVSRV_CONFIRMUSERPASSWORM=</block>
+  <block id="8983eeecdf244f22cec1336291134ec3" category="paragraph">确认SMHVSRV_CONFIRMUSERPASSWORM用户的密码。</block>
+  <block id="a61a3b5b5e4cead0800f62ae9bb66136" category="paragraph">SMHV_WEBSRV_tcp_port</block>
+  <block id="b8ebd2c0b854ff6570d728914e7849e8" category="paragraph">端口号</block>
+  <block id="b746df63e4f5f356b289dbe20ff3ddf7" category="paragraph">指定SnapManager for Hyper-V Web服务将使用哪些端口来访问net.tcp。默认端口为808。</block>
+  <block id="63b9599be551312d5e3cf53bc555bc96" category="paragraph">以下语法显示了全新安装：</block>
+  <block id="81fedb9b338bf45d21d66418f59a062b" category="paragraph">`setup.exe /s /v"/qn silent_mode=1 /L* v SMHVInstall.log SVCUSERNAME=Domain\User Name SMHVSRV_password=password SMHVSRV_CONFIRMUSERPASSWORD=password"`</block>
+  <block id="d04a98437172200dd00fe91c21b12a6a" category="paragraph">以下语法显示了升级：</block>
+  <block id="263e5a95756538f004b9f4be0693d047" category="paragraph">`setup.exe /s /v"/qn REINSTALLMODE=vamus reinstall=all silent_mode=1 /L* v SMHVUpgrade.log SVCUSERNAME=Domain\User Name SMHVSRV_password=password SMHVSRV_CONFIRMUSPASSWORD=password"`</block>
+  <block id="712ef0af99264750df06acf2ceaeb496" category="paragraph">以下语法显示了卸载：</block>
+  <block id="c678cc6163ef02a2dd28b9cbe0db5d16" category="paragraph">`setup.exe /s /x /v"/qn silent_mode=1 /L* v SMHVuninstall.log`</block>
+  <block id="ce7db543aa06ec7ff44a4bc12924f66f" category="summary">Hyper-V父主机是启用了Hyper-V角色的物理服务器。</block>
+  <block id="e82c4340e2eafd38e062fccd93987b16" category="paragraph">Hyper-V父主机是启用了Hyper-V角色的物理服务器。包含虚拟机的主机服务器将添加到SnapManager for Hyper-V中以进行保护和恢复。要安装和运行所有适用于Hyper-V的SnapManager 软件组件、您必须确保Hyper-V父主机满足最低操作系统和Hyper-V要求。</block>
+  <block id="d2c33f738e00f240ee4b4cf84fe38db1" category="list-text">*支持的操作系统*</block>
+  <block id="0346e0e72471991307e842e6d2a221a9" category="paragraph">SnapManager for Hyper-V可在以下操作系统上运行：</block>
+  <block id="5ed6d03e7c3f615ab8fdbae833ffb0b9" category="list-text">Windows Server 2008 R2 SP1</block>
+  <block id="96bc7f42979153694e05a6a2b867772e" category="list-text">Windows Server 2012 R2</block>
+  <block id="00aae0645113cb861020a7a42ded48c2" category="list-text">Windows Server 2012</block>
+  <block id="ed590cb2453f0683b64cb528f78610a2" category="list-text">Windows Server 2016</block>
+  <block id="31f8757839909e87266f2b53482c86ef" category="list-text">Windows Server 2019</block>
+  <block id="ba498e453ebf249225711f39b1e238cc" category="list-text">*支持的管理控制台操作系统*</block>
+  <block id="6e513523c6dc9a4c1cc51397b63aed1c" category="paragraph">管理控制台必须运行以下操作系统：</block>
+  <block id="4e968295ae15428d21e4d601d133970d" category="list-text">* Hyper-V要求*</block>
+  <block id="16854cdf08f480287c8423a246622e5a" category="paragraph">有关详细信息、请参见Microsoft TechNet库中的Hyper-V入门信息。</block>
+  <block id="2e569174a670e65be51fa1a29861108d" category="list-text">*国际化支持*</block>
+  <block id="18478c0d096363246455e61681139d9f" category="paragraph">SnapManager for Hyper-V已在德语和日语操作系统上进行了测试。</block>
+  <block id="9ef9aa257b15f049fe45bfeadd581901" category="summary">执行集群操作系统滚动升级时、您可以使用以下操作步骤 从Windows 2012 R2节点取消LUN映射、并在将LUN添加到集群后将其重新映射到Windows Server 2016节点。</block>
+  <block id="4f95ae6fef70ed87e3e8d5be1f86db4e" category="doc">在混合操作系统模式下映射LUN</block>
+  <block id="1230344a2fabe714726457cfbea52ca9" category="paragraph">必须将Windows Server 2016节点添加到集群中。</block>
+  <block id="693d74cdde31ff59f565613960bb98cf" category="admonition">支持从Windows Server 2016到Windows Server 2019的集群滚动升级</block>
+  <block id="44794b5aca0963aac9c7913a28588d56" category="list-text">登录到ONTAP 系统管理器。</block>
+  <block id="7b3fd96975e5acb98ccd6d057ee36e1c" category="list-text">选择已映射到Windows 2012 R2的LUN。</block>
+  <block id="f0e334dd11c87357165565ccbe3cd55b" category="list-text">单击*编辑*并选择启动程序组。</block>
+  <block id="51064c1864ef207564681f1f4a30562f" category="image-alt">混合操作系统模式3.</block>
+  <block id="ccaa470ad4830933be058d46b71753bf" category="list-text">从集群中取消选中已删除节点的igroup。</block>
+  <block id="01b136dfa868398668f555e864e6aab4" category="list-text">为所有新添加的Windows 2016节点添加一个新启动程序组。</block>
+  <block id="063d97ac5e2b1de822379713510c1b5f" category="image-alt">混合操作系统模式4.</block>
+  <block id="1e4247399d5002eefa579ab314bcaa09" category="list-text">选中新创建的启动程序组旁边的复选框、将LUN映射到已添加到集群的Windows 2016主机。</block>
+  <block id="7d2a80dae0d60498c0c6a64099e7a6b4" category="image-alt">混合操作系统模式6.</block>
+  <block id="f7b89b3e8b56f0c37b434e4f1e9c4cea" category="list-text">重复步骤4和6将每个LUN映射到Windows 2016节点。</block>
+  <block id="eb527f5a61ced06c8190410aaf6114de" category="paragraph">所有LUN都应显示在Windows 2016节点中。</block>
+  <block id="a150560e09fb15f8bb63c8735c5a3138" category="list-text">使用Windows 2016节点中的磁盘管理工具重新扫描磁盘。</block>
+  <block id="80316dd1c05a83cead5bd9bc18d01e38" category="image-alt">混合操作系统模式8.</block>
+  <block id="0eee869e562049efec90606fcfb92495" category="list-text">在新的Windows 2016 SnapDrive 传输协议设置(TPS)中添加存储管理LIF、然后刷新磁盘。</block>
+  <block id="447031a2c3ddc330f826b1707f165254" category="image-alt">混合操作系统模式9</block>
+  <block id="3784cdca88e33c31b92e73c29cc6281d" category="summary">Web服务客户端通道无法连接到计算机smhv51_81cluss上的ConfigurationManagementService实例。</block>
+  <block id="9dfbb9d6f545bc2012ccb952dffaa54f" category="doc">Web服务客户端通道无法连接到计算机smhv51_81cluss上的ConfigurationManagementService实例</block>
+  <block id="978d91cb9f7c24b46e19b15fcd94244d" category="paragraph">net.tcp：//smhv51_81cluss/SnapManager/HyperV/ConfigMgmtService/v_10上没有可以接受此消息的端点侦听。这通常是由于地址或SOAP操作不正确所致。有关详细信息、请参见Inner Exception (如果存在)。</block>
+  <block id="a2b084a9f95ba3b25f1f637979847b5d" category="paragraph">如果导出配置信息、则受管主机的本地Web服务端口设置将存储在导出的配置文件中。如果您稍后必须使用其他Web服务端口重新安装SnapManager for Hyper-V并导入以前的配置信息、则会遇到连接问题。</block>
+  <block id="5eb53b8f7ae08c399198ee7c4a0e7ffe" category="paragraph">要防止出现此问题描述 、请在重新安装适用于Hyper-V的SnapManager 时使用导出的配置文件中包含的相同Web服务端口设置</block>
+  <block id="dd5cfb29bd3e878ccef8250cee1cc7d2" category="summary">备份和还原通知不会在仅使用IPv6的环境中发送。</block>
+  <block id="6654ce07e74638a6c41c7de8fd372bab" category="doc">备份和还原通知不会在仅使用IPv6的环境中发送</block>
+  <block id="8f62d60c72e411a69a11527016246b16" category="paragraph">运行纯IPv6主机时、不会收到任何备份或还原操作通知。</block>
+  <block id="6ec78d8f9e0e84024ab564c4750d7ca7" category="paragraph">SMTP服务器不支持IPv6、或者它未启用IPv6。</block>
+  <block id="65f89a77c7a404d833288f80127ffc9a" category="paragraph">在SMTP服务器上启用IPv6。</block>
+  <block id="54b04bc0d41ab31a5f12b1196896e27e" category="summary">您可以查看主机上安装的VSS提供程序。</block>
+  <block id="aac15e699d8896a7b2d986e0648e7384" category="doc">查看已安装的VSS提供程序</block>
+  <block id="792a7c8ccc244135b48be8fb180811ad" category="list-text">选择*开始*&gt;*运行*、然后输入以下命令打开Windows命令提示符：</block>
+  <block id="64cd475900b6fddfc9d4d9fb7f2ef8b1" category="paragraph">`cmd`</block>
+  <block id="b988824771d7c292abce3028b1a6ee99" category="list-text">在提示符处、输入以下命令：</block>
+  <block id="b82379d924b247bed1d063953160eead" category="paragraph">`vssadmin list providers`</block>
+  <block id="a68c3c53417789e724bdb983d1b29d52" category="paragraph">输出应类似于以下内容：</block>
+  <block id="03786309c480465fa5faa4bb7bc17de2" category="summary">Volume Shadow Copy Service error：检测到内部不一致。</block>
+  <block id="cb42bb6a16f9f1beae25774adb796dba" category="doc">Volume Shadow Copy Service error：检测到内部不一致</block>
+  <block id="b8bdcd5f4cd224e9a0c218984a005234" category="paragraph">卷影复制服务错误：尝试联系卷影复制服务写入程序时检测到内部不一致。请检查事件服务和卷影复制服务是否运行正常。</block>
+  <block id="bc531f5732c0fe66d5a145a5c79c3b83" category="paragraph">在对使用Windows Server 2003的虚拟机执行备份时、由于重试错误、此虚拟机会反复失败。</block>
+  <block id="5d4856a31047c0d9604a8bf4214195d7" category="paragraph">检查虚拟机中的Windows应用程序事件日志、查看是否存在任何VSS错误。</block>
+  <block id="8ca3a1c2cee34714baa3cdbb555be8fa" category="inline-link">Microsoft支持文章940184：在基于Windows Server 2003的计算机上运行"vssadmin list writers"命令时出现错误消息："error：0x8000FFFFFFF"</block>
+  <block id="66ddb81cfb2b9c3cb20556525aa3ef06" category="paragraph"><block ref="66ddb81cfb2b9c3cb20556525aa3ef06" category="inline-link-rx"></block></block>
+  <block id="ac9af776a3185cf2b06fb0d0a7cd7a64" category="summary">如果要创建数据集以保护数据、则必须满足特定要求。</block>
+  <block id="92887ee2efa3d6433ca84970a02d8e2b" category="doc">创建数据集的要求</block>
+  <block id="fc01ba2e746c58919b429d2fd4e376e2" category="paragraph">如果要创建数据集以保护数据、则必须满足特定要求。您必须先将主机或主机集群添加到SnapManager for Hyper-V、然后再将虚拟机添加到主机或主机集群。</block>
+  <block id="fd5bb59e7d014d235c68789b1135795d" category="paragraph">为数据集命名时、您应在站点上使用命名约定来帮助管理员查找和标识数据集、这些数据集仅限于以下字符：</block>
+  <block id="592e3c4687690a8e75020c4f4585edc6" category="section-title">数据集资源</block>
+  <block id="173db84d210ae07ad8b5cd80aab52026" category="paragraph">在将虚拟机等资源添加到数据集之前、必须将主机或主机集群添加到SnapManager for Hyper-V。</block>
+  <block id="fd3940b5cf818e85baca9b042e0bcb89" category="paragraph">您可以向数据集添加主机、专用虚拟机或共享虚拟机。如果添加主机、则需要添加属于该主机的所有虚拟机。您还可以将属于不同主机的虚拟机添加到数据集。虚拟机可以属于多个数据集。</block>
+  <block id="8c0679507602d4802b80d3cf5c7efbef" category="admonition">属于同一主机集群的专用虚拟机和共享虚拟机不应位于同一数据集中。如果将这些类型的资源添加到单个数据集、则发生原因 数据集备份可能会失败。</block>
+  <block id="a737d3e7798680e23775f1e5f35c182c" category="paragraph">与虚拟机关联的所有文件(包括配置文件、Snapshot副本和VHD)都必须驻留在ONTAP LUN上。</block>
+  <block id="b277e186379856ae1bd03b2e5d1c9abb" category="section-title">数据集资源消耗</block>
+  <block id="f29e5485ef3e75c61f25913cdbcefbf2" category="paragraph">在任何给定时间、主机上只能执行一个应用程序一致的备份操作。如果同一虚拟机属于不同的数据集、则不应同时计划对这些数据集进行应用程序一致的备份。如果发生这种情况、其中一个备份操作将失败。</block>
+  <block id="936b9c10d3f3932ec845567bb28015a5" category="paragraph">创建数据集时、应选择驻留在特定ONTAP LUN上的所有虚拟机。这样、您就可以在一个Snapshot副本中获取所有备份、并减少存储系统上的空间消耗。</block>
+  <block id="699aaa675ca238a5dab5d28da08a3035" category="summary">备份失败后、存储性能下降。</block>
+  <block id="a2794223e9d576724f127b652b416ed6" category="doc">备份失败后、存储性能下降</block>
+  <block id="5ad8aa6ff5b24dfffd0b1f734bc98a6b" category="paragraph">备份作业失败后、存储性能可能会降低。</block>
+  <block id="757401961a2d50be2256c37ea70ff8f0" category="paragraph">如果Microsoft Hyper-V VSS组件在备份期间出现异常、则集群共享卷(CSV)可能仍处于重定向I/O模式、从而导致I/O开销和Windows故障转移集群中的潜在瓶颈。这可能会导致整体性能下降、对重定向I/O模式下CSV上的虚拟机的影响最大。</block>
+  <block id="64dd56c59188950b0ec09057b8734bf1" category="paragraph">请联系Microsoft支持部门以获得有关此问题描述 的帮助。</block>
+  <block id="0266b3a5f13d93fbbf84109b9387cb7e" category="summary">如果要将策略应用于数据集以实现备份或还原功能、则必须满足特定要求。您可以向同一数据集添加多个保留、计划和复制策略。</block>
+  <block id="3a9a3dc805cdcfcaae25ecb4c15f163e" category="doc">向数据集添加策略的要求</block>
+  <block id="ae39c66937b8980b60d9388be573019c" category="section-title">策略名称和问题描述</block>
+  <block id="2befe0bbee2fa8767d0083c8195b4bc5" category="paragraph">策略名称和问题描述 、限制为以下字符：</block>
+  <block id="1f0b72c9fe5aa6fa1bc0bc0d67fa1404" category="list-text">(连字符)</block>
+  <block id="950e7111974d7a592ec3959027d83548" category="section-title">备份保留限制</block>
+  <block id="f8995014c19a701588f3b457bb3bd210" category="paragraph">删除每小时、每天、每周或每月备份副本之前、您必须确定要保留的最短时间。</block>
+  <block id="4b477474ab2a7b8255b8ca1e04af4a3a" category="admonition">保留类型为"`无限制`"的备份不会删除。</block>
+  <block id="5c1534d7d0b2f06ed73fa0138b59de0e" category="paragraph">您可以根据时间或指定数量保留备份。例如、您可以保留10个最新备份、也可以删除15天之前的备份。</block>
+  <block id="b2ce75868082f42f112c8a0f38225a95" category="paragraph">如果您的系统似乎保留了旧备份、则应检查保留策略。共享Snapshot副本的所有要备份的对象都必须满足保留策略的备份删除标准、才能触发Snapshot副本的删除。</block>
+  <block id="2a82a0be63dfab9ffb7147358323f75c" category="section-title">计划的备份作业名称</block>
+  <block id="4242f84e8731df3d9beef42442106e7d" category="paragraph">您必须为计划的备份作业分配一个名称。</block>
+  <block id="8f2e8de2d528d2fcff64889bfc234dcc" category="section-title">计划备份的权限</block>
+  <block id="245c70f2ec0507bd8c36848846bae3b9" category="paragraph">您必须具有适当的凭据才能计划数据集备份。</block>
+  <block id="0c989ccfc82014c30ee8b0c47e404ac3" category="section-title">同时计划备份的可能数据集的数量</block>
+  <block id="2c401305a667f888e89bbd9a52476871" category="paragraph">如果同一虚拟机属于不同的数据集、则不应同时计划对包含同一虚拟机的多个数据集进行备份。如果发生这种情况、其中一个备份操作将失败。在任何给定时间、主机上只能执行一个备份操作。</block>
+  <block id="dd3c46dc8f4da0f46e3f6f7837b02cf2" category="section-title">计划备份的类型</block>
+  <block id="1ebe2f403310f20afc46fd5b5fdb3b4b" category="paragraph">您可以执行应用程序一致的备份或崩溃状态一致的备份。</block>
+  <block id="f7d4327488390afe4c65725ff82002de" category="paragraph">您必须选择是否要在备份完成后更新SnapMirror目标位置。</block>
+  <block id="446bf6a6fe4e3f61cc97e65cdc55726b" category="paragraph">只有在已配置SnapMirror且数据集中包含虚拟机的LUN属于源SnapMirror卷时、更新才会成功。</block>
+  <block id="afe6bb39ca14f26068030842ad6d03ce" category="paragraph">SnapManager for Hyper-V的默认行为是、如果一个或多个虚拟机无法联机备份、备份将失败。如果虚拟机处于已保存状态或已关闭、则无法执行联机备份。在某些情况下、虚拟机处于已保存状态或已关闭以进行维护、但备份仍需要继续、即使无法进行联机备份也是如此。为此、您可以使用允许保存状态备份的策略将处于已保存状态的虚拟机移动或关闭到其他数据集。</block>
+  <block id="c9fe310a0f2be6e993252a806083cdfd" category="paragraph">您还可以选中允许已保存状态的虚拟机备份复选框、以使适用于Hyper-V的SnapManager 能够在已保存状态下备份虚拟机。如果选择此选项、则在Hyper-V VSS写入程序以已保存状态备份虚拟机或对虚拟机执行脱机备份时、适用于Hyper-V的SnapManager 不会使备份失败。执行已保存状态或脱机备份可能会导致发生原因 停机。</block>
+  <block id="f9c4c1efdf6118da046109d8e0cb6733" category="paragraph">通过分布式应用程序一致的备份功能、在从备份节点创建的一个硬件Snapshot副本中、可以使配对集群节点上运行的多个VM保持一致。在Windows故障转移集群中的多个节点上运行CSV 2.0 Windows卷的所有VM均支持此功能。要使用此功能、请选择应用程序一致的备份类型、然后选中*启用分布式备份*复选框。</block>
+  <block id="bd49ab85818f7b15f21fb9bfebdacfbe" category="paragraph">通过这些选项、您可以接受适用于SnapMirror关系中定义的二级存储的选项。在此处、您可以选择*备份后更新SnapMirror*。在存储标签选项窗格下、您可以选择*备份后更新SnapVault *。如果选择*备份后更新SnapVault *、则必须从下拉菜单中选择存储标签或输入自定义标签。</block>
+  <block id="dccc207d2e8bb25d32111190fdcef439" category="paragraph">您必须确定是否要在备份之前或之后运行可选备份脚本。</block>
+  <block id="b3ef543ddc4a07d75f614e67df474b1e" category="paragraph">除非指定特定服务器、否则这些脚本将在所有数据集成员主机上运行。</block>
+  <block id="4079acb40e762ec368ceca219971f2d1" category="paragraph">备份脚本在数据集中的每个节点上运行。您可以设置数据集策略以指定要运行脚本的主机的名称。系统会在要备份的虚拟机运行的集群中的每个节点上处理此策略。</block>
+  <block id="e38e6cb3f20f9d6511778003946ac36e" category="image-alt">smhv policywizard指定的主机</block>
+  <block id="eb9bd6f9e51c769289fc9968644d25e4" category="paragraph">您可以在备份后处理脚本的参数中使用以下环境变量：</block>
+  <block id="3eda86050d67f5eb2434d54aeae569a6" category="list-text">$VMSnapshot*：指定通过此备份在存储系统上创建的Snapshot副本的名称。在以7-模式运行的ONTAP 环境中执行应用程序一致的备份时、这是第二个(备份) Snapshot副本的名称。第一个名称与第二个名称相同、但不带_backup后缀。</block>
+  <block id="b5133b11033d21a21643b9257a0736dc" category="list-text">$SnapInfoName*：指定SnapInfo目录名称中使用的时间戳。</block>
+  <block id="6fe06e28a445c63b4f719be1cc245050" category="list-text">$SnapInfoSnapshot*：指定在存储系统上创建的SnapInfo Snapshot副本的名称。SnapManager for Hyper-V会在数据集备份操作结束时为SnapInfo LUN创建Snapshot副本。</block>
+  <block id="b6e45987b96add476796a4d8f3f1f1fe" category="admonition">$SnapInfoSnapshot变量仅支持专用虚拟机。</block>
+  <block id="838cf5b575a0505a14018f6e663ec5a1" category="summary">如果您不再需要使用适用于Hyper-V的SnapManager 对Hyper-V父主机或父主机集群进行管理、则可以将其删除</block>
+  <block id="cc43b98b4cb49bdf19bbb52431e65493" category="doc">删除Hyper-V父主机或父主机集群</block>
+  <block id="78b37256b05600c143aa52ea55f13809" category="list-text">在导航窗格中、单击*保护*&gt;*主机*。</block>
+  <block id="73ffaf70fdb5268887be5437d428aa9e" category="list-text">选择要删除的主机或主机集群。</block>
+  <block id="b12e37979532378004a27949cf339e83" category="list-text">在操作窗格中、单击*删除*。</block>
+  <block id="a809b7569832b3c3064a2b1ce1e39453" category="paragraph">您可以选择*删除所有虚拟机备份*来删除与主机关联的任何虚拟机备份。</block>
+  <block id="62f5b4fd0e05bed543854db08c47a6da" category="paragraph">Hyper-V父主机或主机集群将从用于Hyper-V管理的SnapManager 中删除、但不会永久删除。属于该主机或主机集群的虚拟机也会从其所属的任何数据集中删除。</block>
+  <block id="8353750689069297c64bbb7feb0a4149" category="summary">导出虚拟机(VM\)后、您可以将其导入到ONTAP 主机。</block>
+  <block id="9f5885ba762c8085111beef15fe81cd3" category="doc">将VM导入ONTAP 主机</block>
+  <block id="cca2b2116e2d1dd4d836c88a8dc2927c" category="paragraph">导出虚拟机(VM)后、您可以将其导入到ONTAP 主机中。</block>
+  <block id="74af0dfe33bb453e9ffe9a2de207f04a" category="paragraph">虚拟机必须已从非ONTAP主机导出。</block>
+  <block id="8f593d38cee342b7f34d9d4f9737fa53" category="list-text">从左窗格中、右键单击要将VM导入到的ONTAP 主机的名称。</block>
+  <block id="6ff51118664c90823cf111e1e86a7a17" category="list-text">选择*导入虚拟机*。</block>
+  <block id="35f5eb39140590b7f450a26eaac73f44" category="image-alt">smhv在serverManager中导入VM</block>
+  <block id="048004d77f09a6a45275ec0bc957d0c8" category="paragraph">此时将打开导入虚拟机窗口。</block>
+  <block id="acc0f5a6972e5e0985054875c3e5c26d" category="list-text">单击先前将VM导出到的主机的名称、然后单击*选择文件夹*。</block>
+  <block id="1c86bec301f53929e1351bfa96d02a25" category="list-text">在导入设置下、选择*复制虚拟机[创建新的唯一ID]*。</block>
+  <block id="e4ca0be6435e2cb971783f45129d42f6" category="list-text">单击 * 导入 * 。</block>
+  <block id="0b29b174c2c020e59433e336ef666b9d" category="list-text">验证是否已成功导入此虚拟机、并从非ONTAP主机中删除此虚拟机。</block>
+  <block id="da0d5b8f0133d5bc40085dfa02016eb9" category="list-text">将专门针对Hyper-V 2016的配置版本从5.0升级到8.0。</block>
+  <block id="ca781f7941adb700d92ae2f74dfb1a9e" category="list-text">从右侧窗格中、右键单击要升级的虚拟机的名称。</block>
+  <block id="82f27991e861e4bacbaf70378a1f6fee" category="list-text">选择*升级配置版本*。</block>
+  <block id="088198923469d6bd61bb711fa1f35cf3" category="paragraph">虚拟机的配置版本将升级到8.0。</block>
+  <block id="156ef710da0dc6ef70ebcd96483cd0be" category="list-text">启动虚拟机。</block>
+  <block id="4de9c592c9c483c15c12e019e53af4e0" category="summary">要从灾难中恢复、SnapManager for Hyper-V必须先故障转移到二级存储系统。故障转移涉及PowerShell中的一系列手动步骤。</block>
+  <block id="049b485e63b9d0a8f09be1d721e8d109" category="doc">从灾难恢复故障转移中恢复和还原</block>
+  <block id="a62b489ed8388f31c051be160c2a7a1c" category="paragraph">对于NAS和SAN、大多数备份都可以还原到备用主机；但是、Windows Server 2008 R2崩溃状态一致的备份无法还原到备用主机。</block>
+  <block id="b3cf58f2e0c64638e85e47fa73969973" category="list-text">如果您正在二级站点上运行Data ONTAP 8.1.x、请在适用于Windows的SnapDrive MMC的传输协议设置(TPS)中输入Storage Virtual Machine (SVM)信息。</block>
+  <block id="68e9602f82dcc2fbbe7a63fd2836e5bf" category="list-text">从二级存储系统连接到所有LUN。</block>
+  <block id="2445745a3c1237d089b42b9bc34de800" category="paragraph">如果二级存储系统是集群存储系统、请转到集群组(即目标集群中的可用存储组所有者节点)处于联机状态的节点、然后连接到集群中该节点的所有LUN。有关映射LUN的信息、请参见SnapDrive for Windows文档。</block>
+  <block id="f0fdff1de5564d478e585eb301849c76" category="paragraph">连接到主存储系统上所有相同类型的挂载点和LUN。</block>
+  <block id="221778cf2906612d5524dbe68a0c2956" category="paragraph">从集群组联机的节点、连接到集群中的所有挂载点和LUN。</block>
+  <block id="37e5d5064c98f8aff06e461d8fdf6f98" category="paragraph">要成功更新SnapMirror、您必须在源FlexVol 卷上创建一个更小的第二个LUN (10 MB到100 MB)、然后再启动备份。从集群组联机的节点、连接到集群中的所有挂载点和LUN。</block>
+  <block id="4d2404f1f314e76e2aff542b67926dad" category="paragraph">对于NAS、如果出现拒绝访问错误、或者无法浏览到公开的SMB共享位置、则可能需要重置共享上的访问控制列表。</block>
+  <block id="f83c890bd05e09abd044579352d4d154" category="admonition">在使用System Center Virtual Machine Manager (SCVMM)控制台和Data ONTAP SMI-S代理时、这是典型的。</block>
+  <block id="1f47c5f8fb489d346eeb6fbea74fa541" category="list-text">在SnapManager for Hyper-V MMC中添加二级存储系统或集群、然后使用SnapInfo路径对其进行配置。</block>
+  <block id="37b2da3eb5fb6fcbad0e779ecd0c4ccc" category="list-text">输入Get-VMsFromBackup以检索备份元数据中存在的VM列表。</block>
+  <block id="05887e10a85da9d61eba4d604ca4c1c8" category="list-text">输入Get-Backup以获取每个VM的备份副本。</block>
+  <block id="6d922687b694d91c33858bcc43e91608" category="paragraph">列出的备份</block>
+  <block id="362b72df7531b147c68ef42baa4dab0e" category="paragraph">对于@VHD、一个虚拟机可能具有多个VHD；请确保输入为每个VHD指定的源路径对和目标路径对。</block>
+  <block id="f118b05c5987541658924b4b3861a41c" category="section-title">故障转移示例</block>
+  <block id="bb457fed9f40315999456df6d76baeb8" category="summary">您可以查看与数据集关联的虚拟机。</block>
+  <block id="e2c5fd00749a48ae5cdf6a58b4da108a" category="doc">查看数据集</block>
+  <block id="67003e9e0d77b8a5bb5e8f13b32fb888" category="list-text">展开树视图以查看属于数据集的虚拟机。</block>
+  <block id="02f2739a7ac8086d93880546b5e81bcd" category="summary">您可以执行集群操作系统(OS)滚动升级来升级集群节点的操作系统、而无需停止适用于Hyper-V的SnapManager此功能可减少停机时间、从而支持SLA合规性。</block>
+  <block id="9dd7630a4b702ca0bc5829bc710af18b" category="doc">执行集群操作系统滚动升级</block>
+  <block id="e0d9a1c74a891cca8fcc653471ff5e01" category="paragraph">运行SnapManager for Hyper-V的故障转移集群可以从Windows Server 2012 R2升级到Windows Server 2016和Windows Server 2019、而无需停机。</block>
+  <block id="53f46f0ad5e5e48eb602230bb6b7bdf4" category="paragraph">有关集群操作系统滚动升级优势、安装过程和限制的信息、请参见相关信息。</block>
+  <block id="5a0bd2d9eacaf1e1597799c6d6822d15" category="inline-link">Microsoft TechNet：集群操作系统滚动升级</block>
+  <block id="38f3dbcb8b2856f29d646be11e300c2e" category="paragraph"><block ref="38f3dbcb8b2856f29d646be11e300c2e" category="inline-link-rx"></block></block>
+  <block id="65f7569620d04db9505d950ab1e58a34" category="summary">您可以查看特定Hyper-V父主机或主机集群的配置信息、以便监控其状态。</block>
+  <block id="06f5fb73a66b1b97eef5b0e41c6bb9ce" category="doc">查看Hyper-V父主机或主机集群</block>
+  <block id="5428c4d335b305e6b134fe69a03dc499" category="list-text">选择要查看的主机或主机集群。</block>
+  <block id="150f95faef726d7318a48f6b2a63d883" category="paragraph">详细信息窗格显示主机或主机集群名称、域、集群成员(如果适用)和配置消息。如果选择未配置的主机、则详细信息窗格将显示有关未配置的内容的信息。</block>
+  <block id="f0a99465e51dce4c6fb2ba331e84d9dc" category="summary">如果虚拟机(VM)属于安装了SnapManager for Hyper-V的主机、而您在该虚拟机上安装了SnapManager for Hyper-V以用作管理控制台、则不应使用SnapManager for Hyper-V来管理该虚拟机所属的主机。</block>
+  <block id="ecd18fc31ef844e27ee1b2ae1c07688e" category="doc">虚拟机自行管理</block>
+  <block id="f3813a8c5f322373abcf4783c08a3e3c" category="paragraph">虚拟机上的SnapManager for Hyper-V无法自行管理。</block>
+  <block id="14dcd2586f39f173d4b29e763e432e69" category="paragraph">无需采取更正操作。</block>
+  <block id="6fd38c0075da1b37198bdce33f27e6b4" category="paragraph">如果VM1属于Host1 (已安装SnapManager for Hyper-V)、而您在VM1上安装了SnapManager for Hyper-V、则不应使用SnapManager for Hyper-V从VM1管理Host1。</block>
+  <block id="73ec114e82bec10ec0fab5d13d464c20" category="paragraph">如果您执行此操作并尝试从其自身还原虚拟机、则虚拟机将从Hyper-V Manager中删除或重新启动。</block>
+  <block id="fbe2d0a0910e141c9a8f2e55c41c89a4" category="summary">SnapManager for Hyper-V信息板显示了当前受保护的资源以及未受保护的资源的概述。您可以选择VM保护状态饼图或作业历史记录条形图的不同区块、以查看有关作业、资源和历史记录状态的常规信息。</block>
+  <block id="5ceb2bce5b2f8cd2564671c353768215" category="doc">信息板设置</block>
+  <block id="120b5d70e55ff9181d0fc250186c98d6" category="image-alt">smhv信息板</block>
+  <block id="1d2a3b6e961cc31ace5fe0348dcda069" category="list-text">*虚拟机保护状态*</block>
+  <block id="7e820355f26b47a309017c28cf42f5b0" category="paragraph">在VM保护状态饼图中选择一个区块时、您可以在详细信息窗格中查看有关虚拟机保护状态的信息。有效值的说明如下：</block>
+  <block id="d894f72fcb26b6e46eaec333d56fc64c" category="list-text">* 确定 *</block>
+  <block id="eafb6e6e01d296df9fd05aec086aac34" category="paragraph">显示所有虚拟机的最新成功备份。</block>
+  <block id="f44027b669999f97854e8ef8c8215f16" category="list-text">*失败*</block>
+  <block id="9a67da2f211972aa1f89de5e4aeef2f0" category="paragraph">显示每个虚拟机的最新失败备份。</block>
+  <block id="a9e2b370126b715cc6b8e32af977c417" category="list-text">*未受保护*</block>
+  <block id="5fbdb05dd6bda477ba1532e2c07213f4" category="paragraph">显示不属于任何数据集且因此未受保护的虚拟机。</block>
+  <block id="8ebdf3d0ee92cd5df7dd3210579dffb4" category="list-text">*作业历史记录*</block>
+  <block id="ecad8c823f2697d551d42ff06468b06f" category="paragraph">在作业历史记录条形图中选择一个分段后、您可以在详细信息窗格中查看指定时间段内已完成、失败和正在运行的作业的历史记录。您可以更改作业详细信息在作业历史记录条形图中显示的时间长度。默认值为7天。</block>
+  <block id="71f8cc6d9ab3ad57e930240cf2e1b73a" category="list-text">*配置刷新*</block>
+  <block id="aae38610bead65a7d2127e7b2c9c88a6" category="paragraph">您可以使用*配置刷新*按钮更改信息板刷新显示信息的频率。默认值为10分钟。</block>
+  <block id="ab4daba51c77334b22d9ee8a92a9d98c" category="summary">在使用远程主机安装向导在主机或节点上远程安装SnapManager for Hyper-V之前、您必须收集一些必需的主机详细信息。</block>
+  <block id="d9101724dd2995ac7e40db52bb9fa12e" category="doc">使用远程主机安装向导的要求</block>
+  <block id="0f27cb4b9e262641740b6024e4a9cf82" category="paragraph">您可以从保护窗口的操作窗格访问远程主机安装向导。您可以通过它在独立节点或主机以及集群节点或主机上远程安装或卸载SnapManager for Hyper-V。</block>
+  <block id="92396d12132cf037fee50e3292f232d5" category="paragraph">如果您添加的主机没有适用于Hyper-V的SnapManager 、则添加主机向导会提示您将其安装在主机上。</block>
+  <block id="764c5e4962b6e24d210c25c9056f848d" category="list-text">*安装或卸载*</block>
+  <block id="5c184795ac1979a7fafe69711a820356" category="paragraph">您必须选择是使用向导在主机或节点上远程安装还是卸载SnapManager for Hyper-V。</block>
+  <block id="3cf9f264c7e0412a7d84ef83c7d3995b" category="list-text">*按服务器或存储*</block>
+  <block id="4efda04b842b589387afb2523faa1f7f" category="paragraph">您必须选择是按服务器还是按存储安装SnapManager for Hyper-V。</block>
+  <block id="7e08b1f5898656f33b1a750acefe92d0" category="list-text">*主机名/IP</block>
+  <block id="eb1c730b91c1eceed6b450eaee2a19bc" category="paragraph">您必须提供要安装SnapManager for Hyper-V的主机的名称或IP地址您可以选择*浏览...*来浏览主机或节点。</block>
+  <block id="5ddcf17f54788a5bb9148e8671562c06" category="list-text">* 端口 *</block>
+  <block id="59b8cc8c01bbed8087ca45df9b0fcffa" category="paragraph">您必须提供端口号才能连接到主机或节点。</block>
+  <block id="c2494ab9d3d742993d7ea729fba1ce94" category="list-text">* SMHV许可证密钥*</block>
+  <block id="5e6533ed3317e3a0ea0aa766adb519c8" category="paragraph">您必须提供SnapManager for Hyper-V许可证密钥。</block>
+  <block id="ca8347de6191aaa9753655df4a58f7b4" category="list-text">* SDW许可证密钥*</block>
+  <block id="a59b67300e72e3be62783c96dd5ea93f" category="paragraph">您必须提供SnapDrive for Windows许可证密钥。</block>
+  <block id="9b1ea6d299d8e415d53a65fe6c78bafe" category="list-text">* 用户名 *</block>
+  <block id="3e51ca4c0e5005fc512ad64d916856ac" category="paragraph">您必须使用domain\username格式提供主机或节点管理员级别的用户名。</block>
+  <block id="519a06883e7db4dbb9a21eeecb16986a" category="list-text">* 密码 *</block>
+  <block id="2dcadfb9eb7d2a79f3d948fbd94f9ed7" category="paragraph">您必须输入主机或节点密码。</block>
+  <block id="a1c00612102855350eb712748e306b75" category="list-text">*确认密码*</block>
+  <block id="133a94d79622ad277f38fde90995deeb" category="paragraph">您必须重新输入主机或节点密码以进行确认。</block>
+  <block id="3715e6ae6b6bc5a7d00a1dcf39caa1b4" category="summary">您可以使用配置向导或SnapInfo设置操作来控制SnapInfo目录路径设置。</block>
+  <block id="46c247a1004ec7215f682df4b41dfd79" category="doc">更改SnapInfo目录路径</block>
+  <block id="69528947109f0d89a0cff98cabdba541" category="paragraph">您可以使用配置向导或* SnapInfo设置*操作来控制SnapInfo目录路径设置。</block>
+  <block id="802d13f66c7f1dcd73c7a3c855c7ff42" category="paragraph">SnapInfo目录设置在SnapManager for Hyper-V的主机级别上指定SnapManager for Hyper-V支持NAS (SMB)主机和SAN主机。对于SAN主机、SnapInfo设置将应用于卷级别；对于NAS主机、SnapInfo设置将应用于SMB共享级别。</block>
+  <block id="c9aaf3938a037437bbec77a4b37ca048" category="paragraph">如果已将存储系统的IP地址添加到SnapDrive for Windows TPS中、则在SnapManager for Hyper-V中运行配置向导时、SnapDrive for Windows中的存储设置会自动填充如果您未配置适用于Windows TPS的SnapDrive 、则必须在适用于Hyper-V的SnapManager 的管理存储连接选项卡中指定存储系统的IP地址</block>
+  <block id="fc667cb0846d2e6308c1062d1b31a9a1" category="list-text">选择要更改SnapInfo目录路径的主机。</block>
+  <block id="9c82ae420300b9dd6a925b910eddba4b" category="list-text">从操作窗格中、选择* SnapInfo设置*。</block>
+  <block id="a3e0a45fa17b7a80cfaa22dcd77428cd" category="paragraph">此时将打开SnapInfo设置对话框。</block>
+  <block id="35860252ffa58c8c17a9f10686668483" category="list-text">从显示的选项中选择存储类型：</block>
+  <block id="054b4f3ea543c990f6b125f41af6ebf7" category="cell">选项</block>
+  <block id="50525418dca9302d23550ea6a4182c12" category="paragraph">这是默认存储类型。</block>
+  <block id="f5d4b592b21fbeb4a61c20c6f0d40726" category="paragraph">对SMB共享使用此选项。</block>
+  <block id="6b0c274b49a81c634eaa34f74d894d44" category="paragraph">此时将打开浏览文件夹窗口。</block>
+  <block id="ebf28afd430534d0f687caf9402c5957" category="list-text">选择SnapInfo存储系统(SAN)或卷(NAS)、然后单击*确定*。</block>
+  <block id="679a7f6a14179d30487e739357af4565" category="paragraph">显示的主机是与已在主机级别使用管理存储连接选项注册的存储系统对应的NAS共享。如果未找到要查找的共享、请确保已正确配置管理存储连接。</block>
+  <block id="36b090838e736bd51f0e55001e8c1689" category="list-text">在SnapInfo设置窗口中、单击*确定*。</block>
+  <block id="5388f79ac89eec582c7c61678f20a405" category="summary">您可以查看有关在SnapManager for Hyper-V中管理的主机的报告</block>
+  <block id="fcb212f7c22020d335c9e387a0a07e4f" category="doc">查看主机报告</block>
+  <block id="c3c5ca3418a15b4026538b1580f06ceb" category="list-text">在导航窗格中、单击*报告*&gt;*主机*。</block>
+  <block id="24b2c55d686927dec582979f5bcc45c0" category="list-text">选择包含要查看的报告的主机。</block>
+  <block id="27560bbce6a8c3ed31ead266803aa867" category="list-text">从报告窗格中、选择要查看的报告、然后单击*查看报告*。</block>
+  <block id="ef5a8d85343305fa10c26cf95a30d0a6" category="paragraph">配置报告将显示在一个单独的窗口中。</block>
+  <block id="d70f5be61d8dfe9c40d866f0c9b93484" category="summary">SnapManager for Hyper-V不支持MBR LUN</block>
+  <block id="79d176df7c036fff171dfcacb9040eba" category="doc">SnapManager for Hyper-V不支持MBR LUN</block>
+  <block id="3f1aadc503dede86134b0f8d3d531e85" category="paragraph">对于共享卷或集群共享卷上运行的虚拟机、SnapManager for Hyper-V不支持MBR LUN。</block>
+  <block id="195bbb0e90cf353d7344be556a33722c" category="paragraph">当集群共享卷磁盘所有权发生变化时、Microsoft API问题描述 将返回不同的卷GUID。卷GUID与集群磁盘资源属性中的GUID不同。此问题描述 还通过Microsoft故障转移集群提供了高可用性的适用场景 虚拟机。</block>
+  <block id="25a907990086c3b74fbc72cc3818bd9a" category="paragraph">请参见Microsoft知识库。</block>
+  <block id="b32f4108776356b16f608914024f481f" category="summary">要从备份副本还原虚拟机、必须先确定要如何还原备份副本。</block>
+  <block id="0e581f9dd5766b699240f5d0904b087d" category="doc">还原虚拟机的要求</block>
+  <block id="9d85a093959031782de1b3bf5921ccca" category="section-title">VM备份副本名称</block>
+  <block id="3d577c50cef9bb538d236a3d7af073cf" category="paragraph">您必须确定要还原的备份副本。</block>
+  <block id="fc801efef30c203e31b1360062aaa5c1" category="paragraph">所有备份副本都会在恢复管理窗口的备份窗格中按名称列出。</block>
+  <block id="43e8ccc7b6f2cdf7cb177e093798e358" category="section-title">VM备份副本类型</block>
+  <block id="03feea99991cbcd9161de5bfea7b80a0" category="paragraph">从应用程序一致的备份还原虚拟机可在VSS的协调下完成。Hyper-V VSS写入程序会在还原之前删除虚拟机、并在还原操作完成后将虚拟机注册到Hyper-V Manager。</block>
+  <block id="d238be103eebb14866b32be53d84dd7b" category="paragraph">从崩溃状态一致的备份还原虚拟机不涉及VSS。在执行还原操作之前、虚拟机已关闭。从崩溃状态一致的备份还原时、虚拟机必须存在；从崩溃状态一致的备份还原已删除的虚拟机失败。</block>
+  <block id="a651aaaf069e68138281beb92ba34c5c" category="section-title">VM备份副本状态</block>
+  <block id="9d75b3669b134eae06587df25b02c4aa" category="paragraph">您必须确定虚拟机是否仍存在。</block>
+  <block id="00b7c0a5e36bd62d36e3de7e1a690572" category="paragraph">如果虚拟机不再存在、则在创建虚拟机的LUN仍然存在时、您仍可以还原它。LUN的驱动器号和Windows卷GUID必须与备份时相同。</block>
+  <block id="a6aa9113d4ad56733e70e2f2fd14e4f7" category="paragraph">如果删除Windows Server 2008 R2中的虚拟机、则可以从应用程序一致的备份还原该虚拟机、但在Windows Server 2012和Windows Server 2012 R2中、可以从崩溃和应用程序一致的备份还原已删除的虚拟机。</block>
+  <block id="0eac70134b21e1d7f02651e5f43025de" category="paragraph">如果在删除虚拟机之前已将其从所有数据集中删除、您仍可以通过选择未受保护的资源并选择其所属的备份来还原它。</block>
+  <block id="6fad907a1e0858a858c0fd998edd83fc" category="section-title">VM备份副本配置状态</block>
+  <block id="4076f8baf81109cc452c9661ef7d6e81" category="paragraph">您必须确定虚拟机配置是否与备份时相同。</block>
+  <block id="89489127ea11c91995fda4da581f0758" category="paragraph">如果当前虚拟机配置与备份时的配置不同、则SnapManager for Hyper-V会通知您虚拟机布局已更改、并询问您是否要还原备份中存在的虚拟机配置和数据。</block>
+  <block id="6be75dfd4ad3eb2ebdecaa0d583fa42c" category="admonition">由于SnapManager for Hyper-V不会备份虚拟机的集群配置、因此无法还原集群配置。如果虚拟机和集群配置丢失、您可以从SnapManager for Hyper-V还原虚拟机、但必须手动使其具有高可用性。</block>
+  <block id="47560442ef973392bad1f503047f9ab2" category="paragraph">如果虚拟机的配置与备份中虚拟机的当前配置不同、则可能需要更新集群配置以反映任何新添加或删除的虚拟硬盘(VHD)。</block>
+  <block id="88cb7b202eace6296ee01cd0881e9cbc" category="section-title">Snapshot副本状态</block>
+  <block id="1adbfcf0ea2a1b2b74479f8deddd78a4" category="paragraph">在尝试执行还原操作之前、您可以验证备份Snapshot副本是否位于存储系统上。</block>
+  <block id="fe5c5c937b5cafc4dccbc844523f2851" category="section-title">VM重新启动</block>
+  <block id="e0899440c7c83cc20c1c4d2cc2beb8cf" category="paragraph">您可以选择在虚拟机还原后启动它。</block>
+  <block id="de60b57f630a569347a0ebfb03f51f73" category="inline-link">Microsoft TechNet：Windows Server 2008 R2中的故障转移集群</block>
+  <block id="7c890966217440f252398dd7820efb40" category="paragraph"><block ref="7c890966217440f252398dd7820efb40" category="inline-link-rx"></block></block>
+  <block id="fbf5e949cfd0e7ec5f30158744d3a05d" category="summary">Windows Server 2012及更高版本为集群共享卷(CSV) 2.0提供了一些新功能、其中包括新的文件系统、对CSV写入程序的更改、对CSV卷影副本的更改以及CSV备份的增强功能。</block>
+  <block id="12dc8916c1d106eb0eaf92ab73647be7" category="doc">Windows Server 2012及更高版本中的CSV 2.0</block>
+  <block id="ebab76ddd0a719d01cf3ea91dc8841a8" category="paragraph">Windows Server 2012及更高版本对CSV 2.0进行了以下更改：</block>
+  <block id="903e7fccbabfe3126418737fdeba9dfc" category="list-text">CSV文件系统(CSVFS)可作为新的分布式文件系统在集群中的所有节点上使用。</block>
+  <block id="e9c2e73ac73fd0ae380ef7f28ed66085" category="list-text">CSV写入程序为CSV卷提供来自非请求节点的卷和组件级元数据、并通过在备份会话中包含远程节点的Hyper-V写入程序来充当代理。</block>
+  <block id="2ebf2c6d77ebd0396ab1ed1d56324c98" category="list-text">CSV卷影复制提供程序充当CSV卷的默认软件提供程序、并协调所有集群节点上的VSS冻结和VSS解冻、以提供应用程序和崩溃一致性。</block>
+  <block id="8f06bda8ca313d7f140e14a08afe8f51" category="paragraph">CSV卷影复制提供程序可确保CSV Snapshot卷在发出请求的节点上可写。</block>
+  <block id="fa130d138fad9e89a6b021992155c9db" category="list-text">CSV现在支持在所有CSV之间为多个虚拟机创建一个应用程序一致的Snapshot卷。</block>
+  <block id="543d339f28d66beb0b28502ae21d5985" category="paragraph">Snapshot卷中的CSV卷将公开给所有虚拟机所有者节点、以执行自动恢复。</block>
+  <block id="82719e24f601e00b0b0375e6bf912e8f" category="paragraph">CSV仅在创建Snapshot期间进入重定向I/O模式、而在备份期间不会进入此模式。</block>
+  <block id="88afa0f950757277b9cd0a86d35b94bb" category="summary">您可以配置事件通知设置、以便在发生事件时发送电子邮件、系统日志和AutoSupport 消息。</block>
+  <block id="84e8a88048bb97b5a6416d8b9f99a8b0" category="doc">事件通知设置</block>
+  <block id="997dd00ff1d3ff7ca24a0de47fef203c" category="paragraph">如果在将Hyper-V父主机添加到SnapManager for Hyper-V时未配置事件通知设置、则可以稍后使用配置向导配置这些设置。</block>
+  <block id="0235fd2d5cccf9c82b4b94b7f03a5e1a" category="paragraph">即使主机已添加到SnapManager for Hyper-V、您也可以使用配置向导更改事件通知设置</block>
+  <block id="b26a8aad4334f73863648d787bd12b09" category="paragraph">您可以先配置事件通知设置、然后再向数据集添加虚拟机资源。</block>
+  <block id="7c3ef091f5e9de900650e022373ffe32" category="summary">防病毒解决方案 导致内存消耗较高。</block>
+  <block id="9accf46f4705bca9602a29da75a6d11a" category="doc">防病毒解决方案 导致内存消耗较高</block>
+  <block id="f5ccf0f5a43d30ed01c351daf610c72c" category="paragraph">文件级防病毒解决方案可能会占用大量发生原因 内存、这可能会导致内存泄漏。</block>
+  <block id="302341b993add035e17852f48ede6ba1" category="paragraph">在某些情况下、由于扫描虚拟机配置文件的防病毒解决方案 配置不正确、SnapManager for Hyper-V可能会占用大量不断增加的内存量。当Antivirus解决方案 扫描VM配置文件时、将显示_InstanceModificationEvent事件、其中介绍了所做的更改。当SnapManager for Hyper-V收到此通知时、它会使用SnapDrive for Windows触发存储和VM枚举。在某些情况下、发生这些事件的速度可能会非常快、导致SnapDrive for Windows无法处理这些事件、从而导致SnapManager for Hyper-V将这些事件排入队列。</block>
+  <block id="9dcb12971ce7ee1ca4a0e6c1aa6602ac" category="paragraph">从Antivirus解决方案 扫描的SnapManager for Hyper-V VM文件中排除。</block>
+  <block id="0949c83f1f00368865bd1bf8d478711f" category="summary">仅使用IPv6的主机的连接时间较长。</block>
+  <block id="d51691493b478822bf45a736a571c098" category="doc">仅使用IPv6的主机的连接时间较长</block>
+  <block id="1b4e1cebc792cbce25156d6e542ae745" category="paragraph">如果您在混合IPv4和IPv6环境中工作、并将仅使用IPv6的主机添加到SnapManager for Hyper-V、则连接所需时间可能比正常时间长。</block>
+  <block id="bb29b6e6a49fb6882e905eeab395597d" category="paragraph">之所以出现此延迟、是因为SnapManager for Hyper-V会首先尝试IPv4协议。</block>
+  <block id="54761137c08a41abfde2004613c26d51" category="paragraph">要解决此延迟问题、请在\windows\system32\drivers\etc\hosts文件中添加主机。</block>
+  <block id="8cf04a9734132302f96da8e113e80ce5" category="sidebar">主页</block>
+  <block id="bc75d43ed20a1ef476a229e08f6582f1" category="sidebar">以下虚拟机的备份失败、因为无法联机进行backedup、或者找不到要备份的虚拟机</block>
+  <block id="4f9d4ca3184d1887e8be4f7de3aa95bf" category="sidebar">备份失败、并显示错误"正在创建卷影副本"</block>
+</blocks>

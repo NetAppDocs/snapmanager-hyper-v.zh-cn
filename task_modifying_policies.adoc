@@ -1,0 +1,24 @@
+---
+permalink: task_modifying_policies.html 
+sidebar: sidebar 
+keywords: modify, policies, policy, protect, dataset, wizard 
+summary: 您可以使用修改策略向导修改用于保护数据集的策略。 
+---
+= 修改策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用修改策略向导修改用于保护数据集的策略。
+
+. 在导航窗格中、单击*保护*>*数据集*。
+. 选择包含要修改的策略的数据集。
+. 选择要修改的策略。
+. 从操作窗格中、单击*修改策略*。
++
+此时将显示修改策略向导。
+
+. 完成向导中的步骤以修改数据集的保护策略。
+

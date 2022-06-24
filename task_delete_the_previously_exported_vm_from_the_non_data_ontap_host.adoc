@@ -1,0 +1,28 @@
+---
+permalink: task_delete_the_previously_exported_vm_from_the_non_data_ontap_host.html 
+sidebar: sidebar 
+keywords: import, virtual, machine, vm, successful, delete, non-ontap, host, deleting 
+summary: '成功导入虚拟机(VM)后、您可以从非ONTAP主机中删除该VM。' 
+---
+= 从非ONTAP主机中删除先前导出的虚拟机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+成功导入虚拟机(VM)后、您可以从非ONTAP主机中删除该VM。
+
+必须已成功导入此VM。
+
+. 选择最初托管VM的非ONTAP主机。
+. 从虚拟机窗格中、右键单击先前导出的虚拟机的名称。
+. 单击 * 删除 * 。
++
+此时将打开一个窗口、要求您确认要删除此虚拟机。
+
+. 单击 * 删除 * 。
++
+虚拟机将从其原始主机中删除。
+
+

@@ -1,0 +1,52 @@
+---
+permalink: reference_requirements_for_creating_a_dataset.html 
+sidebar: sidebar 
+keywords: specific, requirement, create, dataset, protect, data, host, cluster, snapmanager, hyper-v 
+summary: 如果要创建数据集以保护数据、则必须满足特定要求。 
+---
+= 创建数据集的要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果要创建数据集以保护数据、则必须满足特定要求。您必须先将主机或主机集群添加到SnapManager for Hyper-V、然后再将虚拟机添加到主机或主机集群。
+
+
+
+== 数据集名称和问题描述
+
+为数据集命名时、您应在站点上使用命名约定来帮助管理员查找和标识数据集、这些数据集仅限于以下字符：
+
+* a到z
+* A到Z
+* 0到9
+* _(下划线)
+* 连字符
+
+
+
+
+== 数据集资源
+
+在将虚拟机等资源添加到数据集之前、必须将主机或主机集群添加到SnapManager for Hyper-V。
+
+您可以向数据集添加主机、专用虚拟机或共享虚拟机。如果添加主机、则需要添加属于该主机的所有虚拟机。您还可以将属于不同主机的虚拟机添加到数据集。虚拟机可以属于多个数据集。
+
+
+NOTE: 属于同一主机集群的专用虚拟机和共享虚拟机不应位于同一数据集中。如果将这些类型的资源添加到单个数据集、则发生原因 数据集备份可能会失败。
+
+
+
+== 虚拟机和ONTAP LUN
+
+与虚拟机关联的所有文件(包括配置文件、Snapshot副本和VHD)都必须驻留在ONTAP LUN上。
+
+
+
+== 数据集资源消耗
+
+在任何给定时间、主机上只能执行一个应用程序一致的备份操作。如果同一虚拟机属于不同的数据集、则不应同时计划对这些数据集进行应用程序一致的备份。如果发生这种情况、其中一个备份操作将失败。
+
+创建数据集时、应选择驻留在特定ONTAP LUN上的所有虚拟机。这样、您就可以在一个Snapshot副本中获取所有备份、并减少存储系统上的空间消耗。

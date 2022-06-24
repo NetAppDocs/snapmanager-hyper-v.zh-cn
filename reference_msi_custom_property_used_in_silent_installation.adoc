@@ -1,0 +1,25 @@
+---
+permalink: reference_msi_custom_property_used_in_silent_installation.html 
+sidebar: sidebar 
+keywords: msi, custom, property, silent, installation 
+summary: 在静默安装中使用的MSI自定义属性。 
+---
+= 在静默安装中使用的MSI自定义属性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+运行Windows Server 2008或Vista且安装了Windows安装程序4.5的系统无法识别SnapManager for Hyper-V安装的内置属性。
+
+* * 更正操作 *
++
+在安装时使用MSIRESTABMANAGERCONTROL=Disable命令开关参数。
+
+
+
+* 相关信息 *
+
+http://msdn.microsoft.com/library/["Microsoft开发人员网络(MSDN)库"]

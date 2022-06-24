@@ -1,0 +1,14 @@
+---
+permalink: concept_configuring_policies.html 
+sidebar: sidebar 
+keywords: add, modify, delete, policies, policy, associate, dataset, protect, data, configuring, configure 
+summary: 您可以添加、修改或删除与数据集关联的策略、以便保护数据。 
+---
+= 配置策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以添加、修改或删除与数据集关联的策略、以便保护数据。

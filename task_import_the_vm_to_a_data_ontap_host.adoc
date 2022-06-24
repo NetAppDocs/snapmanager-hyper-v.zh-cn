@@ -1,0 +1,41 @@
+---
+permalink: task_import_the_vm_to_a_data_ontap_host.html 
+sidebar: sidebar 
+keywords: export, virtual, machine, vm, import, ontap, host 
+summary: '导出虚拟机(VM\)后、您可以将其导入到ONTAP 主机。' 
+---
+= 将VM导入ONTAP 主机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+导出虚拟机(VM)后、您可以将其导入到ONTAP 主机中。
+
+虚拟机必须已从非ONTAP主机导出。
+
+. 从左窗格中、右键单击要将VM导入到的ONTAP 主机的名称。
+. 选择*导入虚拟机*。
++
+image::../media/smhv_import_vm_in_servermanager.gif[smhv在serverManager中导入VM]
+
++
+此时将打开导入虚拟机窗口。
+
+. 单击 * 浏览 * 。
+. 单击先前将VM导出到的主机的名称、然后单击*选择文件夹*。
+. 在导入设置下、选择*复制虚拟机[创建新的唯一ID]*。
+. 单击 * 导入 * 。
+. 验证是否已成功导入此虚拟机、并从非ONTAP主机中删除此虚拟机。
+. 将专门针对Hyper-V 2016的配置版本从5.0升级到8.0。
++
+.. 从右侧窗格中、右键单击要升级的虚拟机的名称。
+.. 选择*升级配置版本*。
++
+虚拟机的配置版本将升级到8.0。
+
+
+
+. 启动虚拟机。
+

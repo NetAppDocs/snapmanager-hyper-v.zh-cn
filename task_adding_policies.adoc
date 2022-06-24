@@ -1,0 +1,33 @@
+---
+permalink: task_adding_policies.html 
+sidebar: sidebar 
+keywords: add, retention, schedule, scheduling, replication, policies, policy, script, dataset, data, protect 
+summary: 您可以向数据集添加保留、计划和复制策略以及脚本、以便保护数据。 
+---
+= 正在添加策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以向数据集添加保留、计划和复制策略以及脚本、以便保护数据。
+
+您必须具有以下信息：
+
+* 策略名称和说明
+* 保留信息
+* 计划信息
+* 备份选项信息
+* 备份脚本信息
++
+.. 在导航窗格中、单击*保护*>*数据集*。
+.. 选择要添加策略的数据集。
+.. 从操作窗格中、单击*添加策略*。
++
+此时将显示创建策略向导。
+
+.. 完成向导中的步骤、为数据集创建保护策略。
+
+
+

@@ -1,0 +1,56 @@
+---
+permalink: reference_requirements_for_remote_host_install.html 
+sidebar: sidebar 
+keywords: remote, host, install, wizard, snapmanager, hyper-v, host, node, require, detail, requirement 
+summary: 在使用远程主机安装向导在主机或节点上远程安装SnapManager for Hyper-V之前、您必须收集一些必需的主机详细信息。 
+---
+= 使用远程主机安装向导的要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在使用远程主机安装向导在主机或节点上远程安装SnapManager for Hyper-V之前、您必须收集一些必需的主机详细信息。
+
+您可以从保护窗口的操作窗格访问远程主机安装向导。您可以通过它在独立节点或主机以及集群节点或主机上远程安装或卸载SnapManager for Hyper-V。
+
+如果您添加的主机没有适用于Hyper-V的SnapManager 、则添加主机向导会提示您将其安装在主机上。
+
+* *安装或卸载*
++
+您必须选择是使用向导在主机或节点上远程安装还是卸载SnapManager for Hyper-V。
+
+* *按服务器或存储*
++
+您必须选择是按服务器还是按存储安装SnapManager for Hyper-V。
+
+* *主机名/IP
++
+您必须提供要安装SnapManager for Hyper-V的主机的名称或IP地址您可以选择*浏览...*来浏览主机或节点。
+
+* * 端口 *
++
+您必须提供端口号才能连接到主机或节点。
+
+* * SMHV许可证密钥*
++
+您必须提供SnapManager for Hyper-V许可证密钥。
+
+* * SDW许可证密钥*
++
+您必须提供SnapDrive for Windows许可证密钥。
+
+* * 用户名 *
++
+您必须使用domain\username格式提供主机或节点管理员级别的用户名。
+
+* * 密码 *
++
+您必须输入主机或节点密码。
+
+* *确认密码*
++
+您必须重新输入主机或节点密码以进行确认。
+
+
