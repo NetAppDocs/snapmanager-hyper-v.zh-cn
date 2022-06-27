@@ -1,0 +1,25 @@
+---
+permalink: reference-high-memory-consumption-caused-by-antivirus-solution.html 
+sidebar: sidebar 
+keywords: high, memeory, consumption, cause, antivirus, solution 
+summary: 防病毒解决方案 导致内存消耗较高。 
+---
+= 防病毒解决方案 导致内存消耗较高
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+文件级防病毒解决方案可能会占用大量发生原因 内存、这可能会导致内存泄漏。
+
+* * 发生原因 *
++
+在某些情况下、由于扫描虚拟机配置文件的防病毒解决方案 配置不正确、SnapManager for Hyper-V可能会占用大量不断增加的内存量。当Antivirus解决方案 扫描VM配置文件时、将显示_InstanceModificationEvent事件、其中介绍了所做的更改。当SnapManager for Hyper-V收到此通知时、它会使用SnapDrive for Windows触发存储和VM枚举。在某些情况下、发生这些事件的速度可能会非常快、导致SnapDrive for Windows无法处理这些事件、从而导致SnapManager for Hyper-V将这些事件排入队列。
+
+* * 更正操作 *
++
+从Antivirus解决方案 扫描的SnapManager for Hyper-V VM文件中排除。
+
+

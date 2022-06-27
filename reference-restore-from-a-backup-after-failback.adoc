@@ -1,0 +1,34 @@
+---
+permalink: reference-restore-from-a-backup-after-failback.html 
+sidebar: sidebar 
+keywords: restore, restoring, backup, failback 
+summary: 故障恢复后从备份中还原。 
+---
+= 故障恢复后从备份中还原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+如果您执行故障转移和故障恢复、则可能无法在故障转移之前从同一主站点上创建的备份还原主站点上的VM。
+
+* * 发生原因 *
++
+Snapshot副本验证使用卷GUID。GUID在灾难恢复后发生更改。
+
+* *更正操作*
++
+您可以通过PowerShell或还原向导禁用验证快照选项：
+
++
+** 取消选中还原向导*还原选项*页面中的"启用Snapshot验证"选项。
+** 使用PowerShell、确保指定-`DisableVerifySnapshot`参数。
+
+
+
+
+* 相关信息 *
+
+xref:task-restore-a-virtual-machine-from-a-backup-copy.adoc[从备份副本还原虚拟机]

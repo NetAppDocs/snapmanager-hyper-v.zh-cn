@@ -1,0 +1,14 @@
+---
+permalink: concept-snapmanager-for-hyper-v-troubleshoot.html 
+sidebar: sidebar 
+keywords: encounter, unexpected, behavior, installation, configuration, troubleshoot, identify, resolve 
+summary: 如果您在安装或配置SnapManager for Hyper-V期间遇到意外行为、可以按照特定的故障排除过程确定并解决此类问题的发生原因。 
+---
+= 对SnapManager for Hyper-V进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您在安装或配置SnapManager for Hyper-V期间遇到意外行为、可以按照特定的故障排除过程确定并解决此类问题的发生原因。

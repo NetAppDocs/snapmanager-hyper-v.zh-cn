@@ -1,0 +1,25 @@
+---
+permalink: task-view-a-virtual-machine.html 
+sidebar: sidebar 
+keywords: virtual, machine, tab, vhd, detail, pane, vm, information, monitor, status, view 
+summary: 从虚拟机的详细信息窗格的虚拟机选项卡和VHD选项卡中、您可以查看有关该虚拟机的信息并监控其状态。 
+---
+= 查看虚拟机
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+从虚拟机的详细信息窗格的虚拟机选项卡和VHD选项卡中、您可以查看有关该虚拟机的信息并监控其状态。
+
+.步骤
+. 从导航窗格中、单击菜单：Protection[主机>保护>数据集]。
+. 选择虚拟机所属的数据集或主机。
+. 选择相应的虚拟机。
+
+
+虚拟机选项卡可显示选定虚拟机的名称、GUID和状态。
+
+VHD选项卡可显示系统磁盘、挂载点、VHD完整路径、LUN路径、存储系统名称、 序列号以及与选定虚拟机关联的卷名称。

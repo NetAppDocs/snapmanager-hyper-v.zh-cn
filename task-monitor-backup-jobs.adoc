@@ -1,0 +1,28 @@
+---
+permalink: task-monitor-backup-jobs.html 
+sidebar: sidebar 
+keywords: view, schedule, job, particular, dataset, management, window, schedule, tab, backup, monitor, backup 
+summary: 您可以使用作业管理窗口的已计划选项卡查看特定数据集的已计划备份作业。您还可以使用作业管理窗口的运行选项卡查看当前正在运行的备份和还原作业。 
+---
+= 监控备份作业
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用作业管理窗口计划选项卡查看特定数据集的计划备份作业。您还可以使用作业管理窗口运行选项卡查看当前正在运行的备份和还原作业。
+
+.步骤
+. 在导航窗格中、单击*作业*。
+. 单击*已计划*选项卡或*正在运行*选项卡。
+. 选择要监控的已计划或正在运行的备份作业或还原作业。
++
+有关作业的信息将显示在详细信息窗格中。
+
+. 如果要查看正在运行的作业的实时报告、请使用*报告视图*中的"正在运行的作业"报告。
++
+
+NOTE: 您还可以使用Microsoft的SCOM控制台监控备份作业。有关详细信息、请参见Microsoft网站。
+
+

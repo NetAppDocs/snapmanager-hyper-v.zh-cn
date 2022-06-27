@@ -1,0 +1,14 @@
+---
+permalink: task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, contain, migration, wizard, migrate, virtual, machine, vm, non-ontap, ontap, service, manager, operation, migrating 
+summary: 'SnapManager for Hyper-V不包含迁移向导、可帮助您将虚拟机(VM)从非ONTAP存储迁移到ONTAP 存储、以便将其与SnapManager for Hyper-V结合使用而是必须使用Server Manager手动导出和导入虚拟机。' 
+---
+= 迁移用于SnapManager for Hyper-V操作的Hyper-V虚拟机
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapManager for Hyper-V不包含迁移向导、可帮助您将虚拟机(VM)从非ONTAP存储迁移到ONTAP 存储、以便将其与SnapManager for Hyper-V结合使用而是必须使用Server Manager手动导出和导入虚拟机。

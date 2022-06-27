@@ -1,0 +1,25 @@
+---
+permalink: reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html 
+sidebar: sidebar 
+keywords: error, 1935, occur, installation, assembly, component 
+summary: 错误1935 
+---
+= 错误1935。安装组件组件期间出错
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 消息 *
++
+`错误1935。安装组件｛2A030FEB-29B5-314B-97B5-ED38673CC885｝期间发生错误。HRESULT：0x80070BC9。`
+
+* * 问题描述 *
++
+如果由于在安装或卸载Microsoft修补程序后Hyper-V系统未重新启动而导致SnapManager for Hyper-V安装程序失败、则会出现此消息。
+
+* * 更正操作 *
++
+重新启动计算机并再次运行SnapManager for Hyper-V安装程序。
+
+

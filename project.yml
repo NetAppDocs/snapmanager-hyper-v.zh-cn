@@ -9,248 +9,252 @@ settings:
   langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: 主页
+  - title: SnapManager for Hyper-V文档
     url: "/index.html"
+  - title: 发行说明
+    url: "/release-notes.html"
   - title: 什么是适用于Hyper-V的SnapManager
-    url: "/concept_what_snapmanager_for_hyper_v_is.html"
+    url: "/concept-what-snapmanager-for-hyper-v-is.html"
     entries:
     - title: 您可以使用适用于Hyper-V的SnapManager 执行什么操作
-      url: "/concept_what_you_can_do_with_snapmanager_for_hyper_v.html"
+      url: "/concept-what-you-can-do-with-snapmanager-for-hyper-v.html"
     - title: SnapManager for Hyper-V限制列表
-      url: "/concept_snapmanager_for_hyper_v_limitations.html"
+      url: "/concept-snapmanager-for-hyper-v-limitations.html"
     - title: 数据管理概念
-      url: "/concept_data_management_concepts.html"
+      url: "/concept-data-management-concepts.html"
   - title: 安装SnapManager for Hyper-V的要求列表
-    url: "/reference_list_of_requirements_for_installing_snapmanager_for_hyper_v.html"
+    url: "/reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html"
     entries:
     - title: 适用于ONTAP 的SnapManager for Hyper-V许可
-      url: "/reference_snapmanager_for_hyper_v_licensing_for_ontap.html"
+      url: "/reference-snapmanager-for-hyper-v-licensing-for-ontap.html"
     - title: Hyper-V父主机要求
-      url: "/reference_hyper_v_parent_host_requirements.html"
+      url: "/reference-hyper-v-parent-host-requirements.html"
     - title: Windows Server环境的修补程序要求
-      url: "/reference_hotfix_requirements_for_windows_server_environments.html"
+      url: "/reference-hotfix-requirements-for-windows-server-environments.html"
     - title: 许可证要求
-      url: "/reference_license_requirements.html"
+      url: "/reference-license-requirements.html"
     - title: 使用远程主机安装向导的要求
-      url: "/reference_requirements_for_remote_host_install.html"
+      url: "/reference-requirements-for-remote-host-install.html"
   - title: 安装SnapManager for Hyper-V
-    url: "/concept_installing_snapmanager_for_hyper_v.html"
+    url: "/concept-install-snapmanager-for-hyper-v.html"
     entries:
-    - title: 正在下载适用于Hyper-V的SnapManager
-      url: "/task_downloading_snapmanager_for_hyper_v.html"
+    - title: 下载适用于Hyper-V的SnapManager
+      url: "/task-download-snapmanager-for-hyper-v.html"
     - title: SnapDrive for Windows和SnapManager for Hyper-V的安装顺序
-      url: "/concept_installation_order_for_snapdrive_for_windows_and_snapmanager_for_hyper_v.html"
+      url: "/concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html"
     - title: 安装SnapManager for Hyper-V
-      url: "/task_installing_snapmanager_for_hyper_v.html"
+      url: "/task-install-snapmanager-for-hyper-v.html"
     - title: 在节点或主机上远程安装或卸载SnapManager for Hyper-V
-      url: "/task_remotely_installing_or_uninstalling_snapmanager_for_hyper_v_on_nodes.html"
+      url: "/task-remotely-install-or-uninstall-snapmanager-for-hyper-v-on-nodes.html"
     - title: 列出用于静默安装的命令行开关的问题描述
-      url: "/reference_command_line_switch_descriptions.html"
+      url: "/reference-command-line-switch-descriptions.html"
   - title: 在Windows上卸载SnapManager for Hyper-V
-    url: "/concept_uninstalling_snapmanager_for_hyper_v_on_windows.html"
+    url: "/concept-uninstall-snapmanager-for-hyper-v-on-windows.html"
     entries:
     - title: 卸载适用于Hyper-V的SnapManager
-      url: "/task_uninstalling_snapmanager_for_hyper_v.html"
+      url: "/task-uninstall-snapmanager-for-hyper-v.html"
   - title: 为Hyper-V配置SnapManager
-    url: "/concept_configuring_snapmanager_for_hyper_v.html"
+    url: "/concept-configure-snapmanager-for-hyper-v.html"
     entries:
     - title: 信息板设置
-      url: "/concept_dashboard_settings.html"
+      url: "/concept-dashboard-settings.html"
     - title: 配置主机
-      url: "/concept_configuring_hosts.html"
+      url: "/concept-configure-hosts.html"
       entries:
       - title: 添加Hyper-V父主机或主机集群的要求
-        url: "/reference_requirements_for_adding_a_hyper_v_parent_host_or_host_cluster.html"
+        url: "/reference-requirements-for-adding-a-hyper-v-parent-host-or-host-cluster.html"
       - title: 添加Hyper-V父主机或主机集群
-        url: "/task_adding_a_hyper_v_parent_host_or_host_cluster.html"
+        url: "/task-add-a-hyper-v-parent-host-or-host-cluster.html"
       - title: 管理存储连接设置
-        url: "/task_managing_storage_connection_settings.html"
+        url: "/task-manage-storage-connection-settings.html"
       - title: 查看Hyper-V父主机或主机集群
-        url: "/task_viewing_a_hyper_v_parent_host_or_host_cluster.html"
+        url: "/task-view-a-hyper-v-parent-host-or-host-cluster.html"
       - title: 查看虚拟机
-        url: "/task_viewing_a_virtual_machine.html"
-      - title: 为SnapManager for Hyper-V操作迁移Hyper-V虚拟机
-        url: "/task_migrating_a_hyper_v_virtual_machine_to_support_snapmanager_for_hyper_v_operations.html"
+        url: "/task-view-a-virtual-machine.html"
+      - title: 迁移用于SnapManager for Hyper-V操作的Hyper-V虚拟机
+        url: "/task-migrate-a-hyper-v-virtual-machine-to-support-snapmanager-for-hyper-v-operations.html"
       - title: 导入或导出主机和数据集配置信息
-        url: "/task_importing_or_exporting_host_and_dataset_configuration_information.html"
+        url: "/task-import-or-export-host-and-dataset-configuration-information.html"
       - title: 删除Hyper-V父主机或父主机集群
-        url: "/task_removing_a_hyper_v_parent_host.html"
+        url: "/task-remove-a-hyper-v-parent-host.html"
       - title: 事件通知设置
-        url: "/concept_event_notification_settings.html"
+        url: "/concept-event-notification-settings.html"
         entries:
         - title: 配置电子邮件通知
-          url: "/concept_configuring_multiple_recipients_for_email_notifications_in_smhv.html"
+          url: "/concept-configure-multiple-recipients-for-email-notifications-in-smhv.html"
       - title: 报告路径设置
-        url: "/concept_report_path_settings.html"
+        url: "/concept-report-path-settings.html"
     - title: 配置SnapInfo目录设置
-      url: "/concept_configuring_snapinfo_directory_settings.html"
+      url: "/concept-configure-snapinfo-directory-settings.html"
       entries:
       - title: 设置SnapInfo LUN
-        url: "/task_setting_up_a_snapinfo_lun.html"
+        url: "/task-set-up-a-snapinfo-lun.html"
       - title: 更改SnapInfo目录路径
-        url: "/task_changing_the_snapinfo_directory_path.html"
+        url: "/task-change-the-snapinfo-directory-path.html"
     - title: 配置数据集
-      url: "/concept_configuring_datasets.html"
+      url: "/concept-configure-datasets.html"
       entries:
       - title: 创建数据集的要求
-        url: "/reference_requirements_for_creating_a_dataset.html"
+        url: "/reference-requirements-for-creating-a-dataset.html"
       - title: 创建数据集
-        url: "/task_creating_a_dataset.html"
+        url: "/task-create-a-dataset.html"
       - title: 修改数据集
-        url: "/task_modifying_a_dataset.html"
+        url: "/task-modify-a-dataset.html"
       - title: 查看数据集
-        url: "/task_viewing_a_dataset.html"
+        url: "/task-view-a-dataset.html"
       - title: 删除数据集
-        url: "/task_deleting_a_dataset.html"
+        url: "/task-delete-a-dataset.html"
     - title: 配置策略
-      url: "/concept_configuring_policies.html"
+      url: "/concept-configure-policies.html"
       entries:
       - title: 向数据集添加策略的要求
-        url: "/reference_requirements_for_adding_policies_to_a_dataset.html"
-      - title: 正在添加策略
-        url: "/task_adding_policies.html"
+        url: "/reference-requirements-for-adding-policies-to-a-dataset.html"
+      - title: 添加策略
+        url: "/task-add-policies.html"
       - title: 修改策略
-        url: "/task_modifying_policies.html"
+        url: "/task-modify-policies.html"
       - title: 查看策略
-        url: "/task_viewing_policies.html"
-      - title: 正在删除策略
-        url: "/task_deleting_policies.html"
+        url: "/task-view-policies.html"
+      - title: 删除策略
+        url: "/task-delete-policies.html"
     - title: 为基于SMB的Hyper-V配置SVM或CIFS服务器
-      url: "/concept_configuring_svms_or_cifs_servers_for_hyper_v_over_smb.html"
+      url: "/concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html"
   - title: 管理报告
-    url: "/concept_report_management.html"
+    url: "/concept-report-management.html"
     entries:
     - title: 查看数据集报告
-      url: "/task_viewing_a_report.html"
+      url: "/task-view-a-report.html"
     - title: 查看主机报告
-      url: "/task_viewing_a_host_report.html"
+      url: "/task-view-a-host-report.html"
     - title: 删除报告
-      url: "/task_deleting_a_report.html"
+      url: "/task-delete-a-report.html"
   - title: VSS组件
-    url: "/concept_overview_of_vss_components.html"
+    url: "/concept-overview-of-vss-components.html"
     entries:
     - title: Windows Server 2012及更高版本中的CSV 2.0
-      url: "/concept_cluster_shared_volume_2_0_architecture.html"
+      url: "/concept-cluster-shared-volume-2-0-architecture.html"
     - title: 在Windows Server 2012中为Hyper-V VM提供SMB 3.0支持
-      url: "/reference_smb_3_0_support_hyper_v_vms_in_windows_server_2012.html"
+      url: "/reference-smb-3-0-support-hyper-v-vms-in-windows-server-2012.html"
     - title: SnapManager for Hyper-V如何使用VSS
-      url: "/concept_how_snapmanager_for_hyper_v_uses_vss.html"
+      url: "/concept-how-snapmanager-for-hyper-v-uses-vss.html"
     - title: ONTAP VSS硬件提供程序要求
-      url: "/concept_ontap_vss_hardware_provider_requirement.html"
+      url: "/concept-ontap-vss-hardware-provider-requirement.html"
     - title: 查看已安装的VSS提供程序
-      url: "/task_viewing_installed_vss_providers.html"
+      url: "/task-view-installed-vss-providers.html"
     - title: 验证是否已成功使用VSS硬件提供程序
-      url: "/task_verifying_that_the_vss_hardware_provider_was_used_successfully.html"
+      url: "/task-verify-that-the-vss-hardware-provider-was-used-successfully.html"
   - title: 在SnapManager for Hyper-V中创建和管理备份作业
-    url: "/concept_creating_and_managing_backup_jobs_in_snapmanager_for_hyper_v.html"
+    url: "/concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html"
     entries:
     - title: 手动备份数据集的要求
-      url: "/reference_requirements_for_manually_backing_up_a_dataset.html"
+      url: "/reference-requirements-for-manually-backing-up-a-dataset.html"
     - title: SnapManager for Hyper-V如何处理已保存状态的备份
-      url: "/concept_how_snapmanager_for_hyper_v_handles_saved_state_backups.html"
+      url: "/concept-how-snapmanager-for-hyper-v-handles-saved-state-backups.html"
     - title: 手动备份数据集
-      url: "/task_manually_backing_up_a_dataset.html"
+      url: "/task-manually-backing-up-a-dataset.html"
     - title: 监控备份作业
-      url: "/task_monitoring_backup_jobs.html"
+      url: "/task-monitor-backup-jobs.html"
     - title: 删除备份
-      url: "/task_deleting_a_backup.html"
+      url: "/task-delete-a-backup.html"
   - title: 从备份副本还原虚拟机
-    url: "/concept_restoring_a_virtual_machine.html"
+    url: "/concept-restore-a-virtual-machine.html"
     entries:
     - title: 还原虚拟机的要求
-      url: "/reference_requirements_for_restoring_a_virtual_machine.html"
+      url: "/reference-requirements-for-restoring-a-virtual-machine.html"
     - title: 从备份副本还原虚拟机
-      url: "/task_restoring_a_virtual_machine_from_a_backup_copy.html"
+      url: "/task-restore-a-virtual-machine-from-a-backup-copy.html"
   - title: 执行集群操作系统滚动升级
-    url: "/concept_performing_a_cluster_os_rolling_upgrade.html"
+    url: "/concept-perform-a-cluster-os-rolling-upgrade.html"
     entries:
     - title: 在混合操作系统模式下映射LUN
-      url: "/task_mapping_luns_after_the_windows_server_2016_node_addition.html"
-    - title: 在所有节点上更新数据集和SnapInfo
-      url: "/task_updating_the_dataset_and_snapinfo_across_all_nodes.html"
+      url: "/task-map-luns-after-the-windows-server-2016-node-addition.html"
+    - title: 更新所有节点上的数据集和SnapInfo
+      url: "/task-update-the-dataset-and-snapinfo-across-all-nodes.html"
   - title: 执行灾难恢复
-    url: "/concept_performing_disaster_recovery.html"
+    url: "/concept-perform-disaster-recovery.html"
     entries:
     - title: 为Hyper-V配置SnapManager 以实现故障转移
-      url: "/concept_configuring_snapmanager_for_hyper_v_for_failover.html"
+      url: "/concept-configure-snapmanager-for-hyper-v-for-failover.html"
     - title: 从灾难恢复故障转移中恢复和还原
-      url: "/task_recovering_and_restoring_from_a_disaster_recovery_failover.html"
+      url: "/task-recover-and-restore-from-a-disaster-recovery-failover.html"
     - title: 在灾难恢复故障恢复后重新配置存储系统
-      url: "/task_reconfiguring_storage_systems_after_a_disaster_recovery_failback.html"
+      url: "/task-reconfigure-storage-systems-after-a-disaster-recovery-failback.html"
     - title: 还原独立主机的原始配置
-      url: "/task_restoring_the_original_configuration_for_standalone_hosts.html"
+      url: "/task-restore-the-original-configuration-for-standalone-hosts.html"
     - title: 还原集群主机的原始配置
-      url: "/task_restoring_the_original_configuration_for_clustered_hosts.html"
+      url: "/task-restore-the-original-configuration-for-clustered-hosts.html"
   - title: 对SnapManager for Hyper-V进行故障排除
-    url: "/concept_snapmanager_for_hyper_v_troubleshooting.html"
+    url: "/concept-snapmanager-for-hyper-v-troubleshoot.html"
     entries:
     - title: 以下虚拟机的备份失败、因为无法联机进行backedup、或者找不到要备份的虚拟机
-      url: "/reference_backup_failed_for_the_following_vm_s_since_it_cannot_be_backedup_online_or_no_vm_to_be_found_for_backup.html"
+      url: "/reference-backup-failed-for-the-following-vm-s-since-it-cannot-be-backedup-online-or-no-vm-to-be-found-for-backup.html"
     - title: 查询IVssWriteCallback接口时出现意外错误。HR = 0x80070005、访问被拒绝。
-      url: "/reference_unexpected_error_querying_for_the_ivsswritercallback_interface_hr_0x80070005.html"
+      url: "/reference-unexpected-error-querying-for-the-ivsswritercallback-interface-hr-0x80070005.html"
     - title: 备份报告在报告名称中使用管理控制台时区信息
-      url: "/reference_backup_reports_use_management_console_time_zone_information_in_report_name.html"
+      url: "/reference-backup-reports-use-management-console-time-zone-information-in-report-name.html"
     - title: 备份和还原通知不会在仅使用IPv6的环境中发送
-      url: "/reference_backup_and_restore_notifications_not_sent_in_ipv6_only_environments.html"
+      url: "/reference-backup-and-restore-notifications-not-sent-in-ipv6-only-environments.html"
     - title: 故障转移集群事件ID 5121
-      url: "/reference_failover_clustering_event_id_5121.html"
+      url: "/reference-failover-clustering-event-id-5121.html"
     - title: 在执行还原操作期间执行的虚拟机备份可能无效
-      url: "/reference_virtual_machine_backups_made_while_a_restore_operation_is_in_progress_might_be_invalid.html"
+      url: "/reference-virtual-machine-backups-made-while-a-restore-operation-is-in-progress-might-be-invalid.html"
     - title: 虚拟机自行管理
-      url: "/reference_virtual_machine_adding_itself_to_a_dataset.html"
+      url: "/reference-virtual-machine-adding-itself-to-a-dataset.html"
     - title: 仅使用IPv6的主机的连接时间较长
-      url: "/reference_connection_time_is_longer_with_ipv6_only_host.html"
+      url: "/reference-connection-time-is-longer-with-ipv6-only-host.html"
     - title: Volume Shadow Copy Service error：检测到内部不一致
-      url: "/reference_volume_shadow_copy_service_error_an_internal_inconsistency_was_detected.html"
+      url: "/reference-volume-shadow-copy-service-error-an-internal-inconsistency-was-detected.html"
     - title: Web服务客户端通道无法连接到计算机smhv51_81cluss上的ConfigurationManagementService实例
-      url: "/reference_web_service_client_channel_was_unable_to_connect_to_the_configurationmanagementservice_instance_on_machine_smhv51_81clus.html"
+      url: "/reference-web-service-client-channel-was-unable-to-connect-to-the-configurationmanagementservice-instance-on-machine-smhv51-81clus.html"
     - title: 在静默安装中使用的MSI自定义属性
-      url: "/reference_msi_custom_property_used_in_silent_installation.html"
+      url: "/reference-msi-custom-property-used-in-silent-installation.html"
     - title: SnapManager for Hyper-V在主机或存储系统上未获得许可
-      url: "/reference_snapmanager_for_hyper_v_is_not_licensed_on_the_host_or_in_the_storage_system.html"
+      url: "/reference-snapmanager-for-hyper-v-is-not-licensed-on-the-host-or-in-the-storage-system.html"
     - title: 在故障转移后删除备份
-      url: "/reference_secondary_machine_unable_to_delete_backups_after_failover.html"
+      url: "/reference-secondary-machine-unable-to-delete-backups-after-failover.html"
     - title: 备份失败后、存储性能下降
-      url: "/reference_storage_performance_degrades_after_failed_backup.html"
+      url: "/reference-storage-performance-degrades-after-failed-backup.html"
     - title: 已删除SnapInfo Snapshot副本
-      url: "/reference_retention_of_snapinfo_snapshot_copies.html"
+      url: "/reference-retention-of-snapinfo-snapshot-copies.html"
     - title: 防病毒解决方案 导致内存消耗较高
-      url: "/reference_high_memory_consumption_caused_by_antivirus_solution.html"
+      url: "/reference-high-memory-consumption-caused-by-antivirus-solution.html"
     - title: 为每个备份创建两个Snapshot副本时占用的空间
-      url: "/reference_space_consumption_when_making_two_snapshot_copies_for_each_backup.html"
+      url: "/reference-space-consumption-when-making-two-snapshot-copies-for-each-backup.html"
     - title: 备份时、SnapDrive SDDiscoveryFileSystemListInfo响应为空
-      url: "/reference_error_snapdrive_sddiscoveryfilesystemlistinfo_response_is_null.html"
+      url: "/reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.html"
     - title: 错误：VSS请求程序-备份组件失败
-      url: "/reference_error_vss_requestor_backup_components_failed.html"
+      url: "/reference-error-vss-requestor-backup-components-failed.html"
     - title: VSS请求程序—备份组件失败。系统中未收到预期磁盘
-      url: "/reference_error_vss_requestor_backup_components_failed_an_expected_disk_did_not_arrive_in_the_system.html"
+      url: "/reference-error-vss-requestor-backup-components-failed-an-expected-disk-did-not-arrive-in-the-system.html"
     - title: VSS请求程序—备份组件失败、并出现部分写入程序错误
-      url: "/reference_dataset_backup_might_fail_with_a_partial_writer_error.html"
+      url: "/reference-dataset-backup-might-fail-with-a-partial-writer-error.html"
     - title: 在NAS备份期间、VSS针对Microsoft iSCSI Target VSS硬件提供程序返回错误
-      url: "/reference_vss_returns_errors_against_microsoft_iscsi_target_vss_hardware_provider_during_nas_backup.html"
+      url: "/reference-vss-returns-errors-against-microsoft-iscsi-target-vss-hardware-provider-during-nas-backup.html"
     - title: VSS请求程序—备份组件失败。无法调用保留快照集。
-      url: "/reference_vss_requestor_backup_components_failed_failed_to_call_keep_snapshot_set.html"
+      url: "/reference-vss-requestor-backup-components-failed-failed-to-call-keep-snapshot-set.html"
     - title: SnapManager for Hyper-V不支持MBR LUN
-      url: "/reference_mbr_luns_unsupported_in_snapmanager_for_hyper_v.html"
+      url: "/reference-mbr-luns-unsupported-in-snapmanager-for-hyper-v.html"
     - title: 从Hyper-V Manager中删除虚拟机后、备份失败
-      url: "/reference_backup_fails_after_removing_virtual_machine_from_hyper_v_manager.html"
+      url: "/reference-backup-fails-after-removing-virtual-machine-from-hyper-v-manager.html"
     - title: 某些类型的备份故障不会导致部分备份失败
-      url: "/reference_some_types_of_failures_do_not_generate_error_message.html"
+      url: "/reference-some-types-of-failures-do-not-generate-error-message.html"
     - title: 重命名存储系统卷后还原失败
-      url: "/reference_restore_failure_after_storage_system_volume_renaming.html"
+      url: "/reference-restore-failure-after-storage-system-volume-renaming.html"
     - title: 故障恢复后从备份中还原
-      url: "/reference_restoring_from_a_backup_after_failback.html"
+      url: "/reference-restore-from-a-backup-after-failback.html"
     - title: 将数据集更新到新节点时、Web服务客户端通道无法连接
-      url: "/reference_web_service_client_channel_unable_to_connect_while_updating_the_dataset_to_the_new_node.html"
+      url: "/reference-web-service-client-channel-unable-to-connect-while-updating-the-dataset-to-the-new-node.html"
     - title: 数据集不会自动复制到Windows故障转移集群中的新节点
-      url: "/reference_datasets_are_not_automatically_replicated_to_new_nodes_in_a_windows_failover_cluster.html"
+      url: "/reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html"
     - title: 错误1935。安装组件组件期间出错
-      url: "/reference_error_1935_an_error_occurred_during_the_installation_of_assembly_component.html"
+      url: "/reference-error-1935-an-error-occurred-during-the-installation-of-assembly-component.html"
     - title: 如果备份作业涉及来自同一存储系统的15个以上CSV、则可能会失败
-      url: "/reference_backup_jobs_that_involve_more_than_15_csvs_from_the_same_filer_fail_with_rename_snapshot_error.html"
+      url: "/reference-backup-jobs-that-involve-more-than-15-csvs-from-the-same-filer-fail-with-rename-snapshot-error.html"
     - title: 指定的虚拟机不存在或无法联机备份
-      url: "/reference_either_the_specified_vm_s_are_not_present_or_they_cannot_be_backed_up_online.html"
+      url: "/reference-either-the-specified-vm-s-are-not-present-or-they-cannot-be-backed-up-online.html"
     - title: 某些平台上无法安装所需的热修补程序KB2263829
-      url: "/reference_required_hotfix_kb2263829_cannot_be_installed_on_some_platforms.html"
+      url: "/reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html"
     - title: 备份失败、并显示错误"正在创建卷影副本"
-      url: "/reference_backup_fail_with_the_error_shadow_copy_creation_is_already_in_progress.html"
+      url: "/reference-backup-fail-with-the-error-shadow-copy-creation-is-already-in-progress.html"
+  - title: 法律声明
+    url: "/legal-notices.html"

@@ -1,0 +1,22 @@
+---
+permalink: task-delete-a-report.html 
+sidebar: sidebar 
+keywords: delete, report, deleting 
+summary: 您可以删除不再需要的一个或多个报告。 
+---
+= 删除报告
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以删除不再需要的一个或多个报告。
+
+.步骤
+. 从导航窗格中、单击菜单：报告[数据集]或菜单：报告[主机]。
+. 选择包含要删除的报告的数据集、虚拟机或主机。
+. 从报告窗格中、选择要删除的一个或多个报告。
+. 在操作窗格中、单击*删除报告*、然后单击*确定*以删除。
+

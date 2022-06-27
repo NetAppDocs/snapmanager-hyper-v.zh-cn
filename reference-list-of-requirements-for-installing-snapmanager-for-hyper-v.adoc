@@ -1,0 +1,56 @@
+---
+permalink: reference-list-of-requirements-for-installing-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: environment, hardware, software, ontap, license, licensing, requirement, install, snapmanager, hyper-v, windows, .net, 4.5 
+summary: 在安装SnapManager for Hyper-V之前、您的环境必须满足所有硬件、软件、ONTAP 和许可要求 
+---
+= 安装SnapManager for Hyper-V的要求列表
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在安装SnapManager for Hyper-V之前、您的环境必须满足所有硬件、软件、ONTAP 和许可要求如果不满足最低Windows操作系统和.Net 4.5的要求、安装程序将停止。
+
+
+
+== Hyper-V父主机要求
+
+Hyper-V父主机必须运行Windows Server 2008 R2或更高版本。您必须在父主机上启用Hyper-V角色。Hyper-V父主机上必须安装SnapDrive 7.1 for Windows或更高版本。
+
+
+
+== SnapManager for Hyper-V下载
+
+您必须已从NetApp支持站点下载适用于Hyper-V的SnapManager 软件。
+
+
+
+== 存储系统要求
+
+存储系统必须运行相应版本的ONTAP 软件。您可以使用基于主机的许可或存储系统许可来安装SnapManager for Hyper-V
+
+
+
+== licenses
+
+要运行适用于Hyper-V的SnapManager 、您必须具有相应的许可证
+
+
+
+== 凭据
+
+要安装和运行适用于Hyper-V的SnapManager 、您必须具有相应的凭据
+
+
+
+== 服务帐户和身份验证要求
+
+您必须具有服务帐户、并且必须满足身份验证要求。您必须能够使用服务帐户登录到主机、并且该帐户必须具有管理权限。
+
+
+
+== Web服务端口号
+
+您必须具有可用的Web服务net.tcp端口号。默认端口号为808。在集群上安装SnapManager for Hyper-V时、必须确保所有节点使用相同的端口号。

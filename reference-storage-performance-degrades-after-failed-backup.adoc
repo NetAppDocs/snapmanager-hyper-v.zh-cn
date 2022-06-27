@@ -1,0 +1,25 @@
+---
+permalink: reference-storage-performance-degrades-after-failed-backup.html 
+sidebar: sidebar 
+keywords: storage, performance, degrade, fail, backup 
+summary: 备份失败后、存储性能下降。 
+---
+= 备份失败后、存储性能下降
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+备份作业失败后、存储性能可能会降低。
+
+* * 发生原因 *
++
+如果Microsoft Hyper-V VSS组件在备份期间出现异常、则集群共享卷(CSV)可能仍处于重定向I/O模式、从而导致I/O开销和Windows故障转移集群中的潜在瓶颈。这可能会导致整体性能下降、对重定向I/O模式下CSV上的虚拟机的影响最大。
+
+* * 更正操作 *
++
+请联系Microsoft支持部门以获得有关此问题描述 的帮助。
+
+

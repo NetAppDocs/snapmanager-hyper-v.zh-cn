@@ -1,0 +1,16 @@
+---
+permalink: release-notes.html 
+sidebar: sidebar 
+keywords: release notes, snapmanager for hyper-v 
+summary: 《SnapManager for Hyper-V发行说明》介绍了新增功能、升级说明、已修复的问题、已知限制和已知问题。 
+---
+= 发行说明
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+《SnapManager for Hyper-V发行说明》介绍了新增功能、升级说明、已修复的问题、已知限制和已知问题。
+
+有关详细信息，请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2851116["《SnapManager for Hyper-V 2.1.4发行说明》"^]。

@@ -1,0 +1,32 @@
+---
+permalink: reference-datasets-are-not-automatically-replicated-to-new-nodes-in-a-windows-failover-cluster.html 
+sidebar: sidebar 
+keywords: dataset, automatic, replicated, node, windows, failover, cluster 
+summary: 数据集不会自动复制到Windows故障转移集群中的新节点。 
+---
+= 数据集不会自动复制到Windows故障转移集群中的新节点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+向Windows故障转移集群添加新节点后、数据集不会自动传输到新节点。
+
+* * 发生原因 *
++
+在向Windows故障转移集群添加新节点时、SnapManager for Hyper-V不会自动将现有数据集复制到集群中的新节点。
+
+* * 更正操作 *
++
+运行修改数据集向导、然后在"基本详细信息"页面上单击*更新所有数据集成员节点的计划策略*。
+
++
+必须为每个包含虚拟机的数据集运行此向导。
+
+
+
+* 相关信息 *
+
+xref:task-modify-a-dataset.adoc[修改数据集]

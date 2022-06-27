@@ -1,0 +1,73 @@
+---
+permalink: reference-dataset-backup-might-fail-with-a-partial-writer-error.html 
+sidebar: sidebar 
+keywords: vss, requestor, backup, component, partial, writer, error 
+summary: VSS请求程序—备份组件失败、并出现部分写入程序错误。 
+---
+= VSS请求程序—备份组件失败、并出现部分写入程序错误
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 消息 *
++
+[listing]
+----
+Error: Vss Requestor - Backup Components failed with partial
+writer error.
+Writer Microsoft Hyper-V VSS Writer involved in backup or restore
+operation reported partial failure. Writer returned failure code
+0x80042336. Writer state is 5.
+Application specific error information:
+Application error code: 0x1
+Application error message: -
+Failed component information:
+Failed component: VM GUID XXX
+    Writer error code: 0x800423f3
+    Application error code: 0x8004230f
+    Application error message: Failed to revert to VSS snapshot on the
+    virtual hard disk 'volume_guid' of the virtual machine 'vm_name'.
+   (Virtual machine ID XXX)
+----
++
+Hyper-V主机上的Windows应用程序事件日志中显示以下错误：
+
++
+[listing]
+----
+Volume Shadow Copy Service error: Unexpected error calling routine
+GetOverlappedResult.  hr = 0x80070057, The parameter is incorrect.
+
+Operation:
+   Revert a Shadow Copy
+
+Context:
+   Execution Context: System Provider
+
+Volume Shadow Copy Service error: Error calling a routine on a Shadow
+Copy Provider
+{b5946137-7b9f-4925-af80-51abd60b20d5}. Routine details
+RevertToSnapshot
+[hr = 0x80042302, A Volume Shadow Copy Service component encountered
+an unexpected
+error.
+Check the Application event log for more information.].
+
+Operation:
+   Revert a Shadow Copy
+
+Context:
+   Execution Context: Coordinator
+----
+* * 问题描述 *
++
+对数据集执行应用程序一致的备份时、会显示此消息。此错误会导致数据集中某些虚拟机的备份失败。
+
+* * 更正操作 *
++
+** 重试数据集备份。
+** 如果重试尝试再次失败、请将数据集拆分为两个数据集、以便将备份失败的所有VM放置在一个数据集中、而所有其他VM将放置在另一个数据集中。然后再次运行备份。
+
+
+

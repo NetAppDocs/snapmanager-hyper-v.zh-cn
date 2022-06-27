@@ -1,0 +1,25 @@
+---
+permalink: reference-required-hotfix-kb2263829-cannot-be-installed-on-some-platforms.html 
+sidebar: sidebar 
+keywords: require, hotfix, kb2263829, install, platform 
+summary: 某些平台上无法安装所需的热修补程序KB2263829。 
+---
+= 某些平台上无法安装所需的热修补程序KB2263829
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+安装SnapManager for Hyper-V时、尝试安装Windows Server 2008 R2 SP1的修补程序KB2263829可能会失败。安装程序指出此修补程序不适用于此服务器。
+
+* * 发生原因 *
++
+您的平台不支持此修补程序。
+
+* * 更正操作 *
++
+与Microsoft一起创建支持案例、并与Microsoft一起解决问题描述。
+
+

@@ -1,0 +1,22 @@
+---
+permalink: concept-perform-a-cluster-os-rolling-upgrade.html 
+sidebar: sidebar 
+keywords: cluster, operating, system, os, rolling, upgrade, snapmanager, perform, reducing, reduce, downtime 
+summary: '您可以执行集群操作系统(OS)滚动升级来升级集群节点的操作系统、而无需停止适用于Hyper-V的SnapManager此功能可减少停机时间、从而支持SLA合规性。' 
+---
+= 执行集群操作系统滚动升级
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以执行集群操作系统(OS)滚动升级来升级集群节点的操作系统、而无需停止适用于Hyper-V的SnapManager此功能可减少停机时间、从而支持SLA合规性。
+
+运行SnapManager for Hyper-V的故障转移集群可以从Windows Server 2012 R2升级到Windows Server 2016和Windows Server 2019、而无需停机。
+
+有关集群操作系统滚动升级优势、安装过程和限制的信息、请参见相关信息。
+
+* 相关信息 *
+
+https://docs.microsoft.com/en-us/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade["Microsoft TechNet：集群操作系统滚动升级"]

@@ -1,0 +1,24 @@
+---
+permalink: task-view-policies.html 
+sidebar: sidebar 
+keywords: view, policy, detail, associate, specific, dataset, policies 
+summary: 您可以查看与特定数据集关联的策略详细信息。 
+---
+= 查看策略
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以查看与特定数据集关联的策略详细信息。
+
+.步骤
+. 在导航窗格中、单击菜单：Protection[Datasets ]。
+. 选择包含要查看的策略的数据集。
+. 从策略窗格中、选择要查看其详细信息的特定策略。
++
+有关此策略的信息将显示在详细信息窗格中。
+
+

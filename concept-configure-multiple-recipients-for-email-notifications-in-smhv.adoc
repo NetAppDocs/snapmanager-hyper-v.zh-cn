@@ -1,0 +1,16 @@
+---
+permalink: concept-configure-multiple-recipients-for-email-notifications-in-smhv.html 
+sidebar: sidebar 
+keywords: multiple, email, recipient, notification, comma, configuring, configure 
+summary: 通知的多个电子邮件收件人必须用逗号分隔。 
+---
+= 配置电子邮件通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+通知的多个电子邮件收件人必须用逗号分隔。
+
+在SnapManager for Hyper-V中为电子邮件通知配置多个电子邮件收件人时、请使用逗号分隔每个收件人。此要求与SnapManager for SQL不同、在该要求中、每个电子邮件通知收件人都必须用分号分隔。

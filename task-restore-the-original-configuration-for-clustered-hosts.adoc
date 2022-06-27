@@ -1,0 +1,22 @@
+---
+permalink: task-restore-the-original-configuration-for-clustered-hosts.html 
+sidebar: sidebar 
+keywords: vm, backed, up, primary, storage, system, return, origin, configuration, snapmirror, relationship, secondary, primary, restoring 
+summary: 在主存储系统上备份VM后、您可以使用从主存储系统到二级存储系统建立的SnapMirror关系返回到原始配置。 
+---
+= 还原集群主机的原始配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在主存储系统上备份VM后、您可以使用从主存储系统到二级存储系统建立的SnapMirror关系返回到原始配置。
+
+.步骤
+. 使所有VM的虚拟机资源和虚拟机配置资源脱机。
+. 从集群中删除这些资源。
+. 从Hyper-V Manager中删除所有VM。
+. 使用SnapDrive 断开所有磁盘的连接。
+. 重新同步主存储系统与二级存储系统之间的SnapMirror关系。
+

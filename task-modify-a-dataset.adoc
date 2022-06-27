@@ -1,0 +1,24 @@
+---
+permalink: task-modify-a-dataset.html 
+sidebar: sidebar 
+keywords: create, dataset, modify, description, resource, associate 
+summary: 创建数据集后、您可以修改数据集问题描述 以及与该数据集关联的资源。 
+---
+= 修改数据集
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+创建数据集后、您可以修改数据集问题描述 以及与该数据集关联的资源。
+
+默认情况下、验证数据集复选框处于选中状态。SnapManager for Hyper-V会在创建或修改数据集期间检查所有VM中的任何配置错误。如果不希望启用数据集验证、则必须确保未选中此复选框。
+
+.步骤
+. 在导航窗格中、单击菜单：Protection[Datasets ]。
+. 选择要修改的数据集。
+. 从操作窗格中、单击*修改数据集*。
+. 完成向导中的步骤。
+

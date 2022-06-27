@@ -1,0 +1,32 @@
+---
+permalink: reference-virtual-machine-adding-itself-to-a-dataset.html 
+sidebar: sidebar 
+keywords: virtual, machine, managing, manage, itself 
+summary: '如果虚拟机(VM)属于安装了SnapManager for Hyper-V的主机、而您在该虚拟机上安装了SnapManager for Hyper-V以用作管理控制台、则不应使用SnapManager for Hyper-V来管理该虚拟机所属的主机。' 
+---
+= 虚拟机自行管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 问题描述 *
++
+如果虚拟机(VM)属于安装了SnapManager for Hyper-V的主机、而您在该虚拟机上安装了SnapManager for Hyper-V以用作管理控制台、则不应使用SnapManager for Hyper-V来管理该虚拟机所属的主机。
+
+* * 发生原因 *
++
+虚拟机上的SnapManager for Hyper-V无法自行管理。
+
+* * 更正操作 *
++
+无需采取更正操作。
+
+* * 示例 *
++
+如果VM1属于Host1 (已安装SnapManager for Hyper-V)、而您在VM1上安装了SnapManager for Hyper-V、则不应使用SnapManager for Hyper-V从VM1管理Host1。
+
++
+如果您执行此操作并尝试从其自身还原虚拟机、则虚拟机将从Hyper-V Manager中删除或重新启动。
+
+

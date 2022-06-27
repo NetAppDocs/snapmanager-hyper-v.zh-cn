@@ -1,0 +1,18 @@
+---
+permalink: concept-installation-order-for-snapdrive-for-windows-and-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: install, snapdrive, windows, hyper-v, cluster, snapdrive 
+summary: 在安装SnapManager for Hyper-V之前、必须在所有主机上安装SnapDrive for Windows如果主机是集群的成员、则集群中的所有节点都需要安装SnapDrive for Windows。 
+---
+= SnapDrive for Windows和SnapManager for Hyper-V的安装顺序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在安装SnapManager for Hyper-V之前、必须在所有主机上安装SnapDrive for Windows如果主机是集群的成员、则集群中的所有节点都需要安装SnapDrive for Windows。
+
+当SnapManager for Hyper-V启动时、它会与SnapDrive for Windows进行通信、以获取主机上运行的所有虚拟机的列表。如果主机上未安装SnapDrive for Windows、则此API将失败、并且SnapManager for Hyper-V内部缓存不会使用虚拟机信息进行更新。
+
+您可能会收到以下消息：`Error：SnapManager for Hyper-V is not licensed on the host or in the Storage System、backup is aborted：`。

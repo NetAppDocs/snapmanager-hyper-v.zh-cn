@@ -1,0 +1,56 @@
+---
+permalink: task-change-the-snapinfo-directory-path.html 
+sidebar: sidebar 
+keywords: control, snapinfo, directory, path, setting, configuration, wizard, action, changing, change 
+summary: 您可以使用配置向导或SnapInfo设置操作来控制SnapInfo目录路径设置。 
+---
+= 更改SnapInfo目录路径
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用配置向导或* SnapInfo设置*操作来控制SnapInfo目录路径设置。
+
+SnapInfo目录设置在SnapManager for Hyper-V的主机级别上指定SnapManager for Hyper-V支持NAS (SMB)主机和SAN主机。对于SAN主机、SnapInfo设置将应用于卷级别；对于NAS主机、SnapInfo设置将应用于SMB共享级别。
+
+如果已将存储系统的IP地址添加到SnapDrive for Windows TPS中、则在SnapManager for Hyper-V中运行配置向导时、SnapDrive for Windows中的存储设置会自动填充如果您未配置适用于Windows TPS的SnapDrive 、则必须在适用于Hyper-V的SnapManager 的管理存储连接选项卡中指定存储系统的IP地址
+
+.步骤
+. 在导航窗格中、单击菜单：Protection[Hosts]。
+. 选择要更改SnapInfo目录路径的主机。
+. 从*操作*窗格中、选择* SnapInfo设置*。
++
+此时将打开* SnapInfo设置*对话框。
+
+. 从显示的选项中选择存储类型：
++
+|===
+| 选项 | Description 
+
+
+ a| 
+SAN
+ a| 
+这是默认存储类型。
+
+
+
+ a| 
+NAS
+ a| 
+对SMB共享使用此选项。
+
+|===
+. 单击 * 浏览 * 。
++
+此时将打开浏览文件夹窗口。
+
+. 选择SnapInfo存储系统(SAN)或卷(NAS)、然后单击*确定*。
++
+显示的主机是与已在主机级别使用`Manage Storage Connection`选项注册的存储系统对应的NAS共享。如果您未看到要查找的共享、请确保已正确配置`M管理存储连接`。
+
+. 在* SnapInfo Settings*窗口中、单击*确定*。
+

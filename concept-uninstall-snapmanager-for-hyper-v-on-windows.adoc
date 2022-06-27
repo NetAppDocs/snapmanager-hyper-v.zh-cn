@@ -1,0 +1,14 @@
+---
+permalink: concept-uninstall-snapmanager-for-hyper-v-on-windows.html 
+sidebar: sidebar 
+keywords: uninstall, snapmanager, hyper-v, windows, host, software, uninstallation, program, interactive 
+summary: 如果您不再需要SnapManager for Hyper-V、则可以从Windows主机卸载该软件。您必须以交互方式运行卸载程序。 
+---
+= 在Windows上卸载SnapManager for Hyper-V
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您不再需要SnapManager for Hyper-V、则可以从Windows主机卸载该软件。您必须以交互方式运行卸载程序。

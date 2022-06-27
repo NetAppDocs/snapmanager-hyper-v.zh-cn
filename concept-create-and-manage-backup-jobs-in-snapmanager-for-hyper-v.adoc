@@ -1,0 +1,54 @@
+---
+permalink: concept-create-and-manage-backup-jobs-in-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: create, monitor, on-demand, backup, manage, schedule, snapmanager, hyper-v, creating, managing, application, crash 
+summary: 您可以在SnapManager for Hyper-V中创建和监控按需备份或受管计划备份 
+---
+= 在SnapManager for Hyper-V中创建和管理备份作业
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在SnapManager for Hyper-V中创建和监控按需备份或受管计划备份您还可以使用SnapManager for Hyper-V执行两种类型的备份作业：应用程序一致和崩溃一致。
+
+
+
+== 关于SnapManager for Hyper-V备份
+
+您可以创建按需备份作业并根据需要运行这些作业、也可以使用附加到数据集的策略创建计划的备份作业。按需备份作业可以包括保留和复制策略以及备份前后要运行的脚本。您可以创建、修改、查看和删除构成计划备份作业的策略。
+
+
+
+== SnapManager for Hyper-V可以执行的备份作业类型
+
+您可以使用SnapManager for Hyper-V执行两种类型的备份作业：应用程序一致和崩溃一致。
+
+
+
+== 应用程序一致的备份作业
+
+应用程序一致的备份作业是全面、可靠且占用大量资源的。它们是在Microsoft卷影复制服务(VSS)的协调下执行的、以确保在创建Snapshot副本之前虚拟机上运行的每个应用程序都处于静默状态。此备份方法可确保应用程序数据一致性。您可以使用它来还原VM及其上运行的应用程序。但是、应用程序一致的备份作业非常耗时、并且可能非常复杂。
+
+
+
+== 崩溃状态一致的备份作业
+
+崩溃状态一致的备份作业是指数据集中涉及的VM所使用的所有LUN的快速Snapshot副本。生成的备份副本与崩溃或突然关闭的虚拟机的数据捕获类似。崩溃状态一致的备份作业提供了一种快速捕获数据的方法、但要从崩溃状态一致的备份中还原、必须存在虚拟机。崩溃状态一致的备份作业不能替代应用程序一致的备份作业。
+
+
+
+== SnapManager for Hyper-V备份要求和限制
+
+您应了解SnapManager for Hyper-V备份的要求和限制：
+
+* 如果要对MetroCluster 配置执行切换或切回操作、则不支持备份和还原操作。如果备份和还原操作以及切换或切回操作同时运行、则在Windows Server 2012 R2系统中、VM的`.vhd`文件格式可能会更改为`.avhdx`。此虚拟机不受此更改的影响。
+* 通过"分配应用程序一致的备份`d`"选项、可以在从备份节点创建的一个硬件Snapshot副本中使配对集群节点上运行的多个VM保持一致。在Windows故障转移集群中的多个节点上运行CSV 2.0 Windows卷的所有VM均支持此选项。
+* 在7-模式下运行时、应用程序一致的备份作业使用VSS硬件提供程序创建两个Snapshot副本。Snapshot副本称为`snapshot_name`和`snapshot_name_backup`。创建这两个Snapshot副本是为了便于在VSS备份期间自动恢复。
+* 在集群模式环境中、应用程序一致的备份在自动恢复过程中只需要一个Snapshot副本。利用SIS克隆执行自动恢复、自动恢复完成后、第一个Snapshot副本(`snapshot_name`)将被删除。
+* 虚拟机中的每个Windows卷必须至少具有300 MB的可用磁盘空间。其中包括与VHD对应的Windows卷、iSCSI LUN以及连接到VM的直通磁盘。
+* 崩溃状态一致的备份作业始终仅创建一个Snapshot副本。它不提供VSS集成。
+* 多个崩溃状态一致的备份作业可以并行执行。崩溃状态一致的备份作业可以与应用程序一致的备份作业并行运行。
+* `允许已保存状态备份`不适用于崩溃状态一致的备份作业。
+

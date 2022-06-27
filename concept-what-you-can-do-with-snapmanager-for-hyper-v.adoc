@@ -1,0 +1,33 @@
+---
+permalink: concept-what-you-can-do-with-snapmanager-for-hyper-v.html 
+sidebar: sidebar 
+keywords: snapmanager, hyper-v, enable, back, up, restore, multiple, virtual, machine, automatic, backup, task, schedule, scheduling, dataset, retention, replication 
+summary: 通过SnapManager for Hyper-V、您可以在多个主机之间备份和还原多个虚拟机。您可以创建数据集并对其应用策略、以自动执行计划、保留和复制等备份任务。 
+---
+= 您可以使用适用于Hyper-V的SnapManager 执行什么操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过SnapManager for Hyper-V、您可以在多个主机之间备份和还原多个虚拟机。您可以创建数据集并对其应用策略、以自动执行计划、保留和复制等备份任务。
+
+您可以使用适用于Hyper-V的SnapManager 执行以下任务：
+
+* 将虚拟机分组到具有相同保护要求的数据集中、并对这些数据集应用策略
+* 备份和还原运行ONTAP 软件的存储系统上的专用虚拟机和集群虚拟机
+* 备份和还原集群共享卷(CSV)上托管的虚拟机
+* 使用计划策略自动执行数据集备份
+* 对数据集执行按需备份
+* 使用保留策略、根据需要将数据集备份保留任意时间
+* 备份成功完成后、更新SnapMirror目标位置
+* 指定要在备份前后运行的自定义脚本
+* 从备份还原虚拟机
+* 监控所有已计划和正在运行的作业的状态
+* 从管理控制台远程管理主机
+* 为数据集备份、还原和配置操作提供综合报告
+* 同时执行崩溃状态一致的备份和应用程序一致的备份
+* 使用PowerShell cmdlet执行灾难恢复操作
+* 执行集群操作系统(OS)滚动升级
+

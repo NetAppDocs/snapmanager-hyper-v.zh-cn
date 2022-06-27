@@ -1,0 +1,26 @@
+---
+permalink: task-update-the-dataset-and-snapinfo-across-all-nodes.html 
+sidebar: sidebar 
+keywords: perform, cluster, os, rolling, upgrade, dataset, snapinfo, node, updating, update 
+summary: 执行集群操作系统滚动升级后、您必须更新所有节点上的数据集和SnapInfo。 
+---
+= 更新所有节点上的数据集和SnapInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+执行集群操作系统滚动升级后、您必须更新所有节点上的数据集和SnapInfo。
+
+++++
+
+
+NOTE: 支持从Windows Server 2016到Windows Server 2019的集群滚动升级；混合模式操作系统不支持共享磁盘备份。
+
+.步骤
+. 编辑Windows 2012 R2节点上的所有数据集。
+. 验证所有可用数据集是否均显示在Windows 2016节点上。
+. 在Windows 2012 R2节点上设置SnapInfo路径。
+. 验证Windows 2016节点上显示的SnapInfo路径是否正确。
+

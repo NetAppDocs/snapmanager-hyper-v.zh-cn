@@ -1,0 +1,28 @@
+---
+permalink: task-delete-a-dataset.html 
+sidebar: sidebar 
+keywords: delete, dataset, protection, change, deleting 
+summary: 您可以在保护需求发生变化时删除数据集。 
+---
+= 删除数据集
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以在保护需求发生变化时删除数据集。
+
+删除数据集不会删除属于该数据集的虚拟机。删除数据集后、如果属于该数据集的虚拟机不属于其他数据集、则这些虚拟机将不受保护。
+
+.步骤
+. 在导航窗格中、单击菜单：Protection[Datasets ]。
+. 选择要删除的数据集。
+. 在操作窗格中、单击*删除*并单击*确定*以删除数据集。
++
+删除数据集还会从属于该数据集的所有主机中删除已计划的作业。删除数据集时、SnapManager for Hyper-V不再管理备份的保留、即使重新创建了同名数据集也是如此。
+
+
+
+SnapManager for Hyper-V不再保护与已删除数据集关联的资源、除非这些资源属于另一数据集。

@@ -1,0 +1,34 @@
+---
+permalink: reference-error-vss-requestor-backup-components-failed.html 
+sidebar: sidebar 
+keywords: error, vss, requestor, backup, component, fail 
+summary: 错误：VSS请求程序-备份组件失败。 
+---
+= 错误：VSS请求程序-备份组件失败
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+* * 消息 *
++
+SnapManager for Hyper-V报告和Windows事件日志中会显示以下错误消息：`Error：VSS Requestor - Backup组件失败。备份或还原中涉及的写入程序Microsoft Hyper-V VSS写入程序遇到可重试的错误。写入程序返回故障代码0x800423f3。写入程序状态为XXX。有关详细信息、请参见Windows事件查看器中的Hyper-V VMM事件日志。`
+
+* * 问题描述 *
++
+如果收到VSS重试错误、导致应用程序一致的备份失败、则SnapManager for Hyper-V会重试备份三次、每次尝试之间等待一分钟。
+
+* * 更正操作 *
++
+您可以使用以下注册表项配置重试次数(重试次数)和两次重试之间的等待时间(重试间隔)：
+
++
+`密钥：HKLM\System\CurrentControlSet\Services\OnCommandHyperV\Parameters DWORD值(以秒为单位)：vss_retry_leep (两次重试之间等待的时间持续时间) DWORD值：vss_retry (重试次数)`
+
++
+这些设置在Hyper-V主机级别、应在Hyper-V主机上为每个虚拟机设置密钥和值。如果虚拟机已加入集群、则应在集群中的每个节点上设置密钥。
+
++
+在更改或添加这些注册表项后、您必须重新启动SnapManager for Hyper-V。
+
+

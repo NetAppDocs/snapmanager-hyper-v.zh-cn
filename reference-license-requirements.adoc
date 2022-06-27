@@ -1,0 +1,38 @@
+---
+permalink: reference-license-requirements.html 
+sidebar: sidebar 
+keywords: run, snapmanager, hyper-v, select, host-based, storage, system, license, installation, license 
+summary: 要运行SnapManager for Hyper-V、您必须在安装许可证期间选择基于主机的许可证或存储系统许可证。 
+---
+= 许可证要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+要运行SnapManager for Hyper-V、您必须在安装许可证期间选择基于主机的许可证或存储系统许可证。
+
+
+
+== SnapManager 套件许可证
+
+Windows主机系统上需要SnapManager 套件许可证。您可以选择基于主机的许可或存储系统许可。
+
+
+
+== 按服务器许可证
+
+这也称为_基于主机的许可_。如果选择基于主机的许可、则必须在安装期间提供SnapManager 套件许可证密钥、您可以稍后根据需要进行更改。您可以在安装后通过单击SnapManager for Hyper-V欢迎窗口中的*许可证设置*来更改许可证密钥。每个父主机都需要一个SnapManager 套件许可证。
+
+
+
+== 每个存储系统许可证
+
+这也称为_storage system licensing。如果选择存储系统许可、则必须将SnapManager 套件许可证添加到所有存储系统、才能运行SnapManager for Hyper-V操作。
+
+
+
+== 按客户端系统许可证
+
+在安装管理控制台时、应使用此许可选项。

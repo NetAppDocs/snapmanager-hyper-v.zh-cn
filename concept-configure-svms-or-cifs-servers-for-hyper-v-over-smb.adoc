@@ -1,0 +1,18 @@
+---
+permalink: concept-configure-svms-or-cifs-servers-for-hyper-v-over-smb.html 
+sidebar: sidebar 
+keywords: configure, configuring, single, storage, virtual, machine, svm, cif, server, multiple, application, resource, sharing, share, issue, smb, hyper-v 
+summary: '为多个应用程序配置单个Storage Virtual Machine (SVM)或CIFS服务器可能会导致资源共享问题、进而影响Hyper-V环境。' 
+---
+= 为基于SMB的Hyper-V配置SVM或CIFS服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+为多个应用程序配置单个Storage Virtual Machine (SVM)或CIFS服务器可能会导致资源共享问题、进而影响Hyper-V环境。您应根据需要为基于SMB的Hyper-V配置专用SVM或CIFS服务器。
+
+* 相关信息 *
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapManager_Suite/How_to_set_up_SVM%2F%2FCIFS_for_Hyper-V_over_SMB["NetApp知识库文章1015099：How to set up SVM/CIFS for Hyper-V over SMB"^]

@@ -1,0 +1,27 @@
+---
+permalink: task-remove-a-hyper-v-parent-host.html 
+sidebar: sidebar 
+keywords: remove, hyper-v, parent, host, cluster, snapmanager, removing 
+summary: 如果您不再需要使用适用于Hyper-V的SnapManager 对Hyper-V父主机或父主机集群进行管理、则可以将其删除 
+---
+= 删除Hyper-V父主机或父主机集群
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您不再需要使用适用于Hyper-V的SnapManager 对Hyper-V父主机或父主机集群进行管理、则可以将其删除
+
+.步骤
+. 在导航窗格中、单击菜单：Protection[Hosts]。
+. 选择要删除的主机或主机集群。
+. 在*操作*窗格中、单击*删除*。
++
+您可以选择*删除所有虚拟机备份*来删除与主机关联的任何虚拟机备份。
+
++
+Hyper-V父主机或主机集群将从用于Hyper-V管理的SnapManager 中删除、但不会永久删除。属于该主机或主机集群的虚拟机也会从其所属的任何数据集中删除。
+
+
