@@ -13,6 +13,7 @@ summary: 您可以安装SnapManager for Hyper-V、以便备份和还原数据。
 [role="lead"]
 您可以安装SnapManager for Hyper-V、以便备份和还原数据。在安装SnapManager for Hyper-V之前、应先安装SnapDrive for Windows
 
+.您需要的内容
 必须备份现有数据、并且必须准备好以下信息：
 
 * 许可证密钥

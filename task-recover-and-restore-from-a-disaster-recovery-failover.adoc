@@ -13,6 +13,7 @@ summary: 要从灾难中恢复、SnapManager for Hyper-V必须先故障转移到
 [role="lead"]
 要从灾难中恢复、SnapManager for Hyper-V必须先故障转移到二级存储系统。故障转移涉及PowerShell中的一系列手动步骤。
 
+.关于此任务
 对于NAS和SAN、大多数备份都可以还原到备用主机；但是、Windows Server 2008 R2崩溃状态一致的备份无法还原到备用主机。
 
 .步骤

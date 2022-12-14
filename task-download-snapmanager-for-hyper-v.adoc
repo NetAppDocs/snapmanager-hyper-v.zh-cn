@@ -13,6 +13,7 @@ summary: 在安装SnapManager for Hyper-V之前、您必须从NetApp支持站点
 [role="lead"]
 在安装SnapManager for Hyper-V之前、您必须从下载软件包 link:http://mysupport.netapp.com["NetApp 支持站点"^]。
 
+.您需要的内容
 您必须具有 NetApp 支持站点的登录凭据。
 
 .步骤

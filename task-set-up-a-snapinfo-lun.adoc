@@ -14,6 +14,7 @@ summary: 您必须在SnapManager for Hyper-V中添加SnapInfo LUN以存储数据
 [role="lead"]
 您必须在SnapManager for Hyper-V中添加SnapInfo LUN以存储数据集备份元数据。SnapInfo路径必须驻留在ONTAP LUN上、因为SnapManager for Hyper-V会在定期备份后对SnapInfo副本进行备份。
 
+.您需要的内容
 如果您运行的是Windows Server 2012集群、则SnapInfo路径可以位于集群共享卷(CSV)上。如果管理专用虚拟机、则SnapInfo位置必须位于专用ONTAP LUN上。如果管理共享虚拟机、则SnapInfo位置必须位于共享ONTAP LUN上。
 
 .步骤
@@ -35,6 +36,7 @@ summary: 您必须在SnapManager for Hyper-V中添加SnapInfo LUN以存储数据
 
 
 
+.结果
 运行配置向导时、SnapInfo配置设置将复制到集群中的所有节点。* 相关信息 *
 
 xref:reference-error-snapdrive-sddiscoveryfilesystemlistinfo-response-is-null.adoc[错误：SnapDrive SDDiscoveryFileSystemListInfo响应为空]
